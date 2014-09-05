@@ -4,7 +4,7 @@ class CreateSessions < ActiveRecord::Migration
 
 			actual_sessions.references :user
 
-            actual_rating.timestamps
+            actual_sessions.timestamps
         end
     end
 
