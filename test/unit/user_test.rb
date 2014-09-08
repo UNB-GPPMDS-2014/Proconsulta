@@ -17,7 +17,19 @@ class UserTest < ActiveSupport::TestCase
 		user_fifth_test = User.new(:name_user => "teste", :password_user => "teste1234", :adress_user => "teste", :email_user => "teste")
 		assert !user_fifth_test.valid?
 		#email_user with different regex
+		user_sixth_test = User.new(:name_user => "a"*51, :password_user => "teste1234", :adress_user => "teste", :email_user => "teste@teste.com")
+		assert !user_sixth_test.valid?
+		#name_user too long
+		user_seventh_test = User.new(:name_user => "teste", :password_user => "teste1234", :adress_user => "a"*100, :email_user => "teste@teste.com")
+		assert !user_seventh_test.valid?
+		#adress too long
+		user_8th_test = User.new(:name_user => "teste", :password_user => "teste1234", :adress_user => "teste", :email_user => "a"*70+"@teste.com")
+		assert !user_8th_test.valid?
+		#email_user too long
+		b = User.new(:name_user => "teste", :password_user => "teste1234", :adress_user => "teste", :email_user => "nil@nil.com")
+		c = User.new(:name_user => "teste", :password_user => "teste1234", :adress_user => "teste", :email_user => "nil@nil.com")
+		c.save
+		assert c.valid?
 
-		#every validate tested
 	end
 end
