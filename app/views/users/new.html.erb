@@ -1,0 +1,27 @@
+<center><h1>Registro</h1>
+
+    <%= form_for(@user) do |f| %>    
+
+<br>
+    <%= f.label :name_user, "Nome" %>
+    <%= f.text_field :name_user %>
+</br>
+<br>
+    <%= f.label :email_user %>
+    <%= f.text_field :email_user %>
+</br><br>
+    <%= f.label :password_user, "Senha" %>
+    <%= f.password_field :password_user %>
+    </br><br>
+
+    <%= f.label :password_confirmation, "Repetir" %>
+    <%= f.password_field :password_confirmation %>
+</br>
+<br>
+    <%= f.label :adress_user, "Endereço" %>
+    <%= f.text_field :adress_user %>
+<br>
+    <%= f.submit "Registrar conta", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </center>
+</br>

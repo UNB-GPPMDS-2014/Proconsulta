@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140908000004) do
+ActiveRecord::Schema.define(:version => 20140908000005) do
 
   create_table "ratings", :force => true do |t|
     t.integer  "idRating"
@@ -35,9 +35,10 @@ ActiveRecord::Schema.define(:version => 20140908000004) do
     t.string   "password_user"
     t.integer  "rating_id"
     t.integer  "session_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
     t.string   "password_digest"
+    t.string   "password_confirmation"
   end
 
 end
