@@ -1,0 +1,15 @@
+<%= form_for(@user) do |f| %>
+    <%= f.label :name_user %></br>
+    <%= f.text_field :name_user %></br>
+
+    <%= render 'shared/error_messages' %>
+    
+    <%= f.label :password %></br>
+    <%= f.password_field :password %></br>
+
+    <%= f.label :password_confirmation, "Confirmar Senha" %></br>
+    <%= f.password_field :password_confirmation %></br>
+
+
+    <%= f.submit "Salvar mudanças", class: "btn btn-large btn-primary" %>
+<% end %>
