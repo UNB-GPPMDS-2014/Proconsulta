@@ -4,7 +4,7 @@ require 'rails_helper'
 describe User do
 	before do
 		@user = User.new(name_user: "UserTest", email_user: "usertest@test.com",
-		 password_user: "teste1234", adress_user: "teste",
+		 password: "teste1234", adress_user: "teste",
 		 password_confirmation: "teste1234")
 	end
 
@@ -12,7 +12,7 @@ describe User do
 	it { should respond_to(:name_user) }
 	it { should respond_to(:email_user) }
 	it { should respond_to(:password_digest) }
-	it { should respond_to(:password_user) }
+	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 
 	it { should be_valid }
@@ -51,7 +51,7 @@ describe User do
     describe "password blank" do
     	before do
     		@user = User.new(name_user: "TesteUser",
-    		 email_user: "teste@teste.com", password_user: " ",
+    		 email_user: "teste@teste.com", password: " ",
     		 password_confirmation: " ")
     	end
     	it { should_not be_valid }
@@ -60,7 +60,7 @@ describe User do
     describe "password_confirmation isn't equal password" do
     	before do
     	 	@user = User.new(name_user: "testeuser", 
-    	 		email_user: "teste@teste.com", password_user: "teste1234", 
+    	 		email_user: "teste@teste.com", password: "teste1234", 
     	 		password_confirmation: "blablabla1234")
      	end
     	it { should_not be_valid }
