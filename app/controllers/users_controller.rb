@@ -11,22 +11,27 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)	
     	if @user.save
-      		redirect_to ('/users/'+@user.name_user)
+      		redirect_to @user
     	else
       	render 'new'
     	end
 	end
 
 	def show
-		@user = User.find_by_name_user!(params[:id])
+		@user = User.find(params[:id])
 	end
 
 	def edit
-		@user = User.find_by_name_user!(params[:name_user])
+		@user = User.find(params[:id])
 	end
 
 	def update
-		@user = User.find_by_name_user!(params[:name_user])
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+      		redirect_to @user
+    	else
+      		render 'edit'
+    	end
 	end
 
 	def destroy
