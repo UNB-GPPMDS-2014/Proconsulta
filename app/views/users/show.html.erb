@@ -5,5 +5,5 @@ ID: <%= @user.id %></br>
 </h1>
 
 <h1>
-	<%= link_to "Deletar Conta", " " %>
+	<%= link_to "Deletar Conta", @user.id.to_s, method: :delete, data: { confirm: "Você tem certeza?" } %>
 </h1>
