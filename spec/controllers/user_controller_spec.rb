@@ -1,7 +1,8 @@
-require 'spec_helper'
 require 'rails_helper'
+require 'spec_helper'
+require 'capybara/rspec'
 
-describe UsersController do
+describe UsersController, :type => :controller do 
 	before do
 		@user = User.new(name_user: "UserTes", email_user: "usertest@test.com",
 		 password: "teste1234", adress_user: "teste",
@@ -16,7 +17,15 @@ describe UsersController do
 	it { should respond_to(:password_confirmation) }
 	it { should be_valid }
 
-	describe "GET #index" do
+	 
+	describe "GET index" do
+		it "assigns all users as @users" do
+			render
+			# name
+			rendered.should match('Novo')
+			# adress
+			rendered.should match('Logar')
+		end
 	end
 
 	describe "GET #show" do
