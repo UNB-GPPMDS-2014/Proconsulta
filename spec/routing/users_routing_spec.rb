@@ -14,6 +14,18 @@ require "rails_helper"
 			it "routes to #edit" do
 				expect(:get => "/users/7/edit").to route_to("users#edit", id => "7")
 			end
+
+			it "routes to #update" do
+				expect(:put => "/users/7").to route_to("users#update", id => "7")
+
+			it "routes to #show" do
+				expect(:get => "/users/7").to route_to("users#show", id => "7")
+			end
+
+			it "routes to #destroy" do
+				expect(:delete => "/users/7").to route_to("users#destroy", id => "7")
+			end
+
 		end
 	end
 
