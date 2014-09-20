@@ -1,1 +1,12 @@
-Pernada
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+	<%= f.label :email_user %>
+	<%= f.text_field :email_user %>
+
+	<%= f.label :password %>
+	<%= f.text_field :password %>
+
+	<%= f.submit "Logar", class: "btn btn-large btn-primary" %>
+<% end %>
+
+<p>Novo? <%= link_to "Cadastrar!", "/signup" %></p>
