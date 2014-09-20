@@ -17,17 +17,6 @@ describe UsersController, :type => :controller do
 	it { should respond_to(:password_confirmation) }
 	it { should be_valid }
 
-	 
-	describe "GET index" do
-		it "assigns all users as @users" do
-			render
-			# name
-			rendered.should match('Novo')
-			# adress
-			rendered.should match('Logar')
-		end
-	end
-
 	describe "GET #show" do
 		it "assigns the requested user to @user"
 		it "renders the :show template"
