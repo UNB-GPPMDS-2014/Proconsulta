@@ -1,12 +1,18 @@
-<%= form_for(:session, url: sessions_path) do |f| %>
+<center>
+	<%= form_for(:session, url: sessions_path) do |f| %>
 
-	<%= f.label :email_user %>
-	<%= f.text_field :email_user %>
+		<br>
+			<%= f.label :email_user %>
+			<%= f.text_field :email_user %>
+		</br>
+		<br>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</br>
+		<br>
+			<%= f.submit "Logar", class: "btn btn-large btn-primary" %>
+		</br>
+	<% end %>
 
-	<%= f.label :password %>
-	<%= f.text_field :password %>
-
-	<%= f.submit "Logar", class: "btn btn-large btn-primary" %>
-<% end %>
-
-<p>Novo? <%= link_to "Cadastrar!", "/signup" %></p>
+	<p>Novo? <%= link_to "Cadastrar!", "/signup" %></p>
+</center>
