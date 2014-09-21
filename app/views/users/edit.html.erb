@@ -1,18 +1,19 @@
 <%= form_for(@user) do |f| %>
-    <%= f.label :name_user %></br>
-    <%= f.text_field :name_user %></br>
-
+    <center>    
     <%= render 'shared/error_messages' %>
     
-    <%= f.label :password %></br>
-    <%= f.password_field :password %></br>
+    <%= f.label :name_user, "Nome: " %>
+    <%= f.text_field :name_user %></br>
 
-    <%= f.label :password_confirmation, "Confirmar Senha" %></br>
-    <%= f.password_field :password_confirmation %></br>
-
-    <%= f.label :adress_user %></br>
+    <%= f.label :adress_user, "Endereço:" %>
     <%= f.text_field :adress_user %></br>
 
+    <%= f.label :email_user, "E-mail" %>
+    <%= f.text_field :email_user %></br>
+
+    <%= f.label :password, "Senha" %>
+    <%= f.password_field :password %></br>
 
     <%= f.submit "Salvar mudanças", class: "btn btn-large btn-primary" %>
+    </center>
 <% end %>

@@ -1,0 +1,8 @@
+<h1>Lista de usuários registrados:</br></h1>
+<% @users.each do |user| %>
+      <tr>
+      <h2>
+        <td><%= user.name_user %></td>, id: <%= user.id %></br>
+      </tr>
+      </h2>
+<% end %>

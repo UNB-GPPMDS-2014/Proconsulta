@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+	def allusers
+		@users = User.all
+	end
+
 	def index
 		@user = User.all
 	end
@@ -12,7 +16,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)	
     	if @user.save
     		sign_in @user
-    		flash[:sucess] = "Seja bem-vindo!"
+    		# flash[:sucess] = "Seja bem-vindo!"
       		redirect_to @user
     	else
       		render 'new'

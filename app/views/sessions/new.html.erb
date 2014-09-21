@@ -2,11 +2,11 @@
 	<%= form_for(:session, url: sessions_path) do |f| %>
 
 		<br>
-			<%= f.label :email_user %>
+			<%= f.label :email_user, "E-mail" %>
 			<%= f.text_field :email_user %>
 		</br>
 		<br>
-			<%= f.label :password %>
+			<%= f.label :password, "Senha" %>
 			<%= f.password_field :password %>
 		</br>
 		<br>
@@ -14,5 +14,5 @@
 		</br>
 	<% end %>
 
-	<p>Novo? <%= link_to "Cadastrar!", "/signup" %></p>
+	<p>Novo? <%= link_to "Cadastre-se!", "/signup" %></p>
 </center>
