@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			sign_in user
 			redirect_to user
 		else
-			#flash[:error] = 'E-mail/Senha inválida!' #Arrumar depois!!
+			# flash[:error] = 'E-mail/Senha inválida!' #Arrumar depois!!
 			render 'new'
 		end
 	end
