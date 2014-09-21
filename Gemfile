@@ -7,6 +7,7 @@ gem 'rails', '3.2.15'
 
 gem 'sqlite3'
 gem 'strong_parameters'
+gem 'rspec-its'
 
 group :development, :test do
   gem 'rspec-rails'

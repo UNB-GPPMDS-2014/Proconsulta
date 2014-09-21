@@ -1,11 +1,10 @@
 class User < ActiveRecord::Base
 	attr_accessible :email_user, :name_user, :password, :password_confirmation, :adress_user
 	has_secure_password
+  before_save { |user| user.email_user = email_user.downcase }
+  before_save :create_remember_token
 #	list_ratings = Array.new
-
 	has_many :ratings
-	# has_secure_password
-	has_one :session
 
 
 	validates :password, presence: true
@@ -29,6 +28,6 @@ class User < ActiveRecord::Base
   	private 
 
   	def create_remember_token
-      self.remember_token = User.digest(User.new_remember_token)
+      self.remember_token = SecureRandom.urlsafe_base64
     end
 end
