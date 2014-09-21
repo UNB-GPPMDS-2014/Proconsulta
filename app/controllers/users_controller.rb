@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     	if @user.save
     		sign_in @user
     		# flash[:sucess] = "Seja bem-vindo!"
-      		redirect_to @user
+      		 redirect_to :action => :show, :id => @user.id
     	else
       		render 'new'
     	end
