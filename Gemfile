@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
 gem 'bootstrap-sass', '2.1'
+gem 'simplecov', :require => false, :group => :test
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
