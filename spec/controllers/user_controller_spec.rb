@@ -38,5 +38,12 @@ describe UsersController, :type => :controller do
 		it "re-renders the :new template"
 	end
 
+	describe "GET edit" do
+		it "assigns the requested place as @place" do
+		get :edit, :id => @user.id
+		expect(assigns(:user)).to eq(@user)
+		end
+	end
+
 
 end
