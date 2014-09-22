@@ -1,4 +1,13 @@
 SISANPRO::Application.routes.draw do
+  root :to => "users#index"
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete 
+  match '/allusers', to: 'users#allusers'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

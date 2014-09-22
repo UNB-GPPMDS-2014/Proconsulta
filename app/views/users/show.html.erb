@@ -1,0 +1,12 @@
+<center><h2>
+Nome: <%= @user.name_user %></br>
+Endereço: <%= @user.adress_user %></br>
+E-Mail: <%= @user.email_user %></br>
+ID: <%= @user.id %></br>
+</h2>
+<h1>
+
+<%= link_to "Editar Dados", "/users/"+@user.id.to_s+"/edit" %></br>
+
+	<%= link_to "Deletar Conta", @user.id.to_s, method: :delete, data: { confirm: "Você tem certeza?" } %>
+</h1></center>

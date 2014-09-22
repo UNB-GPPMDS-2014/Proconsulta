@@ -1,0 +1,28 @@
+<center><h1>Cadastro de Usuário</h1>
+<%= form_for(@user) do |f| %>    
+    <%= render 'shared/error_messages' %>    
+
+<br>
+    <%= f.label :name_user, "Nome" %></br>
+    <%= f.text_field :name_user %>
+</br>
+<br>
+    <%= f.label :email_user, "E-mail" %></br>
+    <%= f.text_field :email_user %>
+</br><br>
+    <%= f.label :password, "Senha" %></br>
+    <%= f.password_field :password %>
+    </br><br>
+
+    <%= f.label :password_confirmation, "Repetir" %></br>
+    <%= f.password_field :password_confirmation %>
+</br>
+<br>
+    <%= f.label :adress_user, "Endereço" %></br>
+    <%= f.text_field :adress_user %>
+<br>
+</br>
+    <%= f.submit "Registrar conta", class: "btn btn-large btn-primary" %>
+<% end %>
+  </center>
+</br>

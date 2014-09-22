@@ -1,0 +1,13 @@
+
+	<center><h1>PROCONSULTA</br>
+	<h1>
+	<p>
+	<% if signed_in? %>
+	
+	<h2>Seja bem-vindo,  <%= current_user.name_user %></h2>
+	<% else %>
+	<%= link_to "Novo? Registre-se!", "/signup" %></br>
+	<%= link_to "Logar", "/signin" %></br>
+	<% end %>
+</h1>
+</p></center></html>
