@@ -1,17 +1,28 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/sra/github/Proconsulta/spec/controllers/user_controller_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/controllers/user_controller_spec.rb": [
         1,
         1,
         1,
         null,
         1,
         1,
-        8,
+        13,
         null,
         null,
         null,
+        1,
+        null,
+        3,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        2,
         null,
         7,
         2,
@@ -28,6 +39,17 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
         null,
         1,
         1,
@@ -36,16 +58,43 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
         null,
         1,
         1,
         1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/rails_helper.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -86,14 +135,14 @@
         1,
         null
       ],
-      "/home/sra/github/Proconsulta/config/environment.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/sra/github/Proconsulta/config/application.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/application.rb": [
         1,
         null,
         1,
@@ -158,7 +207,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/boot.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/boot.rb": [
         1,
         null,
         null,
@@ -166,7 +215,7 @@
         null,
         1
       ],
-      "/home/sra/github/Proconsulta/config/environments/test.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/environments/test.rb": [
         1,
         null,
         null,
@@ -205,7 +254,7 @@
         1,
         null
       ],
-      "/home/sra/github/Proconsulta/config/initializers/backtrace_silencers.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -214,7 +263,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/initializers/inflections.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -231,14 +280,14 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/initializers/mime_types.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/initializers/secret_token.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -247,7 +296,7 @@
         null,
         1
       ],
-      "/home/sra/github/Proconsulta/config/initializers/session_store.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -257,7 +306,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/initializers/wrap_parameters.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -273,7 +322,7 @@
         1,
         null
       ],
-      "/home/sra/github/Proconsulta/app/controllers/application_controller.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -286,7 +335,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/helpers/application_helper.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/helpers/application_helper.rb": [
         1,
         1,
         0,
@@ -298,7 +347,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/helpers/sessions_helper.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/helpers/sessions_helper.rb": [
         1,
         null,
         1,
@@ -325,7 +374,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/controllers/ratings_controller.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/controllers/ratings_controller.rb": [
         1,
         null,
         1,
@@ -350,7 +399,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/models/rating.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/models/rating.rb": [
         1,
         null,
         1,
@@ -359,7 +408,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/controllers/sessions_controller.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -384,7 +433,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/controllers/users_controller.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -396,7 +445,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
@@ -415,7 +464,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -441,28 +490,24 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/app/models/user.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/models/user.rb": [
         1,
         1,
         1,
-        11,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
+        16,
         1,
         null,
         1,
         null,
         null,
         1,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
         null,
         null,
         1,
@@ -470,82 +515,100 @@
         null,
         null,
         1,
+        0,
+        null,
         null,
         1,
-        10,
+        null,
+        1,
+        15,
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/config/routes.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/models/costumer_service.rb": [
         1,
         1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        null
+      ],
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/app/models/supplier.rb": [
+        1,
+        1,
         null,
         null,
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/models/user_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/config/routes.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/models/user_spec.rb": [
         1,
         1,
         1,
@@ -623,7 +686,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/routing/users_routing_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/routing/users_routing_spec.rb": [
         1,
         1,
         1,
@@ -662,7 +725,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/views/users/destroy.html.erb_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/views/users/destroy.html.erb_spec.rb": [
         1,
         1,
         1,
@@ -676,7 +739,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/views/users/index.html.erb_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/views/users/index.html.erb_spec.rb": [
         1,
         1,
         1,
@@ -688,7 +751,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/views/users/new.html.erb_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/views/users/new.html.erb_spec.rb": [
         1,
         1,
         null,
@@ -700,7 +763,7 @@
         null,
         null
       ],
-      "/home/sra/github/Proconsulta/spec/views/users/show.html.erb_spec.rb": [
+      "/home/djmgguedes/PROCONSULTA/Proconsulta/spec/views/users/show.html.erb_spec.rb": [
         1,
         1,
         1,
@@ -719,6 +782,6 @@
         null
       ]
     },
-    "timestamp": 1411326186
+    "timestamp": 1411564436
   }
 }
