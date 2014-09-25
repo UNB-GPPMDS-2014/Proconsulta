@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20140924000008) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "suppliers", :force => true do |t|
+    t.string   "type_supplier"
+    t.string   "social_reason_supplier"
+    t.string   "fantasy_name_supplier"
+    t.string   "cnpj"
+    t.string   "cnaep_main_code_supplier"
+    t.string   "description_cnaep_code_supplier"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name_user"
     t.string   "adress_user"
