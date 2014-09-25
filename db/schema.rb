@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140921000007) do
+ActiveRecord::Schema.define(:version => 20140924000008) do
+
+  create_table "customer_services", :force => true do |t|
+    t.string   "year_customer_service"
+    t.string   "trimester_customer_service"
+    t.string   "month_customer_service"
+    t.string   "date_customer_service"
+    t.string   "region_customer_service"
+    t.string   "uf_customer_service"
+    t.string   "description_customer_service"
+    t.string   "code_subject_customer_service"
+    t.string   "description_subject_customer_service"
+    t.string   "code_problem_customer_service"
+    t.string   "description_problem_customer_service"
+    t.string   "genre_customer_service"
+    t.string   "cep_customer_service"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+  end
 
   create_table "ratings", :force => true do |t|
     t.integer  "idRating"
