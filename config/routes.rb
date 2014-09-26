@@ -2,7 +2,7 @@ SISANPRO::Application.routes.draw do
   root :to => "users#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :customers_service
+  resources :customer_services
 
 
   match '/signup', to: 'users#new'
