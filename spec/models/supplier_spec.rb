@@ -21,8 +21,17 @@ describe Supplier do
 
 
 	describe "blank type_supplier" do
-		before { @rating.type_supplier = " " }
+		before { @supplier.type_supplier = " " }
 		it { should_not be_valid }
 	end
 	
+	describe "blank social_reason_supplier" do
+		before { @supplier.social_reason_supplier = " " }
+		it { should_not be_valid }
+	end
+
+	describe "blank fantasy_name_supplier" do
+		before { @supplier.fantasy_name_supplier = " " }
+		it { should_not be_valid }
+	end
 end
