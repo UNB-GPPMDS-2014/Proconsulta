@@ -44,4 +44,9 @@ describe Supplier do
 		before { @supplier.cnaep_main_code_supplier = " " }
 		it { should_not be_valid }
 	end
+
+	describe "blank description_cnaep_code_supplier" do
+		before { @supplier.description_cnaep_code_supplier = " " }
+		it { should_not be_valid }
+	end
 end
