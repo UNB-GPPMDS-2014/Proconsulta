@@ -34,4 +34,14 @@ describe Supplier do
 		before { @supplier.fantasy_name_supplier = " " }
 		it { should_not be_valid }
 	end
+
+	describe "blank cnpj" do
+		before { @supplier.cnpj = " " }
+		it { should_not be_valid }
+	end
+
+	describe "blank cnaep_main_code_supplier" do
+		before { @supplier.cnaep_main_code_supplier = " " }
+		it { should_not be_valid }
+	end
 end
