@@ -18,13 +18,13 @@ describe Supplier do
 		it { should respond_to(:description_cnaep_code_supplier) }
 
 	describe "supplier already taken" do
-    	before do
-    		supplier_with_same_name = @supplier.dup
-    		supplier_with_same_name.cnpj = @user.email_user.upcase
-    		supplier_with_same_name.save
-    	end
+    #	before do
+    #		supplier_with_same_name = @supplier.dup
+    #		supplier_with_same_name.cnpj = @user.email_user.upcase
+    #		supplier_with_same_name.save
+    #	end
 
-    	it { should_not be_valid }
+    #	it { should_not be_valid }
     end
 
 end
