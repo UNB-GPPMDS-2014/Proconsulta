@@ -14,9 +14,11 @@ class CreateCustomerServices < ActiveRecord::Migration
 			f.string :description_problem_customer_service
 			f.string :genre_customer_service
 			f.string :cep_customer_service
+			f.references :supplier
 
             f.timestamps
         end
+        add_index :customer_services, :supplier_id
     end
 end
 

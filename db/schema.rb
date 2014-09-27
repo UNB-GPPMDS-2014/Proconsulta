@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140924000008) do
+ActiveRecord::Schema.define(:version => 20140927000014) do
 
   create_table "customer_services", :force => true do |t|
     t.string   "year_customer_service"
@@ -27,23 +27,19 @@ ActiveRecord::Schema.define(:version => 20140924000008) do
     t.string   "description_problem_customer_service"
     t.string   "genre_customer_service"
     t.string   "cep_customer_service"
+    t.integer  "supplier_id"
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
   end
 
-  create_table "ratings", :force => true do |t|
-    t.integer  "idRating"
-    t.float    "valeu_rating"
-    t.integer  "user_id"
-    t.string   "descripion_rating"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-  end
+  add_index "customer_services", ["supplier_id"], :name => "index_customer_services_on_supplier_id"
 
-  create_table "sessions", :force => true do |t|
+  create_table "ratings", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "description_rating"
+    t.float    "value_rating"
   end
 
   create_table "suppliers", :force => true do |t|
@@ -57,9 +53,10 @@ ActiveRecord::Schema.define(:version => 20140924000008) do
     t.datetime "updated_at",                      :null => false
   end
 
+  add_index "suppliers", ["fantasy_name_supplier"], :name => "fantasy_name_supplier", :unique => true
+
   create_table "users", :force => true do |t|
     t.string   "name_user"
-    t.string   "adress_user"
     t.string   "email_user"
     t.integer  "rating_id"
     t.integer  "session_id"
@@ -67,8 +64,10 @@ ActiveRecord::Schema.define(:version => 20140924000008) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "remember_token"
+    t.string   "address_user"
   end
 
+  add_index "users", ["address_user"], :name => "index_users_on_address_user"
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

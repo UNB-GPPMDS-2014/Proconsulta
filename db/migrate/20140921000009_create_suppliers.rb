@@ -10,6 +10,7 @@ class CreateSuppliers < ActiveRecord::Migration
 
             f.timestamps
         end
+         execute "ALTER IGNORE TABLE suppliers ADD UNIQUE (fantasy_name_supplier);"
     end
 end
 

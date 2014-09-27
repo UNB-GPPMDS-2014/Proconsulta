@@ -4,6 +4,7 @@ gem 'rails', '3.2.15'
 
 gem 'simplecov', :require => false, :group => :test
 
+gem 'mysql2'
 
 
 # Bundle edge Rails instead:
