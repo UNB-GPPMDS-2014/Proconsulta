@@ -1,6 +1,6 @@
 class Rating < ActiveRecord::Base
 
-	attr_accessible :idRating, :valeu_rating, :user_rating, :unity_procon_rating, :descripion_rating
+	attr_accessible :value_rating, :unity_procon_rating, :description_rating
 
 	belongs_to :user
 
