@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< Updated upstream
   <head>
     
+=======
+  <head>    
+  <body>
+  <div class="container">
+
+      </br></br></br></br></br>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+>>>>>>> Stashed changes
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
