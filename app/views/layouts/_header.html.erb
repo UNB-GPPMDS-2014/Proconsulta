@@ -6,8 +6,16 @@
 		<li><%= link_to "Home", root_path%></li>  
 		<li><%= link_to "Legislação"%></li>
 		<li><%= link_to "Procons" %></li>
-		<li><%= link_to "Atendimentos" %></li>
+    <li id="fat-menu" class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Atendimentos <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu"> 
+        <li><%= link_to "Atendimento ao Cliente" %></li>
+      </ul>
+    </li>
 		<li><%= link_to "Fornecedores" %></li>
+
           <% if signed_in? %>
             <li><%= link_to "Usuários", '/allusers' %></li>
             <li id="fat-menu" class="dropdown">
