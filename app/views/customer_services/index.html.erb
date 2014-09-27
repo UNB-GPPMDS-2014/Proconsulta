@@ -13,9 +13,17 @@ Busca Textual<br>
 <input type="radio" name="pesquisa" value="Fornecedor"> Fornecedor
 </form>
 
+5 primeiros atendimentos:
 
 
-
-
-
-
+<h1>Lista dos 20 primeiros suppliers:</br></h1>
+<% @customer_services.each do |cs| %>
+      <tr>
+      <h4>
+        <td>Ano: <%= cs.year_customer_service %></td>
+        <td>UF:<%= cs.uf_customer_service %></td>
+        <td>Descrição:<%= cs.description_customer_service %></td>
+        <td>Descr: <%= cs.description_problem_customer_service %></td>
+      </tr>
+      </h4>
+<% end %>
