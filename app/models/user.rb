@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 	validates :password, presence: true
 	validates :name_user, presence: true, length: { maximum:50 }
-	validates :address_user, presence: true, length: { maximum:99 }
+	validates :address_user, presence: true, length: { maximum:2 }
 	validates :email_user, presence: true, length: { maximum:70 }
  	valid_email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email_user, presence: true, format: { with: valid_email_regex },
