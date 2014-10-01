@@ -5,17 +5,17 @@ require 'capybara/rspec'
 describe UsersController, :type => :controller do 
 	before do
 		@user = User.create(name_user: "UserTes", email_user: "usertest@test.com",
-		 password: "teste1234", address_user: "teste",
+		 password: "teste1234", address_user: "DF",
 		 password_confirmation: "teste1234")
 	end
 	let(:valid_attributes) {
     	skip(name_user: "UserTest", email_user: "usertest@test.com", 
-    		password: "teste1234", adress_user: "teste")
+    		password: "teste1234", address_user: "DF")
   	}
 
   	let(:invalid_attributes) {
     	skip(name_user: "", email_user: "emailerrado", 
-    		password: "zzzz", adress_user: "")
+    		password: "zzzz", address_user: "")
   	}
 
   	let(:valid_session) { {} }

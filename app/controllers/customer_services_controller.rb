@@ -1,7 +1,7 @@
 class CustomerServicesController < ApplicationController
 
   def index
-    @customer_services = CustomerService.all
+    @customer_services = CustomerService.first(5)
   end
 
   def show

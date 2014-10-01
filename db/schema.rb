@@ -27,11 +27,15 @@ ActiveRecord::Schema.define(:version => 20140927000014) do
     t.string   "description_problem_customer_service"
     t.string   "genre_customer_service"
     t.string   "cep_customer_service"
+    t.integer  "supplier_id"
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
   end
 
+  add_index "customer_services", ["supplier_id"], :name => "index_customer_services_on_supplier_id"
+
   create_table "ratings", :force => true do |t|
+    t.integer  "user_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "description_rating"
@@ -48,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20140927000014) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
+
+  add_index "suppliers", ["fantasy_name_supplier"], :name => "fantasy_name_supplier", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name_user"
