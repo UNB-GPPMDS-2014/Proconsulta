@@ -3,11 +3,10 @@
 <%= will_paginate %>
 <% @suppliers.each do |sup| %>
       <tr>
-      <h6>
-        <td><%= sup.fantasy_name_supplier %></td>
-        - ID: <%= sup.id %>
+      <h5>
+        <%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
       </tr>
-      </h6>
+      </h5>
 <% end %>
 <%= will_paginate %>
 </center>
