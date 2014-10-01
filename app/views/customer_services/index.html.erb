@@ -3,9 +3,15 @@
 <div class="span5">
 	<body style= "width:1200px">
 	<h3>PROCURE ATENDIMENTOS</br></h3>
-	<form>
 	<span style="color:#FFA500">
 	<b> Busca Textual </b><br>
+
+
+
+		<% # = form_tag('/customer_services/', method: :get) %>
+		<% # input type="text" name=idteste> %>
+		<% # = submit_tag "Pesquisar", class:"form_submit" %>
+
 	</span>
 	<input type="text" name="pesquisa" size="50" maxlength="50">
 	<br>
@@ -16,6 +22,7 @@
 	<input type="radio" name="pesquisa" value="Fornecedor"> <b> Fornecedor </b>
 	<br>
 	<br>
+	<%= submit_tag "Pesquisar", class:"form_submit" %>
 	<span style="color:#FFA500">
 	<b> Filtros </b>
 	<br>
@@ -77,19 +84,19 @@
 
 </div>
 <div class="span7">
-	5 primeiros atendimentos:
-
-	<h1>Lista dos 20 primeiros suppliers:</br></h1>
+	<%= will_paginate %>
 	<% @customer_services.each do |cs| %>
 	      <tr>
-	      <h4>
+	      <h5>****
 	        <td>Ano: <%= cs.year_customer_service %></td>
 	        <td>UF:<%= cs.uf_customer_service %></td>
 	        <td>Descrição:<%= cs.description_customer_service %></td>
 	        <td>Descr: <%= cs.description_problem_customer_service %></td>
+	        ***</br>
 	      </tr>
-	      </h4>
+	      </h5>
 	<% end %>
+	<%= will_paginate %>
 </div>
 </div>
 </div>
