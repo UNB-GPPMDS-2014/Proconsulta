@@ -6,7 +6,7 @@
     <%= f.text_field :name_user %></br>
 
     <%= f.label :address_user, "Estado: " %></br>
-    <%= f.select :address_user, options_for_select([["AC", "AC"], ["AL", "AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PR", "PR"], ["PB", "PB"], ["PA", "PA"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SE", "SE"], ["SP", "SP"], ["TO", "TO"]]) %>
+    <%= f.select :address_user, options_for_select([[@user.address_user, @user.address_user], ["AC", "AC"], ["AL", "AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PR", "PR"], ["PB", "PB"], ["PA", "PA"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SE", "SE"], ["SP", "SP"], ["TO", "TO"]]) %>
 
     <%= f.label :email_user, "E-mail" %>
     <%= f.text_field :email_user %></br>
