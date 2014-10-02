@@ -1,7 +1,7 @@
 class SuppliersController < ApplicationController
 
   def index
-    @suppliers = Supplier.first(10)
+    @suppliers = Supplier.paginate(page: params[:page])
   end
 
   def show
