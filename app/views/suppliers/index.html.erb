@@ -2,11 +2,15 @@
 <center>
 <%= will_paginate %>
 <% @suppliers.each do |sup| %>
-      <tr>
       <h5>
-        <%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
+      	<table border="1" style="width:100%">
+      	<tr>
+        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
+        - CNPJ: <%= sup.cnpj %></td>
       </tr>
       </h5>
+
+</table>
 <% end %>
 <%= will_paginate %>
 </center>

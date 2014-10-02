@@ -25,4 +25,10 @@ describe SessionsHelper do
 		sign_in(@user)
 		expect(@user.remember_token?).to be(!nil)
 	end
+
+	it "expect signout to clear current_user" do
+		sign_in(@user)
+		sign_out
+		expect(current_user).to be(nil)
+	end
 end

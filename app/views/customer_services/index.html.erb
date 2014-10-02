@@ -81,21 +81,24 @@
 	</div>
 	</form>
 	</body>
-
+<left>
 </div>
 <div class="span7">
 	<%= will_paginate %>
 	<% @customer_services.each do |cs| %>
+			<table border="1" style="width:100%">
 	      <tr>
-	      <h5>****
+	      <h6>
 	        <td>Ano: <%= cs.year_customer_service %></td>
 	        <td>UF:<%= cs.uf_customer_service %></td>
-	        <td>Descrição:<%= cs.description_customer_service %></td>
+	        <td>ID:<%= cs.id %></td>
+	        <td>ID:<%= link_to cs.id, '/customer_services/'+cs.id.to_s %>
 	        <td>Descr: <%= cs.description_problem_customer_service %></td>
-	        ***</br>
-	      </tr>
-	      </h5>
+	       </br>
+	      </h6>
 	<% end %>
+	</tr>
+	</table>
 	<%= will_paginate %>
 </div>
 </div>
