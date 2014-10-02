@@ -20,4 +20,9 @@ describe SessionsHelper do
 		sign_out
 		expect(signed_in?).to be(false)
 	end
+
+	it "expect user to has token after signin" do
+		sign_in(@user)
+		expect(@user.remember_token?).to be(!nil)
+	end
 end
