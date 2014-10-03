@@ -12,5 +12,15 @@ describe Rating do
 		it { should respond_to(:value_rating) }
 		it { should respond_to(:description_rating) }
 
+		describe "blank value_rating" do
+			before { @rating.value_rating = " " }
+			it { should_not be_valid }
+		end
+
+		describe "blank description_rating" do
+			before { @rating.description_rating = " " }
+			it { should_not be_valid }
+		end
+	
 	
 end
