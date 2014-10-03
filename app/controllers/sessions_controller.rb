@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 			sign_in user
 			redirect_to user
 		else
-			# flash[:error] = 'E-mail/Senha inválida!' #Arrumar depois!!
-			render 'new'
+			flash.now[:error] = 'Invalid email/password combination'
+      		render 'new'
 		end
 	end
 
