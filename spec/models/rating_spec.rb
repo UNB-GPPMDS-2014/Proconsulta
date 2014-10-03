@@ -17,6 +17,16 @@ describe Rating do
 			it { should_not be_valid }
 		end
 
+		describe "improper value_rating one" do
+			before { @rating.value_rating > 0 }
+			it { should_not be_valid }
+		end
+
+		describe "improper value_rating two" do
+			before { @rating.value_rating < 0 }
+			it { should_not be_valid }
+		end
+
 		describe "blank description_rating" do
 			before { @rating.description_rating = " " }
 			it { should_not be_valid }
