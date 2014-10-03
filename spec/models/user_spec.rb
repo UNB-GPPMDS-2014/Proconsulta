@@ -5,12 +5,13 @@ require 'rails_helper'
 describe User do
 	before do
 		@user = User.new(name_user: "UserTest", email_user: "usertest@test.com",
-		 password: "teste1234", adress_user: "teste",
+		 password: "teste1234", address_user: "DF",
 		 password_confirmation: "teste1234")
 	end
 
 	subject { @user }
 	it { should respond_to(:name_user) }
+    it { should respond_to(:address_user) }
 	it { should respond_to(:email_user) }
 	it { should respond_to(:password_digest) }
 	it { should respond_to(:password) }

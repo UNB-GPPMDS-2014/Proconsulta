@@ -1,0 +1,17 @@
+<h1>Customer_Service de id -> <%= @customer_service.id %></h1>
+
+<% a = @customer_service %><h5>
+
+
+<table border="2" style="width:80%">
+  <tr>
+    <td>ID Customer Service: <%= a.id %></td>
+    <td>ID Supplier: <%= a.supplier_id %></td> 
+    <td>Código do problema: <%= a.code_problem_customer_service %></td>
+    <td>Ano: <%= a.year_customer_service %></td>
+    <td>Região: <%= a.region_customer_service %></td>
+    <td>UF: <%= a.uf_customer_service %></td>
+    <td>Descrição: <%= a.description_problem_customer_service %></td>
+    <td>Cep empresa: <%= a.cep_customer_service %></td>
+  </tr>
+</table>
