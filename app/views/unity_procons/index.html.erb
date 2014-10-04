@@ -1,5 +1,7 @@
 <h1>Lista de Unidades do Procon</h1>
+<%= render 'layouts/searcher' %>
 <center>
+<div class="span7">
 <%= will_paginate %>
 <% @unity_procons.each do |un| %>
       <h5>
@@ -14,4 +16,4 @@
 <% end %>
 <%= will_paginate %>
 </center>
-<%= render 'layouts/searcher' %>
+</div>
