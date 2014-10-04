@@ -1,7 +1,7 @@
 <h1>Lista de suppliers</h1>
+<%= render 'layouts/searcher' %>
 <div class="span7">
 <center>
-<%= render 'layouts/searcher' %>
 <%= will_paginate %>
 <% @suppliers.each do |sup| %>
       <h5>
