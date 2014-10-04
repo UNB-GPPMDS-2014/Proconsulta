@@ -3,7 +3,7 @@
 </center>
 <div class="container-fluid">
 <div class="row-fluid">
-<div class="span5">
+<div class="span4">
 	<body style= "width:1200px">
 	<h3>PROCURE ATENDIMENTOS</br></h3>
 	<span style="color:#FFA500">
@@ -85,7 +85,7 @@
 	</body>
 <left>
 </div>
-<div class="span7">
+<div class="span8">
 	<%= will_paginate %>
 	<% @customer_services.each do |cs| %>
 			<table border="1" style="width:100%">
@@ -93,7 +93,6 @@
 	      <h6>
 	        <td>Ano: <%= cs.year_customer_service %></td>
 	        <td>UF:<%= cs.uf_customer_service %></td>
-	        <td>ID:<%= cs.id %></td>
 	        <td>ID:<%= link_to cs.id, '/customer_services/'+cs.id.to_s %>
 	        <td>Descr: <%= cs.description_problem_customer_service %></td>
 	       </br>
