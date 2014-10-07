@@ -1,14 +1,14 @@
 class RatingsController < ApplicationController
-	# List all Ratings
-	def index
+	
+	def index # @List all Ratings
 		@rating = Rating.all
 	end
-	# Create one rating
-	def new
+	 
+	def new # @Instantiate one rating
 		@rating = Rating.new
 	end
-	# 
-	def create
+	
+	def create # @Create one rating
 		@rating = Rating.new(user_params)	
     	if @rating.save
     		 redirect_to :action => :show, :id => @rating.id
@@ -16,16 +16,16 @@ class RatingsController < ApplicationController
       		render 'new'
     	end
 	end
-	# List one rating associated with one id.
-	def show
+	
+	def show # @List one rating associated with the id given.
 		@rating = Rating.find(params[:id])
 	end
-	# Edit one rating.
-	def edit
+	
+	def edit # @Edit one rating.
 		@rating = Rating.find(params[:id])
 	end
-	# Update one edited id.
-	def update
+	
+	def update # @Update one edited id.
 		@rating = Rating.find(params[:idRating])
 		if @rating.update_attributes(user_params)
       		redirect_to @rating
@@ -33,8 +33,8 @@ class RatingsController < ApplicationController
       		render 'edit'
     	end
 	end
-	# Erase one rating.
-	def destroy
+	
+	def destroy # @Erase one rating.
 		@rating = Rating.find(params[:id])
         @rating.destroy
 	end

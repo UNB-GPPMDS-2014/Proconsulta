@@ -7,6 +7,4 @@ class CustomerServicesController < ApplicationController
 	def show
 	    @customer_service = CustomerService.find(params[:id])
 	end
-
 end
-
