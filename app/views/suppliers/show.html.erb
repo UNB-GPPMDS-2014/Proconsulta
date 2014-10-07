@@ -1,12 +1,12 @@
-<center><h1> Supplier <%= @supplier.fantasy_name_supplier %> </h1></center>
+<h1>Fornecedor:</h1></br>
+<center><font face="Decorative" color="#880000"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></center></br>
 <right>
 <% a = @supplier %><h5>
-ID Reclamação: <%= a.id %></br>
-Tipo de supplier: <%= a.type_supplier %></br>
-Razão social: <%= a.social_reason_supplier %></br>
-CNPJ: <%= a.cnpj %></br>
-CNAEP:<%= a.cnaep_main_code_supplier %> </br>
-Descrição: <%= a.description_cnaep_code_supplier %></br>
-
+<font face="verdana" color="gray">ID Fornecedor:      </font><div align="justify"><%= a.id %></div></br>
+<font face="verdana" color="gray">Tipo de Fornecedor: </font><div align="justify"><%= a.type_supplier %></div></br>
+<font face="verdana" color="gray">Razão Social:       </font><div align="justify"><%= a.social_reason_supplier %></div></br>
+<font face="verdana" color="gray">CNPJ:               </font><div align="justify"><%= a.cnpj %></div></br>
+<font face="verdana" color="gray">CNAEP:              </font><div align="justify"><%= a.cnaep_main_code_supplier %></div></br>
+<font face="verdana" color="gray">Descrição:          </font><div align="justify"><%= a.description_cnaep_code_supplier %></div></br>
 </h5>
 </right>
