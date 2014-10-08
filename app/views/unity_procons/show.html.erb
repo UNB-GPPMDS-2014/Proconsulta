@@ -1,13 +1,10 @@
 <% a = @unity_procon %>
 <h1>Unidade do Procon <%= @unity_procon.id %>:</h1></br>
-
-<table border="1" style="width:100%">
-<tr>
-<td>Endereço: <%= a.address_unity_procon %></td>
-<td>Coordenador: <%= a.name_coordinator_unity_procon %></td>
-<td>UF: <%= a.uf_procon %></td>
-<td>email: <%= a.email_unity_procon %></td>
-</tr>
-</table>
-
-
+<right>
+	<h5>
+    <font face="verdana" color="gray">Endereço:   </font><div align="justify"><%= a.address_unity_procon %></div></br>
+    <font face="verdana" color="gray">Coordenador:</font><div align="justify"><%= a.name_coordinator_unity_procon %></div></br>
+    <font face="verdana" color="gray">UF:         </font><div align="justify"><%= a.uf_procon %></div></br>
+    <font face="verdana" color="gray">Email:      </font><div align="justify"><%= a.email_unity_procon %></div></br>
+    </h5>
+</right>
