@@ -1,13 +1,14 @@
-
-	<center><h1>PROCONSULTA</br>
-	<h1>
+<center>
+	<img src="/assets/LogoVetorCinza.png">
+	<h1>PROCONSULTA
 	<p>
 	<% if signed_in? %>
-	
-	<h2>Seja bem-vindo,  <%= current_user.name_user %></h2>
+
+		<h2>Seja bem-vindo,  <%= current_user.name_user %></h2>
+
 	<% else %>
-	<%= link_to "Novo? Registre-se!", "/signup" %></br>
-	<%= link_to "Logar", "/signin" %></br>
+		<%= link_to "Novo? Registre-se!", "/signup" %></br>
+		<%= link_to "Logar", "/signin" %></br>
 	<% end %>
-</h1>
+	</h1>
 </p></center></html>
