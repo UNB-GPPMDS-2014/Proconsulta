@@ -1,6 +1,7 @@
 <% a = @customer_service %>
 <h1>Atendimento <%= a.id%>:</h1></br>
-
+<right>
+	<h5>
     <font face="verdana" color="gray">ID Customer Service:</font><div align="justify"><%= a.id %></div></br>
     <font face="verdana" color="gray">ID Supplier:        </font><div align="justify"><%= a.supplier_id %></div></br>
     <font face="verdana" color="gray">Código do problema: </font><div align="justify"><%= a.code_problem_customer_service %></div></br>
@@ -9,5 +10,5 @@
     <font face="verdana" color="gray">Região:             </font><div align="justify"><%= a.region_customer_service %></div></br>
     <font face="verdana" color="gray">UF:                 </font><div align="justify"><%= a.uf_customer_service %></div></br>
     <font face="verdana" color="gray">CEP empresa:        </font><div align="justify"><%= a.cep_customer_service%></div></br>
-
-
+    </h5>
+</right>
