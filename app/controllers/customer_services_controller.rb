@@ -14,10 +14,10 @@ class CustomerServicesController < ApplicationController
 			return
 		end
 
-		sql = ""
+		sql = "1=1"
 
 		if !params[:type_search].nil? and params[:type_search] != "Fornecedor"
-			sql += "#{params[:type_search]}_customer_service = ? AND "
+			sql += "AND #{params[:type_search]}_customer_service = ? "
 		end
 
 		if !params[:unities].nil? and params[:unities].length > 0
