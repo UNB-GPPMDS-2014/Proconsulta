@@ -10,12 +10,16 @@
 		    <h5>
 		      	<table border="1" style="width:100%">
 			      	<tr>
-				        Posição: <%= un.position_unity_procon %></td>
-	    			    id: <%= link_to un.id, '/unity_procons/'+un.id.to_s %>
+				        <td>Posição: <%= un.position_unity_procon %></td>
+				        <td> id: <%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
+				        <td>UF: <%= un.uf_procon %> </td>
+				        <td> Telefone: <%= un.list_phones %> </td>
+				        <td>Email: <%= un.email_unity_procon %></td>
 			        </tr>
 				</table>
 			</h5>	
 		<% end %>
 	</div>
 </center>
+
 
