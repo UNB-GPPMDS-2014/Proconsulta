@@ -4,17 +4,18 @@
 <%= render 'layouts/searcher' %>
 <div class="span8">
 <center>
-<%= will_paginate %>
-<% @suppliers.each do |sup| %>
-      <h5>
-      	<table border="1" style="width:100%">
-      	<tr>
-        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
-        - CNPJ: <%= sup.cnpj %></td>
-      </tr>
-      </h5>
-</table>
-<% end %>
-<%= will_paginate %>
+	<%= will_paginate %>
+		<% @suppliers.each do |sup| %>
+		    <h5>
+		      	<table border="1" style="width:100%">
+			      	<tr>
+				        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
+				        - CNPJ: <%= sup.cnpj %></td>
+		        	</tr>
+				</table>
+			</h5>
+
+		<% end %>
+	<%= will_paginate %>
 </center>
 </div>

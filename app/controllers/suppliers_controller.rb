@@ -1,4 +1,5 @@
 class SuppliersController < ApplicationController
+	
 	# show 	all sppliers;
   def index
     @suppliers = Supplier.paginate(page: params[:page])
@@ -7,4 +8,5 @@ class SuppliersController < ApplicationController
   def show
     @supplier = Supplier.find(params[:id])
   end
+
 end
