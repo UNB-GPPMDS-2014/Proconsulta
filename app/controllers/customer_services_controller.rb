@@ -9,11 +9,25 @@ class CustomerServicesController < ApplicationController
 	end
 
 	def custom_search
+		unless request.xhr? or params[:page].nil? or params[:search].nil?
+			redirect_to "/"
+			return
+		end
 
 		sql = ""
 
 		if !params[:type_search].nil? and params[:type_search] != "Fornecedor"
 			sql += "#{params[:type_search]}_customer_service = ? AND "
 		end
+
+		if !params[:unities].nil? and params[:unities].length > 0
+			params[:unities].each do |u|
+
+			end
+		end
+
+		sql = sql
+		data = CustomerService.where("#{params[:type_search]}_customer_service = ?", params[:search]).paginate(:page=>1)
+		render :json=>data.to_json
 	end
 end
