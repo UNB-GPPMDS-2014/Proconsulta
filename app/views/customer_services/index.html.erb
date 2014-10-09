@@ -5,17 +5,24 @@
 <div class="span8">
 <center>
 <%= will_paginate %>
-<% @customer_services.each do |cs| %>
-			<table border="1" style="width:100%">
-	      <tr>
-	      <h6>
-	        <td>Ano: <%= cs.year_customer_service %></td>
-	        <td>UF:<%= cs.uf_customer_service %></td>
-	        <td>ID:<%= link_to cs.id, '/customer_services/'+cs.id.to_s %>
-	        <td>Descr: <%= cs.description_problem_customer_service %></td>
-	       </br>
-	      </h6>
+<table border="1" style="width:100%" class="table" id="customer_services">
+	<tr>
+	    <th>Ano</th>
+	    <th>UF</th> 
+	    <th>ID</th>
+	    <th>Descrição</th>
+  	</tr>
+	<% @customer_services.each do |cs| %>
+  		<tr>
+  		<h6>
+	        <td><%= cs.year_customer_service %></td>
+	        <td><%= cs.uf_customer_service %></td>
+	        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
+	        <td><%= cs.description_problem_customer_service %></td>
+       	</tr>
+      	</h6>
 	<% end %>
+</table>
 <%= will_paginate %>
 </center>
 </div>
