@@ -4,6 +4,19 @@
 <head>
   <meta charset="utf-8" />
   <title>FAQ</title>
+
+  <script type="text/javascript">
+
+    function changeIcon(o){   
+     obj = document.getElementById(o);
+     if (obj.className=="icon icon-chevron-down") 
+       setTimeout(function(){obj.className= "icon icon-chevron-up"}, 800);
+     else if (obj.className=="icon icon-chevron-up") 
+        obj.className= "icon icon-chevron-down";     
+  }   
+
+  </script>
+
   <style type="text/css">
         .panel-warning {
       border-color: #FFA500;
@@ -1109,8 +1122,12 @@
               Decorrido o prazo de resposta, que pode ser no máximo de  25 dias, a empresa terá mais 20 (vinte) dias para restituir o valor do produto, substituí-lo ou repará-lo.</p>
             </div>
 
-            <a href="#submenu81" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu81">
-              <h4 class="list-group-item-heading"><b>Em caso de clonagem do telefone celular, a operadora pode exigir a compra de outro aparelho com troca de número?</b></h4>
+            <a href="#submenu81" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu81" onclick="changeIcon('icon81')">
+              <h4 class="list-group-item-heading"> <b>Em caso de clonagem do telefone celular, a operadora pode exigir a compra de outro aparelho com troca de número?
+              <ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon81"></i>
+              </ul>
+              </b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu81">
@@ -1119,22 +1136,19 @@
               Se a troca do número é inevitável, a empresa deverá assumir os gastos com o novo aparelho, os eventuais prejuízos demonstrados pelos consumidores com a troca compulsória do número ou com ligações não realizadas pelos mesmos, entre outras despesas.</p>
             </div>
 
-            <a href="#submenu82" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu82">
-              <h4 class="list-group-item-heading"><b>O que fazer se a conta de telefone apresentar registros não reconhecidos de minutos ou outras chamadas?</b></h4>
-              <span class=" menu-ico-collapse"></span>
+            <a href="#submenu82" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu82" onclick="changeIcon('icon82')">
+              <h4 class="list-group-item-heading"><b>O que fazer se a conta de telefone apresentar registros não reconhecidos de minutos ou outras chamadas?
+              <ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon82"></i>
+              </ul>
+              </b></h4>
+              <span class="menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu82">
               <p class="list-group-item sub-item-text">O consumidor deverá entrar em contato com a operadora imediatamente, solicitando a verificação na linha e a regularização da mesma.<br>
               <br>
               Registrar sua reclamação e anotar o número do protocolo de atendimento, cujo o fornecimento é obrigação da prestadora, que deverá informar sobre o resultado da reclamação.</p>
             </div>
-
-
-            
-
-
-
-
             <div class="panel panel-footer"></div>
           </div>
         </body>
@@ -1147,6 +1161,7 @@
   </center>
 
 </html>
+
 
 
 
