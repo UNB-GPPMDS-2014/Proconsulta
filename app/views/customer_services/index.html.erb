@@ -1,28 +1,37 @@
-<center>
-	<h1>Lista de Atendimentos</h1>
-</center>
-<%= render 'layouts/searcher' %>
-<div class="span8">
-<center>
-<%= will_paginate %>
-<table border="1" style="width:100%" class="table" id="customer_services">
-	<tr>
-	    <th>Ano</th>
-	    <th>UF</th> 
-	    <th>ID</th>
-	    <th>Descrição</th>
-  	</tr>
-	<% @customer_services.each do |cs| %>
-  		<tr>
-  		<h6>
-	        <td><%= cs.year_customer_service %></td>
-	        <td><%= cs.uf_customer_service %></td>
-	        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
-	        <td><%= cs.description_problem_customer_service %></td>
-       	</tr>
-      	</h6>
-	<% end %>
-</table>
-<%= will_paginate %>
-</center>
-</div>
+<div>
+	<%= render 'layouts/searcher' %>
+	<center>
+		<h1>Lista de Atendimentos</h1>
+	</center>
+	<div class="span8">
+	<center>
+		<div class= "container">
+	<%= will_paginate %>
+	<table class="table table-striped" id="customer_services">
+		<thead>
+		<tr>
+		    <th>Ano</th>
+		    <th>UF</th> 
+		    <th>ID</th>
+		    <th>Descrição</th>
+		    <th colspan = "3"></th>
+	  	</tr>
+		</thead>
+		<tbody>
+			<% @customer_services.each do |cs| %>
+	  		<tr>
+	  		<h6>
+		        <td><%= cs.year_customer_service %></td>
+		        <td><%= cs.uf_customer_service %></td>
+		        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
+		        <td><%= cs.description_problem_customer_service %></td>
+	       	</tr>
+	      	</h6>
+		<% end %>
+		</tbody>
+	</table>
+	<%= will_paginate %>
+	</center>
+	</div>
+	</div>
+	</di
