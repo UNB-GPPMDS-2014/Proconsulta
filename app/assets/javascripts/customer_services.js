@@ -1,5 +1,17 @@
 (function()
 {
+	function custom_search(search, type_search, unities)
+	{
+		$.ajax({
+			url: "/customer_service/custom_search",
+			type: "GET",
+			data: { "search":search, "type_search":type_search, "unities":unities,"page":1 },
+			success : function(response) {
+				var html = "";
+				$("#customer_services").html(html);
+			}
+		});
+	}
 	$(document).ready(function()
 	{
 		$("#custom_search_button").click(function()
