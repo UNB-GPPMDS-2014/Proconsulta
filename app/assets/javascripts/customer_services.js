@@ -1,5 +1,18 @@
 (function()
 {
+	function build_row(data) 
+	{
+		var html = "<tr>";
+
+		html += "<td>Ano: "+data.year_customer_service+"</td>";
+		html += "<td>UF: "+data.uf_customer_service+"</td>";
+		html += "<td>ID: "+data.id+"</td>";
+		html += "<td>Desc: "+data.description_subject_customer_service+"</td>";
+
+		html += "</tr>";
+		return html;
+	}
+	
 	function custom_search(search, type_search, unities)
 	{
 		$.ajax(
