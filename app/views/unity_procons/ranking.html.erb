@@ -1,1 +1,21 @@
-RANKING
+<center>
+	<h1>Ranking</h1>
+</center>
+
+<%= render 'layouts/searcher' %>
+
+<center>
+	<div class="span8">
+		<% @unity_procons.each do |un| %>
+		    <h5>
+		      	<table border="1" style="width:100%">
+			      	<tr>
+				        Posição: <%= un.position_unity_procon %></td>
+	    			    id: <%= link_to un.id, '/unity_procons/'+un.id.to_s %>
+			        </tr>
+				</table>
+			</h5>	
+		<% end %>
+	</div>
+</center>
+

@@ -11,7 +11,7 @@ class UnityProconsController < ApplicationController
 	end
 
 	def ranking
-		
+		@unity_procons = UnityProcon.order(:position_unity_procon)
 	end
 
 end
