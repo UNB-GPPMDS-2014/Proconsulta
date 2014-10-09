@@ -1,18 +1,19 @@
 <center>
-	<h1>Lista de Fornecedores</h1>
+	<h1>Lista de Unidades do Procon</h1>
 </center>
 <%= render 'layouts/searcher' %>
-<div class="span8">
 <center>
+<div class="span8">
 <%= will_paginate %>
-<% @suppliers.each do |sup| %>
+<% @unity_procons.each do |un| %>
       <h5>
       	<table border="1" style="width:100%">
       	<tr>
-        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
-        - CNPJ: <%= sup.cnpj %></td>
+        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %>
+        - Endereço:: <%= un.address_unity_procon %></td>
       </tr>
       </h5>
+
 </table>
 <% end %>
 <%= will_paginate %>

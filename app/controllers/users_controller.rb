@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 	def new
 		@user = User.new
 	end	
-
+	# Create and associate one user to one id.
 	def create
 		@user = User.new(user_params)	
     	if @user.save
@@ -22,15 +22,15 @@ class UsersController < ApplicationController
       		render 'new'
     	end
 	end
-
+	# Show one especific user.
 	def show
 		@user = User.find(params[:id])
 	end
-
+	# Edit one user.
 	def edit
 		@user = User.find(params[:id])
 	end
-
+	# Update one edited user.
 	def update
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
       		render 'edit'
     	end
 	end
-	
+	# delete one user.
 	def destroy
 		@user = User.find(params[:id])
 		@user.destroy

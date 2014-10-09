@@ -42,9 +42,6 @@ describe UsersController, :type => :controller do
 	    	end
 		end
 
-		context "with invalid attributes" do
-		end
-
 	end
 
 	describe "GET edit" do
@@ -54,38 +51,11 @@ describe UsersController, :type => :controller do
 		end
 	end
 
-	describe "GET index" do
-		it "assigns all users as @users" do
-			user = User.create! valid_attributes
-			get :index, {}, valid_session
-			expect(assigns(:users)).to eq ([user])
-		end
-	end
-
-	describe "GET show" do
-		it "assigns all users as @users" do
-			user = User.create! valid_attributes
-			get :show, {}, valid_attributes
-			expect(assigns(:users)).to eq ([user])
-		end
-	end
-
 	describe "GET new" do
 		it "assigns all users as @users" do
 			get :new, {}, valid_session
 			expect(assigns(:user)).to be_a_new(User)
 		end
 	end
-
-	describe "POST create" do
-		describe "with valid params" do
-			it "creates a new User" do
-				expect {
-          			post :create, {:user => valid_attributes}, valid_session
-        			}.to change(User, :count).by(1)
-      		end
-      	end
-    end
-
 
 end
