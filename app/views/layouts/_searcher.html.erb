@@ -13,14 +13,18 @@
 			<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
 		</span>
-			<input type="text" name="pesquisa" size="50" maxlength="50">
+			<input type="text" name="pesquisa" size="50" maxlength="50" id="custom_search_text">
+			<input type="button" id="custom_search_button" value="Buscar" class="btn btn-primary" />
 			<br>
-			<input type="radio" name="pesquisa" value="CEP"> <b> CEP </b>
-			<br>
-			<input type="radio" name="pesquisa" value="Data"> <b> Data </b>
-			<br>
-			<input type="radio" name="pesquisa" value="Fornecedor"> <b> Fornecedor </b>
-			<br>
+			<label>
+				<input type="radio"  class="search_type" name="search_type" value="CEP" checked="checked" /> <b> CEP </b>
+			</label>
+			<label>
+				<input type="radio" class="search_type" name="search_type" value="year"> <b> Data </b>
+			</label>
+			<label>
+				<input type="radio" class="search_type" name="search_type" value="Fornecedor"> <b> Fornecedor </b>
+			</label>
 			<br>
 			<span style="color:#FFA500">
 			<b> Filtros </b>
