@@ -55,8 +55,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Lei de Acesso a Informação</div>
 
-            <a href="#submenu1" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu1">
-                <h4 class="list-group-item-heading"><b>Qual a finalidade da Lei de Acesso à Informação?</b></h4>
+            <a href="#submenu1" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu1" onclick="changeIcon('icon1')">
+                <h4 class="list-group-item-heading"><b>Qual a finalidade da Lei de Acesso à Informação?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon1"></i>
+                </ul></b></h4>
                 <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu1">
@@ -64,72 +66,90 @@
             </div>
 
 
-            <a href="#submenu2" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu2">
-              <h4 class="list-group-item-heading"><b>Quais órgãos estão subordinados à essa Lei?</b></h4>
+            <a href="#submenu2" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu2" onclick="changeIcon('icon2')">
+              <h4 class="list-group-item-heading"><b>Quais órgãos estão subordinados à essa Lei?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon2"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu2">
               <p class="list-group-item sub-item-text">Os órgãos da administração direta do Poder Executivo do Distrito Federal, a Câmara Legislativa do Distrito Federal e o Tribunal de Contas do Distrito Federal. As autarquias, fundações públicas, empresas públicas, sociedades de economia mista e demais entidades controladas direta ou indiretamente pelo Distrito Federal. No que couber, às entidades privadas sem fins lucrativos que recebam, para realização de ações de interesse público, recursos públicos diretamente do orçamento ou mediante subvenções sociais, contrato de gestão, termo de parceria, convênios, acordos, ajustes ou outros instrumentos congêneres.</p>
             </div>
 
-            <a href="#submenu3" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu3">
-              <h4 class="list-group-item-heading"><b>Quem pode solicitar informações?</b></h4>
+            <a href="#submenu3" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu3" onclick="changeIcon('icon3')">
+              <h4 class="list-group-item-heading"><b>Quem pode solicitar informações?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon3"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu3">
               <p class="list-group-item sub-item-text">Qualquer interessado poderá pedir acesso a informações aos órgãos e entidades, mediante preenchimento de um requerimento próprio que não poderá conter exigências que inviabilizem a solicitação.</p>
             </div>
 
-            <a href="#submenu4" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu4">
-              <h4 class="list-group-item-heading"><b>As informações dos órgãos ou entidades estarão centralizadas em um único local?</b></h4>
+            <a href="#submenu4" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu4" onclick="changeIcon('icon4')">
+              <h4 class="list-group-item-heading"><b>As informações dos órgãos ou entidades estarão centralizadas em um único local?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon4"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu4">
               <p class="list-group-item sub-item-text">Não. Cada órgão ou entidade será responsável pelo fornecimento das informações que estejam sob sua guarda ou que sejam produzidas por ele. Para obter as informações de um determinado órgão ou entidade, o requerente deverá dirigir seu pedido diretamente a esse órgão ou entidade.</p>
             </div>
 
-            <a href="#submenu5" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu5">
-              <h4 class="list-group-item-heading"><b>É necessário haver uma justificativa para o pedido?</b></h4>
+            <a href="#submenu5" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu5" onclick="changeIcon('icon5')">
+              <h4 class="list-group-item-heading"><b>É necessário haver uma justificativa para o pedido?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon5"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu5">
               <p class="list-group-item sub-item-text">Não. A Lei de Acesso à Informação veda quaisquer exigências relativas aos motivos determinantes da solicitação de informações de interesse público.</p>
             </div>
 
-            <a href="#submenu6" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu6">
-              <h4 class="list-group-item-heading"><b>Qual é o prazo para o fornecimento das informações?</b></h4>
+            <a href="#submenu6" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu6" onclick="changeIcon('icon6')">
+              <h4 class="list-group-item-heading"><b>Qual é o prazo para o fornecimento das informações?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon6"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu6">
               <p class="list-group-item sub-item-text">Se a informação requerida estiver disponível, órgão ou entidade deverá autorizar e conceder o acesso imediato à ela. Não sendo possível o acesso imediato, o órgão ou entidade terá o prazo máximo de 20 (vinte) dias para disponibilizá-la.</p>
             </div>
 
-            <a href="#submenu7" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu7">
-              <h4 class="list-group-item-heading"><b>O prazo para o fornecimento das informações poderá ser prorrogado?</b></h4>
+            <a href="#submenu7" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu7" onclick="changeIcon('icon7')">
+              <h4 class="list-group-item-heading"><b>O prazo para o fornecimento das informações poderá ser prorrogado?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon7"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu7">
               <p class="list-group-item sub-item-text">Sim. O prazo de 20 dias poderá ser prorrogado por mais 10 (dez) dias, mediante justificativa expressa, devendo o requerente ser cientificado.</p>
             </div>
 
-            <a href="#submenu8" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu8">
-              <h4 class="list-group-item-heading"><b>O acesso às informações solicitadas terá algum custo para o cidadão?</b></h4>
+            <a href="#submenu8" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu8" onclick="changeIcon('icon8')">
+              <h4 class="list-group-item-heading"><b>O acesso às informações solicitadas terá algum custo para o cidadão?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon8"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu8">
               <p class="list-group-item sub-item-text">Não. O serviço de busca e fornecimento da informação é gratuito, salvo nas hipóteses de reprodução de documentos, situação em que será cobrado exclusivamente o valor necessário ao ressarcimento do custo dos serviços e materiais utilizados.</p>
             </div>
 
-            <a href="#submenu9" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu9">
-              <h4 class="list-group-item-heading"><b>Todas as informações produzidas pelos órgãos e entidades estarão disponíveis para serem solicitadas?</b></h4>
+            <a href="#submenu9" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu9" onclick="changeIcon('icon9')">
+              <h4 class="list-group-item-heading"><b>Todas as informações produzidas pelos órgãos e entidades estarão disponíveis para serem solicitadas?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon9"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu9">
               <p class="list-group-item sub-item-text">De forma geral todas as informações produzidas ou custodiadas pelos órgãos/entidades do Poder Público Distrital deverão ser disponibilizadas, exceto aquelas que são consideradas imprescindíveis à segurança da sociedade ou do Estado, que poderão sofrer classificação.</p>
             </div>
 
-            <a href="#submenu10" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu10">
-              <h4 class="list-group-item-heading"><b>Quais as informações que são passíveis de classificação?</b></h4>
+            <a href="#submenu10" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu10" onclick="changeIcon('icon10')">
+              <h4 class="list-group-item-heading"><b>Quais as informações que são passíveis de classificação?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon10"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu10">
@@ -147,8 +167,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Ouvidoria</div>
              
-            <a href="#submenu11" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu11">
-              <h4 class="list-group-item-heading"><b>O que é uma Ouvidoria?</b>
+            <a href="#submenu11" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu11" onclick="changeIcon('icon11')">
+              <h4 class="list-group-item-heading"><b>O que é uma Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon11"></i>
+                </ul></b>
               </h4>
               <span class=" menu-ico-collapse"></span>
             </a>
@@ -157,8 +179,10 @@
             </div>
 
 
-            <a href="#submenu12" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu12">
-              <h4 class="list-group-item-heading"><b>Qual o papel da Ouvidoria?</b></h4>
+            <a href="#submenu12" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu12" onclick="changeIcon('icon12')">
+              <h4 class="list-group-item-heading"><b>Qual o papel da Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon12"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu12">
@@ -166,72 +190,90 @@
             </div>
 
 
-            <a href="#submenu13" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu13">
-              <h4 class="list-group-item-heading"><b>O que é uma Ouvidoria Especializada?</b></h4>
+            <a href="#submenu13" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu13" onclick="changeIcon('icon13')">
+              <h4 class="list-group-item-heading"><b>O que é uma Ouvidoria Especializada?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon13"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu13">
               <p class="list-group-item sub-item-text">A Ouvidoria Especializada é a unidade de ouvidoria instalada nos diversos órgãos e entidades que compõe o Governo do Distrito Federal e que possuem características e áreas de atuação especificas. Exemplos: Ouvidoria Especializada da Saúde: Ouvidoria criada na estrutura da Secretaria de Estado de Saúde, que tem como objetivo precípuo mediar conflitos entre os serviços prestados pela Secretaria de Estado de Saúde do Distrito Federal e a população que busca atendimento nos diversos Centros de Saúde e Hospitais públicos. Ouvidoria Especializada de Combate a Corrupção: Ouvidoria criada na estrutura da Secretaria de Estado de Transparência e Controle – STC, que realiza o registro e acompanhamento das denúncias que envolvem licitações e contratos. O atendimento e realizado pelo telefone 0800-644-9060 e ou presencial na Secretaria de Estado de Transparência e Controle. Ouvidoria Especializada no Atendimento ao Servidor Público do Governo do Distrito Federal, ouvidoria do Servidor – OUVISER, ouvidoria criada na estrutura da Secretaria de Estado de Administração Pública que tem como objetivo a defesa dos direitos do servidor do GDF, mantendo um canal direto de relacionamento com os órgãos ou entidades vinculadas ao Governo, com a missão de estimular o bom relacionamento entre os servidores, acolher sugestões, reclamações, denúncias e elogios. Ouvidoria Especializada das Administrações Regionais: Criada para atender as demandas de cada Região Administrativa do Distrito Federal.</p>
             </div>
 
-            <a href="#submenu14" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu14">
-              <h4 class="list-group-item-heading"><b>O que é uma manifestação de Ouvidoria?</b></h4>
+            <a href="#submenu14" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu14" onclick="changeIcon('icon14')">
+              <h4 class="list-group-item-heading"><b>O que é uma manifestação de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon14"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu14">
               <p class="list-group-item sub-item-text">É o registro realizado no sistema informatizado de Ouvidoria, que gera um número de atendimento, para acompanhamento das providências adotadas e resposta final.</p>
             </div>
 
-            <a href="#submenu15" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu15">
-              <h4 class="list-group-item-heading"><b>Quais as formas de registro das manifestações de Ouvidoria?</b></h4>
+            <a href="#submenu15" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu15" onclick="changeIcon('icon15')">
+              <h4 class="list-group-item-heading"><b>Quais as formas de registro das manifestações de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon15"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu15">
               <p class="list-group-item sub-item-text">Para o registro de manifestações de Ouvidoria você deverá ligar gratuitamente na Central de Atendimento Telefônico do GDF, no telefone nº 156, opção nº 1, pelo Portal do GDF, na Web no site www.gdf.df.gov.br e presencial nas Ouvidorias especializadas. Na Ouvidoria de Combate a Corrupção (denúncias que envolvem licitações e contratos), o atendimento e realizado pelo telefone 0800-644-9060 ou presencial na Secretaria de Estado de Transparência e Controle.</p>
             </div>
 
-            <a href="#submenu16" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu16">
-              <h4 class="list-group-item-heading"><b>Qual o horário de funcionamento da Central de Atendimentos?</b></h4>
+            <a href="#submenu16" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu16" onclick="changeIcon('icon16')">
+              <h4 class="list-group-item-heading"><b>Qual o horário de funcionamento da Central de Atendimentos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon16"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu16">
               <p class="list-group-item sub-item-text">O horário de atendimento telefônico da Central de Atendimentos 156 é das 7h às 21h.</p>
             </div>
 
-            <a href="#submenu17" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu17">
-              <h4 class="list-group-item-heading"><b>Quais os tipos de manifestação de Ouvidoria?</b></h4>
+            <a href="#submenu17" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu17" onclick="changeIcon('icon17')">
+              <h4 class="list-group-item-heading"><b>Quais os tipos de manifestação de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon17"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu17">
               <p class="list-group-item sub-item-text">Elogio: É a demonstração de apreço, reconhecimento ou satisfação para com o serviço recebido. Sugestão: É uma mensagem que apresenta uma ideia ou proposta para o aprimoramento dos processos de trabalho das unidades administrativas e/ou dos serviços prestados pelo GDF. Requisitos básicos para sua fundamentação: descrição do aprimoramento e a norma ou procedimento a ser alterado. Reclamação: É uma manifestação de desagrado ou o protesto sobre um serviço prestado, ação ou omissão da administração e/ou do servidor público e a existência ou ausência de norma reguladora. Requisitos básicos para sua fundamentação: detalhar a reclamação para facilitar a adoção de medidas junto ao órgão reclamado. Denúncia: É uma acusação contra ato, pessoa ou órgão que descumpre ou não observa a norma jurídica ou o devido procedimento legal que deveria ser observado ou ainda, o que causa prejuízo ou dano ao patrimônio público. Requisitos básicos para sua fundamentação: descrição da irregularidade que implique em lesão ou ameaças de lesão ao patrimônio público, fundamentação mínima capaz de permitir a apuração.</p>
             </div>
 
-            <a href="#submenu18" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu18">
-              <h4 class="list-group-item-heading"><b>Posso registrar uma manifestação de Ouvidoria de maneira anônima?</b></h4>
+            <a href="#submenu18" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu18" onclick="changeIcon('icon18')">
+              <h4 class="list-group-item-heading"><b>Posso registrar uma manifestação de Ouvidoria de maneira anônima?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon18"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu18">
               <p class="list-group-item sub-item-text">Sim, poderá realizar o registro, mas para tanto deverá observar algumas peculiaridades: A identificação é importante para que você receba uma resposta. Nesse caso, peça que seus dados sejam mantidos em sigilo. Caso opte pela denúncia anônima, há necessidade de que os fatos alegados contenham plausibilidade ou materialidade, isto é, indícios que levam à comprovação dos fatos por você denunciados. Não havendo elementos comprobatórios suficientes, a manifestação será arquivada e você ficará sem a resposta desejada.</p>
             </div>
 
-            <a href="#submenu19" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu19">
-              <h4 class="list-group-item-heading"><b>Quais são os requisitos mínimos que devem constar nas manifestações de Ouvidoria?</b></h4>
+            <a href="#submenu19" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu19" onclick="changeIcon('icon19')">
+              <h4 class="list-group-item-heading"><b>Quais são os requisitos mínimos que devem constar nas manifestações de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon19"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu19">
               <p class="list-group-item sub-item-text">Os requisitos básicos para que a denúncia seja investigada são: Quem fez? O que fez? Quando fez? Onde ocorreu e Como ocorreu o fato.</p>
             </div>
 
-            <a href="#submenu20" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu20">
-              <h4 class="list-group-item-heading"><b>Como é realizado o tratamento das Manifestações de Ouvidoria?</b></h4>
+            <a href="#submenu20" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu20" onclick="changeIcon('icon20')">
+              <h4 class="list-group-item-heading"><b>Como é realizado o tratamento das Manifestações de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon20"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu20">
               <p class="list-group-item sub-item-text">Ao receber sua manifestação, a Ouvidoria Geral encaminha à Ouvidoria Especializada responsável pelo serviço e esta deverá dar o tratamento adequado buscando responder o manifestante no menor tempo possível.</p>
             </div>
 
-            <a href="#submenu21" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu21">
-              <h4 class="list-group-item-heading"><b>Qual o prazo de respostas das Manifestações de Ouvidoria?</b></h4>
+            <a href="#submenu21" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu21" onclick="changeIcon('icon21')">
+              <h4 class="list-group-item-heading"><b>Qual o prazo de respostas das Manifestações de Ouvidoria?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon21"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu21">
@@ -252,8 +294,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Alimentos</div>
 
-            <a href="#submenu22" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu22">
-              <h4 class="list-group-item-heading"><b>O estabelecimento que aceita vale-refeição pode restringir data e horário para que o cartão seja utilizado?</b></h4>
+            <a href="#submenu22" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu22" onclick="changeIcon('icon22')">
+              <h4 class="list-group-item-heading"><b>O estabelecimento que aceita vale-refeição pode restringir data e horário para que o cartão seja utilizado?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon22"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu22">
@@ -263,8 +307,10 @@
             </div>
 
 
-            <a href="#submenu23" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu23">
-              <h4 class="list-group-item-heading"><b>Que informações são obrigatórias na rotulagem de alimentos?</b></h4>
+            <a href="#submenu23" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu23" onclick="changeIcon('icon23')">
+              <h4 class="list-group-item-heading"><b>Que informações são obrigatórias na rotulagem de alimentos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon23"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu23">
@@ -286,8 +332,10 @@
             </div>
 
 
-            <a href="#submenu24" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu24">
-              <h4 class="list-group-item-heading"><b>Comprei um alimento e após abrir verifiquei que estava estragado. O que fazer?</b></h4>
+            <a href="#submenu24" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu24" onclick="changeIcon('icon24')">
+              <h4 class="list-group-item-heading"><b>Comprei um alimento e após abrir verifiquei que estava estragado. O que fazer?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon24"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu24">
@@ -306,8 +354,10 @@
               O Código de Defesa do Consumidor prevê desta forma a reparação do dano ao consumidor, proporcionando a substituição do produto adquirido em condições inadequadas para o consumo.</p>
             </div>
 
-            <a href="#submenu25" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu25">
-              <h4 class="list-group-item-heading"><b>Tive problemas de saúde e suspeito que foram causados pelo produto. Posso reclamar?</b></h4>
+            <a href="#submenu25" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu25" onclick="changeIcon('icon25')">
+              <h4 class="list-group-item-heading"><b>Tive problemas de saúde e suspeito que foram causados pelo produto. Posso reclamar?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon25"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu25">
@@ -320,8 +370,10 @@
               Todos estes documentos (relatório médico, comprovantes das despesas e amostra do produto) são necessários para encaminhamento da reclamação que tem por objetivo identificar o que se chama de nexo causal, ou seja, comprovar que o problema de saúde alegado foi causado pelo consumo do produto.</p>
             </div>
 
-            <a href="#submenu26" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu26">
-              <h4 class="list-group-item-heading"><b>O que é necessário para registrar uma reclamação?</b></h4>
+            <a href="#submenu26" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu26" onclick="changeIcon('icon26')">
+              <h4 class="list-group-item-heading"><b>O que é necessário para registrar uma reclamação?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon26"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu26">
@@ -331,7 +383,9 @@
             </div>
 
             <a href="#submenu27" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu27">
-              <h4 class="list-group-item-heading"><b>Não concordo apenas com a troca do produto. Posso requerer indenização?</b></h4>
+              <h4 class="list-group-item-heading"><b>Não concordo apenas com a troca do produto. Posso requerer indenização?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon27"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu27">
@@ -356,8 +410,10 @@
               Em caso de dano moral, o consumidor deverá recorrer diretamente ao Poder Judiciário para pleitear a indenização. Vale ressaltar que não há como prever o sucesso da causa, já que a decisão será do Juiz de Direito que vai julgá-la.</p>
             </div>
 
-            <a href="#submenu28" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu28">
-              <h4 class="list-group-item-heading"><b>O PROCON realiza análise pra encaminhamento de pedido de indenização no Poder Judiciário?</b></h4>
+            <a href="#submenu28" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu28" onclick="changeIcon('icon28')">
+              <h4 class="list-group-item-heading"><b>O PROCON realiza análise pra encaminhamento de pedido de indenização no Poder Judiciário?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon28"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu28">
@@ -368,8 +424,10 @@
               Caso o consumidor pretenda registrar reclamação para encaminhamento judicial deverá buscar diretamente o Poder Judiciário requerendo a análise.</p>
             </div>
 
-            <a href="#submenu29" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu29">
-              <h4 class="list-group-item-heading"><b>O PROCON recebe produtos para análise?</b></h4>
+            <a href="#submenu29" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu29" onclick="changeIcon('icon29')">
+              <h4 class="list-group-item-heading"><b>O PROCON recebe produtos para análise?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon29"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu29">
@@ -398,8 +456,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Assuntos Financeiros</div>
             
-            <a href="#submenu30" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu30">
-              <h4 class="list-group-item-heading"><b>Os bancos podem estabelecer critérios diferenciados de atendimento a clientes e não clientes? </b></h4>
+            <a href="#submenu30" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu30" onclick="changeIcon('icon30')">
+              <h4 class="list-group-item-heading"><b>Os bancos podem estabelecer critérios diferenciados de atendimento a clientes e não clientes?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon30"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu30">
@@ -413,16 +473,20 @@
               • Cobram taxas para o pagamento de títulos, contas carnês, etc, além daquelas já previstas no próprio boleto etc.</p>
             </div>
 
-            <a href="#submenu31" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu31">
-              <h4 class="list-group-item-heading"><b>Os bancos podem exigir a aquisição de outros produtos ou serviços para manter uma conta?</b></h4>
+            <a href="#submenu31" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu31" onclick="changeIcon('icon31')">
+              <h4 class="list-group-item-heading"><b>Os bancos podem exigir a aquisição de outros produtos ou serviços para manter uma conta?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon31"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu31">
               <p class="list-group-item sub-item-text">Não. Essa prática é a chamada "Venda Casada", considerada abusiva e proibida legalmente pelo Código de Defesa do Consumidor em seu artigo 39, sendo combatida insistentemente pelos órgãos de defesa dos consumidores.</p>
             </div>
 
-            <a href="#submenu32" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu32">
-              <h4 class="list-group-item-heading"><b>Sou responsável por movimentação de terceiros no caso de roubo, furto ou extravio?</b></h4>
+            <a href="#submenu32" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu32" onclick="changeIcon('icon32')">
+              <h4 class="list-group-item-heading"><b>Sou responsável por movimentação de terceiros no caso de roubo, furto ou extravio?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon32"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu32">
@@ -433,8 +497,10 @@
               Para evitar problemas futuros é recomendável que a comunicação sobre a perda, furto ou roubo seja feita o mais rápido possível ao banco e as autoridades policiais, através de qualquer meio hábil. A orientação também é aplicável para casos envolvendo talões de cheques.</p>
             </div>
 
-            <a href="#submenu33" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu33">
-              <h4 class="list-group-item-heading"><b>O que pode ser cobrado pela devolução de um cheque sem fundos, pelo credor?</b></h4>
+            <a href="#submenu33" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu33" onclick="changeIcon('icon33')">
+              <h4 class="list-group-item-heading"><b>O que pode ser cobrado pela devolução de um cheque sem fundos, pelo credor?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon33"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu33">
@@ -445,16 +511,20 @@
               Caso o pagamento esteja vinculada a um contrato, deve-se verificar as regras nele constantes aplicáveis em razão da devolução do cheque.</p>
             </div>
 
-            <a href="#submenu34" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu34">
-              <h4 class="list-group-item-heading"><b>Como o consumidor deve proceder no caso de extravio, furto ou roubo do cartão de crédito?</b></h4>
+            <a href="#submenu34" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu34" onclick="changeIcon('icon34')">
+              <h4 class="list-group-item-heading"><b>Como o consumidor deve proceder no caso de extravio, furto ou roubo do cartão de crédito?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon34"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu34">
               <p class="list-group-item sub-item-text">O consumidor, ao verificar o extravio, furto ou roubo do cartão, deverá comunicar o fato à central de atendimento da administradora, o mais rápido possível, solicitando o bloqueio do mesmo, solicitar o número de protocolo do pedido formalizado anotando a data, horário e o nome do atendente. É importante também que seja lavrado um Boletim de Ocorrência (BO) sobre o fato, para afastar a responsabilidade sobre o uso indevido do mesmo.</p>
             </div>
 
-            <a href="#submenu35" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu35">
-              <h4 class="list-group-item-heading"><b>Como o consumidor deve proceder ao receber fatura da qual não reconhece algum lançamento?</b></h4>
+            <a href="#submenu35" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu35" onclick="changeIcon('icon35')">
+              <h4 class="list-group-item-heading"><b>Como o consumidor deve proceder ao receber fatura da qual não reconhece algum lançamento?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon35"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu35">
@@ -473,16 +543,20 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Bloqueio de Telemarketing</div>
 
-            <a href="#submenu57" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu57">
-              <h4 class="list-group-item-heading"><b>O que é o cadastro para o bloqueio do recebimento de ligações de telemarketing?</b></h4>
+            <a href="#submenu36" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu36" onclick="changeIcon('icon36')">
+              <h4 class="list-group-item-heading"><b>O que é o cadastro para o bloqueio do recebimento de ligações de telemarketing?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon36"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
-            <div class="collapse list-group-submenu" id="submenu57">
+            <div class="collapse list-group-submenu" id="submenu36">
               <p class="list-group-item sub-item-text">É um cadastro no qual os consumidores titulares de linha telefônica do Estado de São Paulo poderão inscrever os respectivos números e, assim, evitar o recebimento de chamadas das empresas de telemarketing ou dos fornecedores que se utilizam desta modalidade de oferta de produtos e serviços.</p>
             </div>
 
-            <a href="#submenu37" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu37">
-              <h4 class="list-group-item-heading"><b>Como funciona o cadastro?</b></h4>
+            <a href="#submenu37" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu37" onclick="changeIcon('icon37')">
+              <h4 class="list-group-item-heading"><b>Como funciona o cadastro?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon37"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu37">
@@ -491,32 +565,40 @@
               As empresas de telemarketing e os fornecedores que se utilizam deste serviço, antes de iniciar uma campanha, terão que previamente se cadastrar para então acessar a lista de telefones inscritos para os quais não poderão efetuar ligações.</p>
             </div>
 
-            <a href="#submenu38" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu38">
-              <h4 class="list-group-item-heading"><b>A inscrição do número de telefone bloqueia o recebimento das chamadas para doações?</b></h4>
+            <a href="#submenu38" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu38" onclick="changeIcon('icon38')">
+              <h4 class="list-group-item-heading"><b>A inscrição do número de telefone bloqueia o recebimento das chamadas para doações?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon38"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu38">
               <p class="list-group-item sub-item-text">Não. As entidades filantrópicas que se utilizam do telemarketing para angariar doações estão excluídas do cumprimento das regras do cadastro.</p>
             </div>
 
-            <a href="#submenu39" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu39">
-              <h4 class="list-group-item-heading"><b>Em quanto tempo após a inscrição no cadastro passa a ser proibido efetuar a ligação?</b></h4>
+            <a href="#submenu39" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu39" onclick="changeIcon('icon39')">
+              <h4 class="list-group-item-heading"><b>Em quanto tempo após a inscrição no cadastro passa a ser proibido efetuar a ligação?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon39"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu39">
               <p class="list-group-item sub-item-text">As empresas de telemarketing e os fornecedores de produtos ou serviços que se utilizam deste serviço não poderão ligar para o número de telefone após o 30º (trigésimo) dia da inscrição no cadastro. Ou seja, as empresas têm um prazo de 30 (trinta) dias para acessar o cadastro e excluir os números inscritos da sua lista de chamadas.</p>
             </div>
 
-            <a href="#submenu40" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu40">
-              <h4 class="list-group-item-heading"><b>Qual a consequência para a empresa que fizer uma ligação para um número inscrito no cadastro?</b></h4>
+            <a href="#submenu40" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu40" onclick="changeIcon('icon40')">
+              <h4 class="list-group-item-heading"><b>Qual a consequência para a empresa que fizer uma ligação para um número inscrito no cadastro?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon40"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu40">
               <p class="list-group-item sub-item-text">O fornecedor estará sujeito à multa administrativa, calculada de acordo com o art. 57, do Código de Defesa do Consumidor.</p>
             </div>
 
-            <a href="#submenu41" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu41">
-              <h4 class="list-group-item-heading"><b>As ligações de pesquisas de opinião, satisfação, entre outras, devem observar o bloqueio?</b></h4>
+            <a href="#submenu41" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu41" onclick="changeIcon('icon41')">
+              <h4 class="list-group-item-heading"><b>As ligações de pesquisas de opinião, satisfação, entre outras, devem observar o bloqueio?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon41"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu41">
@@ -525,11 +607,13 @@
               O propósito da ligação deverá ser esclarecido logo no início da chamada e o consumidor terá de se manifestar expressamente a favor do prosseguimento do contato. Não poderá ser feita, durante ou ao final do telefonema, qualquer oferta de novos produtos ou serviços.</p>
             </div>
 
-            <a href="#submenu42" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu41">
-              <h4 class="list-group-item-heading"><b>O bloqueio de telemarketing também abrange o envio de mensagens sms?</b></h4>
+            <a href="#submenu42" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu42" onclick="changeIcon('icon42')">
+              <h4 class="list-group-item-heading"><b>O bloqueio de telemarketing também abrange o envio de mensagens sms?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon42"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
-            <div class="collapse list-group-submenu" id="submenu41">
+            <div class="collapse list-group-submenu" id="submenu42">
               <p class="list-group-item sub-item-text">Não. O cadastro para bloqueio do recebimento de ligações de telemarketing, criado pela Lei 13.226/08, é restrito para ligações telefônicas realizadas por empresas de telemarketing ou fornecedores que se utilizam deste serviço, excluindo, assim, as mensagens de texto.<br>
               <br>
               Caso as mensagens recebidas sejam da operadora de telefonia celular, o consumidor poderá requerer a suspensão do recebimento no SAC da empresa, já que o artigo 6º, inciso XXIV da Resolução 477 da ANATEL (Agência Nacional de Telecomunicações) declara, como direito do usuário, o "não recebimento de mensagem de cunho publicitário da prestadora em sua Estação Móvel, salvo na hipótese de consentimento prévio".</p>
@@ -544,8 +628,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Produtos</div>
 
-            <a href="#submenu43" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu43">
-              <h4 class="list-group-item-heading"><b>O que é vício (defeito)?</b></h4>
+            <a href="#submenu43" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu43" onclick="changeIcon('icon43')">
+              <h4 class="list-group-item-heading"><b>O que é vício (defeito)?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon43"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu43">
@@ -561,8 +647,10 @@
             </div>
 
 
-            <a href="#submenu44" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu44">
-              <h4 class="list-group-item-heading"><b>O que é garantia legal? Qual o prazo?</b></h4>
+            <a href="#submenu44" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu44" onclick="changeIcon('icon44')">
+              <h4 class="list-group-item-heading"><b>O que é garantia legal? Qual o prazo?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon44"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu44">
@@ -580,8 +668,10 @@
             </div>
 
 
-            <a href="#submenu45" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu45">
-              <h4 class="list-group-item-heading"><b>O que é garantia contratual?</b></h4>
+            <a href="#submenu45" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu45" onclick="changeIcon('icon45')">
+              <h4 class="list-group-item-heading"><b>O que é garantia contratual?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon45"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu45">
@@ -591,8 +681,10 @@
               Ao adquirir o produto, sugerimos que verifique a entrega do termo da garantia contratual e se o prazo de cobertura previsto no termo confere com aquele informado pelo fornecedor.</p>
             </div>
 
-            <a href="#submenu46" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu46">
-              <h4 class="list-group-item-heading"><b>O que é garantia estendida?</b></h4>
+            <a href="#submenu46" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu46" onclick="changeIcon('icon46')">
+              <h4 class="list-group-item-heading"><b>O que é garantia estendida?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon46"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu46">
@@ -607,8 +699,10 @@
               <b>Atenção!</b> O consumidor não é obrigado a contratar a garantia estendida. Assim, sugerimos que leia atentamente o contrato antes de assiná-lo, verificando se a garantia estendida atenderá às suas necessidades.</p>
             </div>
 
-            <a href="#submenu47" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu47">
-              <h4 class="list-group-item-heading"><b>Qual a diferença entre assistência técnica autorizada e assistência técnica especializada?</b></h4>
+            <a href="#submenu47" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu47" onclick="changeIcon('icon47')">
+              <h4 class="list-group-item-heading"><b>Qual a diferença entre assistência técnica autorizada e assistência técnica especializada?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon47"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu47">
@@ -617,8 +711,10 @@
               A assistência técnica especializada é o estabelecimento comercial que presta serviços de manutenção, de forma onerosa, a determinados produtos, sem vínculo com o fabricante.</p>
             </div>
 
-            <a href="#submenu48" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu48">
-              <h4 class="list-group-item-heading"><b>Comprei um produto e este apresentou vício (defeito) ainda na garantia. O que faço?</b></h4>
+            <a href="#submenu48" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu48" onclick="changeIcon('icon48')">
+              <h4 class="list-group-item-heading"><b>Comprei um produto e este apresentou vício (defeito) ainda na garantia. O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon48"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu48">
@@ -639,8 +735,10 @@
               <b>Atenção!</b> O consumidor poderá fazer uso imediato das alternativas mencionadas sempre que não for possível a substituição das peças sem que o produto perca as suas características, qualidade ou valor, como por exemplo cosmético, produto de limpeza, colchão; ou em caso de produto essencial à vida, segurança e subsistência, como medicamento, aparelho para tratamento médico, alimento, fogão, microondas, geladeira e freezer.</p>
             </div>
 
-            <a href="#submenu49" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu49">
-              <h4 class="list-group-item-heading"><b>Tenho que pagar para enviar o produto para conserto na assistência técnica?</b></h4>
+            <a href="#submenu49" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu49" onclick="changeIcon('icon49')">
+              <h4 class="list-group-item-heading"><b>Tenho que pagar para enviar o produto para conserto na assistência técnica?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon49"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu49">
@@ -653,8 +751,10 @@
               Se o produto estiver no prazo da garantia contratual ou garantia estendida, deverá ser observado o que dispõe o termo de garantia.</p>
             </div>
 
-            <a href="#submenu50" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu50">
-              <h4 class="list-group-item-heading"><b>O produto retornou da assistência técnica autorizada antes de 30 dias. Porém, o vício (defeito) persiste ou voltou a ocorrer. O que faço?</b></h4>
+            <a href="#submenu50" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu50" onclick="changeIcon('icon50')">
+              <h4 class="list-group-item-heading"><b>O produto retornou da assistência técnica autorizada antes de 30 dias. Porém, o vício (defeito) persiste ou voltou a ocorrer. O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon50"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu50">
@@ -671,8 +771,10 @@
               Se a escolha for pela troca ou cancelamento da compra, o consumidor deverá devolver o produto para a assistência técnica autorizada, que deverá entregar a ordem de serviço. Se o produto foi reparado na residência, o consumidor deverá recorrer ao atendimento do fornecedor, anotando o número do protocolo de atendimento ou data, hora e nome do funcionário que fizer o atendimento.</p>
             </div>
 
-            <a href="#submenu51" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu51">
-              <h4 class="list-group-item-heading"><b>Sou obrigado a aceitar o produto consertado após os 30 dias?</b></h4>
+            <a href="#submenu51" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu51" onclick="changeIcon('icon51')">
+              <h4 class="list-group-item-heading"><b>Sou obrigado a aceitar o produto consertado após os 30 dias?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon51"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu51">
@@ -689,8 +791,10 @@
               Sugerimos que comunique a sua opção ao fornecedor guardando um comprovante. Se entregar carta, protocole uma via. Se optar pelo correio, envie com aviso de recebimento. Se o contato for por telefone, anote o número do protocolo ou data, hora e o nome do funcionário que fizer o atendimento. Se enviar e-mail imprima a mensagem. Por fax, guarde o pedido com o comprovante da remessa.</p>
             </div>
 
-            <a href="#submenu52" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu52">
-              <h4 class="list-group-item-heading"><b>O produto está fora da garantia e apresentou vício (defeito). O que faço?</b></h4>
+            <a href="#submenu52" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu52" onclick="changeIcon('icon52')">
+              <h4 class="list-group-item-heading"><b>O produto está fora da garantia e apresentou vício (defeito). O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon52"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu52">
@@ -703,8 +807,10 @@
               Se o orçamento for aprovado, prevalecerão as condições nele estabelecidas. Entretanto, uma vez recusado, o produto deverá ser restituído tal e qual foi entregue. Lembramos que eventual cobrança pelo orçamento só poderá ser feita se comunicada e aceita previamente pelo consumidor.</p>
             </div>
 
-            <a href="#submenu53" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu53">
-              <h4 class="list-group-item-heading"><b>Não recebi o produto na data prometida. O que faço?</b></h4>
+            <a href="#submenu53" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu53" onclick="changeIcon('icon53')">
+              <h4 class="list-group-item-heading"><b>Não recebi o produto na data prometida. O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon53"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu53">
@@ -728,8 +834,10 @@
               Sugerimos que comunique a sua opção ao fornecedor guardando um comprovante. Se entregar carta, protocole uma via. Se optar pelo correio, envie com aviso de recebimento. Se o contato for por telefone, anote o número do protocolo e o nome do funcionário que fizer o atendimento. Se enviar e-mail imprima a mensagem. Por fax, guarde o pedido com o comprovante da remessa.</p>
             </div>
 
-            <a href="#submenu54" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu54">
-              <h4 class="list-group-item-heading"><b>O que fazer quando o fornecedor não entrega o produto, entrega incompleto ou diferente?</b></h4>
+            <a href="#submenu54" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu54" onclick="changeIcon('icon54')">
+              <h4 class="list-group-item-heading"><b>O que fazer quando o fornecedor não entrega o produto, entrega incompleto ou diferente?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon54"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu54">
@@ -744,8 +852,10 @@
               Sugerimos que comunique a sua opção ao fornecedor guardando um comprovante. Se entregar carta, protocole uma via. Se optar pelo correio, envie com aviso de recebimento. Se o contato for por telefone, anote o número do protocolo e o nome do funcionário que fizer o atendimento. Se enviar e-mail imprima a mensagem. Por fax, guarde o pedido com o comprovante da remessa.</p>
             </div>
 
-            <a href="#submenu55" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu55">
-              <h4 class="list-group-item-heading"><b>Em quais situações posso cancelar a compra do produto?</b></h4>
+            <a href="#submenu55" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu55" onclick="changeIcon('icon55')">
+              <h4 class="list-group-item-heading"><b>Em quais situações posso cancelar a compra do produto?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon55"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu55">
@@ -760,8 +870,10 @@
               Para as demais situações, o cancelamento da compra será liberalidade do fornecedor.</p>
             </div>
 
-            <a href="#submenu56" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu56">
-              <h4 class="list-group-item-heading"><b>Cancelei a compra e meu nome foi negativado. O que faço?</b></h4>
+            <a href="#submenu56" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu56" onclick="changeIcon('icon56')">
+              <h4 class="list-group-item-heading"><b>Cancelei a compra e meu nome foi negativado. O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon56"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu56">
@@ -772,8 +884,10 @@
               "O consumidor, sempre que encontrar inexatidão nos seus dados e cadastros, poderá exigir sua imediata correção, devendo o arquivista, no prazo de cinco dias úteis, comunicar a alteração aos eventuais destinatários das informações incorretas".</p>
             </div>
 
-            <a href="#submenu57" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu57">
-              <h4 class="list-group-item-heading"><b>O produto financiado foi roubado/furtado. Sou obrigado a pagar as prestações?</b></h4>
+            <a href="#submenu57" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu57" onclick="changeIcon('icon57')">
+              <h4 class="list-group-item-heading"><b>O produto financiado foi roubado/furtado. Sou obrigado a pagar as prestações?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon57"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu57">
@@ -784,8 +898,10 @@
               Não existe qualquer vínculo do fornecedor com o roubo/furto do bem. Dessa forma, a obrigação do consumidor cumprir com o pagamento das prestações restantes, incluindo os encargos financeiros referentes ao parcelamento, permanece.</p>
             </div>
 
-            <a href="#submenu58" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu58">
-              <h4 class="list-group-item-heading"><b> O produto foi anunciado por um preço, mas no momento da compra constava outro. O que faço?</b></h4>
+            <a href="#submenu58" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu58" onclick="changeIcon('icon58')">
+              <h4 class="list-group-item-heading"><b> O produto foi anunciado por um preço, mas no momento da compra constava outro. O que faço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon58"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu58">
@@ -802,8 +918,10 @@
               Porém, existem casos em que se constata claramente que houve engano na informação relativa ao preço, por ser ele incompatível com o produto anunciado. Nestas situações, não caberá a exigência do cumprimento à oferta, pois esse procedimento estaria em desacordo com o artigo 4º do Código de Defesa do Consumidor, que dispõe como um dos objetivos da política nacional das relações de consumo, a harmonização dos interesses entre fornecedores e consumidores, com base na boa fé e equilíbrio dessas relações.</p>
             </div>
 
-            <a href="#submenu59" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu59">
-              <h4 class="list-group-item-heading"><b>A loja pode vender peças de mostruário? Há garantia para esses produtos?</b></h4>
+            <a href="#submenu59" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu59" onclick="changeIcon('icon59')">
+              <h4 class="list-group-item-heading"><b>A loja pode vender peças de mostruário? Há garantia para esses produtos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon59"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu59">
@@ -812,8 +930,10 @@
               Para os vícios informados previamente não caberá a garantia legal ou garantia contratual. Porém, se o produto apresentar algum vício não relacionado na nota fiscal no ato da compra, o consumidor poderá exigir o reparo no prazo de garantia legal ou garantia contratual, se houver.</p>
             </div>
 
-            <a href="#submenu60" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu60">
-              <h4 class="list-group-item-heading"><b>O produto adquirido fora do Brasil apresentou vício (defeito). O fabricante é obrigado a consertá-lo?</b></h4>
+            <a href="#submenu60" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu60" onclick="changeIcon('icon60')">
+              <h4 class="list-group-item-heading"><b>O produto adquirido fora do Brasil apresentou vício (defeito). O fabricante é obrigado a consertá-lo?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon60"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu60">
@@ -830,8 +950,10 @@
               III - o abatimento proporcional no preço".</p>
             </div>
 
-            <a href="#submenu61" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu61">
-              <h4 class="list-group-item-heading"><b>Qual o prazo de arrependimento para as compras realizadas via internet ou telefone?</b></h4>
+            <a href="#submenu61" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu61" onclick="changeIcon('icon61')">
+              <h4 class="list-group-item-heading"><b>Qual o prazo de arrependimento para as compras realizadas via internet ou telefone?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon61"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu61">
@@ -852,8 +974,10 @@
               Para exercer o direito de arrependimento, o consumidor deve formalizar o pedido ao fornecedor. Se entregar carta, protocole uma via. Se optar pelo correio, envie com aviso de recebimento. Se o contato for por telefone, anote o número do protocolo e o nome do funcionário que fizer o atendimento. Se enviar e-mail imprima a mensagem. Por fax, guarde o pedido com o comprovante da remessa.</p>
             </div>
 
-            <a href="#submenu62" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu62">
-              <h4 class="list-group-item-heading"><b>É correto os fornecedores cobrarem pelo desbloqueio do aparelho celular?</b></h4>
+            <a href="#submenu62" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu62" onclick="changeIcon('icon62')">
+              <h4 class="list-group-item-heading"><b>É correto os fornecedores cobrarem pelo desbloqueio do aparelho celular?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon62"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu62">
@@ -879,8 +1003,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Saúde</div>
 
-            <a href="#submenu63" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu63">
-              <h4 class="list-group-item-heading"><b>Quais os documentos necessários para registrar reclamação no PROCON sobre Planos de Saúde?</b></h4>
+            <a href="#submenu63" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu63" onclick="changeIcon('icon63')">
+              <h4 class="list-group-item-heading"><b>Quais os documentos necessários para registrar reclamação no PROCON sobre Planos de Saúde?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon63"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu63">
@@ -895,8 +1021,10 @@
               Somente com a análise da documentação o técnico do PROCON poderá indicar ao consumidor se a conduta da operadora é irregular. </p>
             </div>
 
-            <a href="#submenu64" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu64">
-              <h4 class="list-group-item-heading"><b>No caso de não concluir o tratamento tenho direito a devolução do valor pago?</b></h4>
+            <a href="#submenu64" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu64" onclick="changeIcon('icon64')">
+              <h4 class="list-group-item-heading"><b>No caso de não concluir o tratamento tenho direito a devolução do valor pago?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon64"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu64">
@@ -905,8 +1033,10 @@
               A retenção integral do valor pelo fornecedor sem que o serviço tenha sido prestado em sua integralidade é considerada prática abusiva.</p>
             </div>
 
-            <a href="#submenu65" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu65">
-              <h4 class="list-group-item-heading"><b>O que deve ser observado durante todo o tratamento?</b></h4>
+            <a href="#submenu65" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu65" onclick="changeIcon('icon65')">
+              <h4 class="list-group-item-heading"><b>O que deve ser observado durante todo o tratamento?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon65"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu65">
@@ -915,8 +1045,10 @@
               Se o tratamento envolver aplicação de medicamentos, certifique-se do acompanhamento de um profissional capacitado e fique atento a qualquer alteração ou sintoma, comunicando o responsável pelo tratamento se observar reações diversas das esperadas e informadas no ato da contratação.</p>
             </div>
 
-            <a href="#submenu66" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu66">
-              <h4 class="list-group-item-heading"><b>Que cuidados devemos ter para evitar a compra de medicamentos falsificados?</b></h4>
+            <a href="#submenu66" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu66" onclick="changeIcon('icon66')">
+              <h4 class="list-group-item-heading"><b>Que cuidados devemos ter para evitar a compra de medicamentos falsificados?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon66"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu66">
@@ -933,8 +1065,10 @@
               <b>Todo medicamento deve conter bula e esta deve ser sempre original, jamais cópia.</b></p>
             </div>
 
-            <a href="#submenu67" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu67">
-              <h4 class="list-group-item-heading"><b>O que são os medicamentos chamados de genéricos?</b></h4>
+            <a href="#submenu67" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu67" onclick="changeIcon('icon67')">
+              <h4 class="list-group-item-heading"><b>O que são os medicamentos chamados de genéricos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon67"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu67">
@@ -947,16 +1081,20 @@
               Para ser comercializado, o medicamento genérico tem que ser autorizado pelo Poder Público, sendo necessária sua aprovação após a realização de testes de bioequivalência (avalia a relação entre sua composição e os efeitos que produz) e de biodisponibilidade (avalia o tempo e a forma de absorção da droga), que possam comprovar que esse apresenta as mesmas características do remédio de referência.</p>
             </div>
 
-            <a href="#submenu68" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu68">
-              <h4 class="list-group-item-heading"><b>Como identificar o medicamento genérico?</b></h4>
+            <a href="#submenu68" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu68" onclick="changeIcon('icon68')">
+              <h4 class="list-group-item-heading"><b>Como identificar o medicamento genérico?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon68"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu68">
               <p class="list-group-item sub-item-text">O medicamento genérico deve apresentar na sua embalagem, logo abaixo do nome do princípio ativo que o identifica a frase "Medicamento Genérico - Lei 9787/99". Além disso, os genéricos devem ser identificados por uma letra "G" azul impressa sobre uma tarja amarela situada na parte inferior das embalagens do produto.</p>
             </div>
 
-            <a href="#submenu69" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu69">
-              <h4 class="list-group-item-heading"><b>Como fazer para cancelar o meu contrato de plano de saúde?</b></h4>
+            <a href="#submenu69" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu69" onclick="changeIcon('icon69')">
+              <h4 class="list-group-item-heading"><b>Como fazer para cancelar o meu contrato de plano de saúde?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon69"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu69">
@@ -965,8 +1103,10 @@
               A COMUNICAÇÃO POR ESCRITO É MUITO IMPORTANTE PARA QUE O CONSUMIDOR EVITE COBRANÇAS FUTURAS, CASO O SEU CONTRATO PERMANEÇA EM ABERTO.</p>
             </div>
 
-            <a href="#submenu70" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu70">
-              <h4 class="list-group-item-heading"><b>Em que situação as operadoras de planos poderão suspender ou rescindir contratos?</b></h4>
+            <a href="#submenu70" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu70" onclick="changeIcon('icon70')">
+              <h4 class="list-group-item-heading"><b>Em que situação as operadoras de planos poderão suspender ou rescindir contratos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon70"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu70">
@@ -982,8 +1122,10 @@
               As operadoras têm efetuado as cobranças desse período, mesmo que o consumidor não tenha se utilizado do serviço. Portanto, é importante lembrar, que o não pagamento das mensalidades não implica no cancelamento imediato do contrato. </p>
             </div>
 
-            <a href="#submenu71" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu71">
-              <h4 class="list-group-item-heading"><b>Qual o valor máximo de reajuste de plano de saúde que pode ser aplicado por mudança de faixa etária?</b></h4>
+            <a href="#submenu71" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu71" onclick="changeIcon('icon71')">
+              <h4 class="list-group-item-heading"><b>Qual o valor máximo de reajuste de plano de saúde que pode ser aplicado por mudança de faixa etária?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon71"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu71">
@@ -994,8 +1136,10 @@
               <b>Para os contratos celebrados antes da Lei 9656/98 (contratos antigos)</b>, as variações de faixa etária são definidas pelo contrato, uma vez que as operadoras não são obrigadas a seguir os critérios definidos na nova lei. Sempre que essas informações não estiverem claras, ou o reajuste aplicado for diferente do indicado no contrato, o consumidor poderá procurar um órgão de defesa do consumidor para análise e tomada de providências caso a irregularidade seja confirmada.</p>
             </div>
 
-            <a href="#submenu72" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu72">
-              <h4 class="list-group-item-heading"><b>O filho adotivo tem direito a ser dependente no Plano de Saúde?</b></h4>
+            <a href="#submenu72" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu72" onclick="changeIcon('icon72')">
+              <h4 class="list-group-item-heading"><b>O filho adotivo tem direito a ser dependente no Plano de Saúde?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon72"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu72">
@@ -1014,8 +1158,10 @@
           <div class="panel panel-warning">
             <div class="panel-heading">Perguntas Frequentes sobre Serviços Essenciais</div>
 
-            <a href="#submenu73" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu73">
-              <h4 class="list-group-item-heading"><b>Em um terreno que possue várias casas é necessário a instalação de hidrômetro para cada imóvel?</b></h4>
+            <a href="#submenu73" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu73" onclick="changeIcon('icon73')">
+              <h4 class="list-group-item-heading"><b>Em um terreno que possue várias casas é necessário a instalação de hidrômetro para cada imóvel?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon73"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu73">
@@ -1024,8 +1170,10 @@
               Por outro lado, caso seja do interesse do consumidor colocar um hidrômetro para cada casa, deverá solicitar tal serviço junto à agência de atendimento da concessionária, onde solicitará, mediante protocolo, vistoria para estudo de instalação de cavalete múltiplo. Depois que a empresa realizar a vistoria no imóvel a fim de verificar a possibilidade de atendimento do pedido, e caso positivo, deverá o consumidor exigir orçamento prévio por escrito discriminando o valor da mão-de-obra, dos materiais e equipamentos a serem utilizados, as condições de pagamento, as datas de início e término do serviço, enfim, todas as condições necessárias à sua execução. Somente após aprovação, também por escrito, do orçamento por parte do consumidor é que a empresa poderá iniciar a execução do serviço.</p>
             </div>
 
-            <a href="#submenu74" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu74">
-              <h4 class="list-group-item-heading"><b>Quais as orientações gerais que o consumidor dos serviços de água e esgoto deve observar? </b></h4>
+            <a href="#submenu74" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu74" onclick="changeIcon('icon74')">
+              <h4 class="list-group-item-heading"><b>Quais as orientações gerais que o consumidor dos serviços de água e esgoto deve observar?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon74"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu74">
@@ -1040,8 +1188,10 @@
               <b>A água , produto essencial ao ser humano, deve ser utilizada criteriosamente evitando desperdícios.</b></p>
             </div>
 
-            <a href="#submenu75" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu75">
-              <h4 class="list-group-item-heading"><b>Como proceder em caso de dúvidas quanto ao funcionamento do medidor de energia elétrica? </b></h4>
+            <a href="#submenu75" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu75" onclick="changeIcon('icon75')">
+              <h4 class="list-group-item-heading"><b>Como proceder em caso de dúvidas quanto ao funcionamento do medidor de energia elétrica?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon75"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu75">
@@ -1052,8 +1202,10 @@
               É direito do consumidor solicitar da empresa a aferição de seu relógio ou a troca do mesmo. Cabe lembrar que tal serviço será cobrado quando não houver irregularidades no aparelho, portanto, ao solicitar o serviço consulte o valor a ser cobrado. </p>
             </div>
 
-            <a href="#submenu76" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu76">
-              <h4 class="list-group-item-heading"><b>O que pode acontecer quando o medidor abastece mais de um imóvel?</b></h4>
+            <a href="#submenu76" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu76" onclick="changeIcon('icon76')">
+              <h4 class="list-group-item-heading"><b>O que pode acontecer quando o medidor abastece mais de um imóvel?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon76"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu76">
@@ -1064,8 +1216,10 @@
               Para solicitar a instalação de mais de um medidor, o consumidor deverá consultar a empresa concessionária. </p>
             </div>
 
-            <a href="#submenu77" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu77">
-              <h4 class="list-group-item-heading"><b>O que fazer quando a concessionária de energia desliga o fornecimento sem haver débitos?</b></h4>
+            <a href="#submenu77" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu77" onclick="changeIcon('icon77')">
+              <h4 class="list-group-item-heading"><b>O que fazer quando a concessionária de energia desliga o fornecimento sem haver débitos?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon77"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu77">
@@ -1076,8 +1230,10 @@
               Algumas decisões judiciais têm determinado que os serviços essenciais não podem ser objeto de desligamento/corte, devendo ser mantido e a cobrança de eventuais débitos realizada nos termos previstos em lei.</p>
             </div>
 
-            <a href="#submenu78" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu78">
-              <h4 class="list-group-item-heading"><b>O que fazer quando o fornecimento é interrompido, sem comunicação, mesmo com pagamento em dia?</b></h4>
+            <a href="#submenu78" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu78" onclick="changeIcon('icon78')">
+              <h4 class="list-group-item-heading"><b>O que fazer quando o fornecimento é interrompido, sem comunicação, mesmo com pagamento em dia?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon78"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu78">
@@ -1086,8 +1242,10 @@
               Neste caso, o consumidor terá direito a um crédito, a título de indenização, consistente no dobro do valor estabelecido para o serviço de religa de urgência ou 20% do valor líquido da primeira fatura emitida após a religação (o que for maior entre os dois) a ser creditado na primeira fatura, após a religação, sem prejuízo de pedido de ressarcimento de eventuais danos causados pela suspensão indevida do serviço.</p>
             </div>
 
-            <a href="#submenu79" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu79">
-              <h4 class="list-group-item-heading"><b>Como devo proceder se houver, na minha fatura de energia, cobranças que não reconheço?</b></h4>
+            <a href="#submenu79" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu79" onclick="changeIcon('icon79')">
+              <h4 class="list-group-item-heading"><b>Como devo proceder se houver, na minha fatura de energia, cobranças que não reconheço?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon79"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu79">
@@ -1096,8 +1254,10 @@
               Caso seja reconhecido valores à maior, a concessionária deverá, conforme artigo 88 da Resolução 456 da ANEEL, devolver o que foi pago indevidamente na fatura seguinte ou nas próximas faturas, por opção do consumidor.</p>
             </div>
 
-            <a href="#submenu80" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu80">
-              <h4 class="list-group-item-heading"><b>O que fazer quando a queda de energia elétrica danifica o aparelho elétrico?</b></h4>
+            <a href="#submenu80" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu80" onclick="changeIcon('icon80')">
+              <h4 class="list-group-item-heading"><b>O que fazer quando a queda de energia elétrica danifica o aparelho elétrico?<ul class="nav pull-right">
+                <i class="icon icon-chevron-down" id="icon80"></i>
+                </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu80">
@@ -1123,11 +1283,9 @@
             </div>
 
             <a href="#submenu81" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu81" onclick="changeIcon('icon81')">
-              <h4 class="list-group-item-heading"> <b>Em caso de clonagem do telefone celular, a operadora pode exigir a compra de outro aparelho com troca de número?
-              <ul class="nav pull-right">
+              <h4 class="list-group-item-heading"> <b>Em caso de clonagem do telefone celular, a operadora pode exigir a compra de outro aparelho com troca de número?<ul class="nav pull-right">
                 <i class="icon icon-chevron-down" id="icon81"></i>
-              </ul>
-              </b></h4>
+              </ul></b></h4>
               <span class=" menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu81">
@@ -1137,11 +1295,9 @@
             </div>
 
             <a href="#submenu82" class="list-group-item sub-item" data-toggle="collapse" data-parent="#submenu82" onclick="changeIcon('icon82')">
-              <h4 class="list-group-item-heading"><b>O que fazer se a conta de telefone apresentar registros não reconhecidos de minutos ou outras chamadas?
-              <ul class="nav pull-right">
+              <h4 class="list-group-item-heading"><b>O que fazer se a conta de telefone apresentar registros não reconhecidos de minutos ou outras chamadas?<ul class="nav pull-right">
                 <i class="icon icon-chevron-down" id="icon82"></i>
-              </ul>
-              </b></h4>
+              </ul></b></h4>
               <span class="menu-ico-collapse"></span>
             </a>
             <div class="collapse list-group-submenu" id="submenu82">
@@ -1157,7 +1313,7 @@
   </div>
 
   <center>
-    <h3><a href="https://www.google.com.br/?gfe_rd=cr&ei=NdkzVOSYJ4mO8waAnoC4Dg&gws_rd=ssl#q=PROCON%3A+Perguntas+frequentes"><span style="color:#FFA500">Não encontrou sua pergunta? </span></a></h3>
+    <h3><a href=""><span style="color:#FFA500">Não encontrou sua pergunta? </span></a></h3>
   </center>
 
 </html>
