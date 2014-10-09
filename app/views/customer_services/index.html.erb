@@ -1,83 +1,107 @@
 <div class="container-fluid">
-<div class="row-fluid">
-<div class="span5">
-	<body style= "width:1200px">
-	<h3>PROCURE ATENDIMENTOS</br></h3>
-	<span style="color:#FFA500">
-	<b> Busca Textual </b><br>
+	<div class="row-fluid">
+		<div class="span5">
+			<body style= "width:1200px">
+				<h3>PROCURE ATENDIMENTOS</br></h3>
+				<span style="color:#FFA500">
+					<b> Busca Textual </b><br>
 
+						<% # = form_tag('/customer_services/', method: :get) %>
+						<% # input type="text" name=idteste> %>
+						<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
+				</span>
+				<input type="text" name="pesquisa" size="50" maxlength="50">
+				<br>
+				<input type="radio" name="pesquisa" value="CEP"> <b> CEP </b>
+				<br>
+				<input type="radio" name="pesquisa" value="Data"> <b> Data </b>
+				<br>
+				<input type="radio" name="pesquisa" value="Fornecedor"> <b> Fornecedor </b>
+				<br>
+				<br>
+				<span style="color:#FFA500">
+					<b> Filtros </b>
+					<br>
+				</span>
 
-		<% # = form_tag('/customer_services/', method: :get) %>
-		<% # input type="text" name=idteste> %>
-		<% # = submit_tag "Pesquisar", class:"form_submit" %>
+				<font style="padding-left: 10px;">
+					<b> Regiões </b>
+				</font>
+				<br>
+				<font style="padding-left: 20px;">
+					<b>
+					<input type="checkbox" name="Norte"> Norte
+					<input type="checkbox" name="Nordeste"> Nordeste
+					<input type="checkbox" name="Sul"> Sul
+					<input type="checkbox" name="Centro-Oeste"> Centro-Oeste
+					<input type="checkbox" name="Sudeste"> Sudeste
+					</b>
+				</font>
+				<br>
+				<br>
 
-	</span>
-	<input type="text" name="pesquisa" size="50" maxlength="50">
-	<br>
-	<input type="radio" name="pesquisa" value="CEP"> <b> CEP </b>
-	<br>
-	<input type="radio" name="pesquisa" value="Data"> <b> Data </b>
-	<br>
-	<input type="radio" name="pesquisa" value="Fornecedor"> <b> Fornecedor </b>
-	<br>
-	<br>
-	<span style="color:#FFA500">
-	<b> Filtros </b>
-	<br>
-	</span>
+				<font style="padding-left: 10px;">
+					<b> Unidades Federativas </b>
+				</font>
+				<br>
 
-	<font style="padding-left: 10px;">
-	<b> Regiões </b></font>
-	<br>
-	<font style="padding-left: 20px;">
-	<b>
-	<input type="checkbox" name="Norte"> Norte
-	<input type="checkbox" name="Nordeste"> Nordeste
-	<input type="checkbox" name="Sul"> Sul
-	<input type="checkbox" name="Centro-Oeste"> Centro-Oeste
-	<input type="checkbox" name="Sudeste"> Sudeste
-	</b></font>
-	<br>
-	<br>
+				<font style="padding-left: 20px;">
+					<b>
+					<input type="checkbox" name="RN"> SIGLA
+					<input type="checkbox" name="PB"> SIGLA
+					<input type="checkbox" name="Sul"> SIGLA
+					<input type="checkbox" name="Centro-Oeste"> SIGLA
+					<input type="checkbox" name="Sudeste"> SIGLA
+				</font>
+				<br>
+				<br>
 
-	<font style="padding-left: 10px;">
-	<b> Unidades Federativas </b></font>
-	<br>
+				<font style="padding-left: 10px;">
+					<b> Tipos de Atendimento </b>
+				</font>
+				<br>
 
-	<font style="padding-left: 20px;">
-	<b>
-	<input type="checkbox" name="RN"> SIGLA
-	<input type="checkbox" name="PB"> SIGLA
-	<input type="checkbox" name="Sul"> SIGLA
-	<input type="checkbox" name="Centro-Oeste"> SIGLA
-	<input type="checkbox" name="Sudeste"> SIGLA
-	</font>
-	<br>
-	<br>
-
-	<font style="padding-left: 10px;">
-	<b> Tipos de Atendimento </b></font>
-	<br>
-
-	<div style="padding-left:20px">
-		<input type="checkbox" name="Simples Consulta"> Simples Consulta
-		<br>
-		<input type="checkbox" name="Atendimento Preliminar"> Atendimento Preliminar
-		<br>
-		<input type="checkbox" name="Carta de Informações Preliminares"> Carta de Informações Preliminares
-		<br>
-		<input type="checkbox" name="Cálculo"> Cálculo
-		<br>
-		<input type="checkbox" name="Juizado Especial Civel"> Juizado Especial Civel
-		<br>
-		<input type="checkbox" name="Encaminhamento a Fiscalização"> Encaminhamento a Fiscalização
-		<br>
-		<input type="checkbox" name="Abertura Direta de Reclamação"> Abertura Direta de Reclamação
-		<br>
-		<input type="checkbox" name="Reclamação de Ofício"> Reclamação de Ofício
-		</b>
+				<div style="padding-left:20px">
+					<input type="checkbox" name="Simples Consulta"> Simples Consulta
+					<br>
+					<input type="checkbox" name="Atendimento Preliminar"> Atendimento Preliminar
+					<br>
+					<input type="checkbox" name="Carta de Informações Preliminares"> Carta de Informações Preliminares
+					<br>
+					<input type="checkbox" name="Cálculo"> Cálculo
+					<br>
+					<input type="checkbox" name="Juizado Especial Civel"> Juizado Especial Civel
+					<br>
+					<input type="checkbox" name="Encaminhamento a Fiscalização"> Encaminhamento a Fiscalização
+					<br>
+					<input type="checkbox" name="Abertura Direta de Reclamação"> Abertura Direta de Reclamação
+					<br>
+					<input type="checkbox" name="Reclamação de Ofício"> Reclamação de Ofício
+					</b>
+				</div>
+			</body>
+		</div>
+		<div class="span7">
+			<%= will_paginate %>
+			<% @customer_services.each do |cs| %>
+				<table border="1" style="width:100%">
+			      	<tr>
+				      	<h6>
+					        <td>Ano: <%= cs.year_customer_service %></td>
+					        <td>UF:<%= cs.uf_customer_service %></td>
+					        <td>ID:<%= cs.id %></td>
+					        <td>ID:<%= link_to cs.id, '/customer_services/'+cs.id.to_s %>
+					        <td>Descr: <%= cs.description_problem_customer_service %></td>
+					       	<br>
+				      	</h6>
+					<% end %>
+					</tr>
+				</table>
+			<%= will_paginate %>
+		</div>
 	</div>
+
 	</form>
 	</body>
 <left>
@@ -100,4 +124,5 @@
 	<%= will_paginate %>
 </div>
 </div>
-</div>
+
+
