@@ -11,6 +11,8 @@ SISANPRO::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete 
   match '/allusers', to: 'users#allusers'
   match '/ranking', to: 'unity_procons#ranking'
+
+  get "/customer_service/custom_search", to: "customer_services#custom_search"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
