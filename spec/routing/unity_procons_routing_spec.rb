@@ -10,7 +10,7 @@ RSpec.describe UnityProconsController, :type  => :routing do
 	   end
 
 	   it "routes to #ranking" do 
-	   expect(:get => "/ranking").to route_to("unity_procons#ranking")
+	   expect(:get => "/ranking").to route_to("unity_procons#rankingd")
 	   end
 	
 	end
