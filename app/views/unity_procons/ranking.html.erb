@@ -1,25 +1,34 @@
-<center>
-	<h1>Ranking</h1>
-</center>
-
-<%= render 'layouts/searcher' %>
-
-<center>
-	<div class="span8">
-		<% @unity_procons.each do |un| %>
-		    <h5>
-		      	<table border="1" style="width:100%">
-			      	<tr>
-				        <td>Posição: <%= un.position_unity_procon %></td>
-				        <td> id: <%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
-				        <td>UF: <%= un.uf_procon %> </td>
-				        <td> Telefone: <%= un.list_phones %> </td>
-				        <td>Email: <%= un.email_unity_procon %></td>
-			        </tr>
-				</table>
-			</h5>	
-		<% end %>
-	</div>
-</center>
+<div>
+	<center>
+		<h1>Ranking</h1>
+	</center>
+		<center>
+				<table class="table table-striped" id="ranking">
+					<thead>
+						<tr>
+						    <th>Posição</th>
+						    <th>ID</th> 
+						    <th>UF</th>
+						    <th>Telefone</th>
+						    <th>Email</th> 
+						    <th colspan = "3"></th>
+					  	</tr>
+					</thead>
+					<tbody>
+					<% @unity_procons.each do |un| %>
+						<tr>
+					      <h6>
+					        <td><%= un.position_unity_procon %></td>
+					        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
+					        <td><%= un.uf_procon %></td>
+					        <td><%= un.list_phones %></td>
+					        <td><%= un.email_unity_procon %></td>
+					      </h6>
+			            </tr>
+				<% end %>
+				</tbody>
+			</table>
+		</center>
+</div>
 
 
