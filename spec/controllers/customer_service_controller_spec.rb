@@ -18,4 +18,12 @@ describe CustomerServicesController, :type => :controller do
           assigns[:customer_service].description_subject_customer_service.should == "Atendimento"
         end
     end
+
+    describe "GET index" do
+        it "should find the account by its id" do
+          get :index, :id => @customer_service.id
+          assigns[:customer_service].description_subject_customer_service.should == "Atendimento"
+        end
+    end
+
 end
