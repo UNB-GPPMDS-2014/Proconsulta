@@ -36,7 +36,7 @@ describe UsersController, :type => :controller do
 	    end
 
 		describe "GET #new" do
-			it "assigns a new atendimento as @atendimento" do
+			it "assigns a new user as @user" do
 	      	get :new, {}
 	      	expect(assigns(:user)).to be_a_new(User)
 	    	end

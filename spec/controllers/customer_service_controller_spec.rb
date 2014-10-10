@@ -22,7 +22,7 @@ describe CustomerServicesController, :type => :controller do
     describe "GET index" do
         it "should find the account by its id" do
           get :index, :id => @customer_service.id
-          assigns[:customer_service].description_subject_customer_service.should == "Atendimento"
+          assigns[:supplier].description_problem_customer_service.should == "Duvida	"
         end
     end
 
