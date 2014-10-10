@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
 
-describe SuppliersController, :type => :controller do 
+describe SuppliersController, :type => :controller do
   	before do
     		@supplier = Supplier.create(type_supplier: "SupplierTes", social_reason_supplier: "Razao",
     		 fantasy_name_supplier: "Sup", cnpj: "12000184002", cnaep_main_code_supplier: "123123123",
@@ -16,5 +16,6 @@ describe SuppliersController, :type => :controller do
         end
     end
 
+    
 
 end

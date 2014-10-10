@@ -1,16 +1,34 @@
-<h1>Lista de suppliers</h1>
-<center>
-<%= will_paginate %>
-<% @suppliers.each do |sup| %>
-      <h5>
-      	<table border="1" style="width:100%">
-      	<tr>
-        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %>
-        - CNPJ: <%= sup.cnpj %></td>
-      </tr>
-      </h5>
+<div>
+	<center>
+		<h1>Lista de Fornecedores</h1>
+	</center>
+		<center>
+			<center>
+				<%= will_paginate %>
+			</center>
+				<table class="table table-striped" id="Suppliers">
+						<thead>
+							<tr>
+							    <th>Fornecedor</th>
+							    <th>CNPJ</th> 
+							    <th colspan = "3"></th>
+						  	</tr>
+						</thead>
+						<tbody>
+					    <% @suppliers.each do |sup| %>
+						      <tr>
+						      	<h6>
+							        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %></td>
+							        <td><%= sup.cnpj %></td>
+							    </h6>
+					          </tr>
+							<% end %>
+					</tbody>
+				</table>
+				<center>
+					<%= will_paginate %>
+				</center>
+		</center>
+</div>
 
-</table>
-<% end %>
-<%= will_paginate %>
-</center>
+

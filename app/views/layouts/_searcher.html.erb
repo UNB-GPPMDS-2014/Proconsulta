@@ -1,0 +1,87 @@
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span4">
+		<body style= "width:1200px">
+		<br><br><br><br><br><br><br>
+		<h3>BUSCAR</br></h3>
+		<span style="color:#FFA500">
+		<b> Busca Textual </b><br>
+
+			<% # = form_tag('/customer_services/', method: :get) %>
+			<% # input type="text" name=idteste> %>
+			<% # = submit_tag "Pesquisar", class:"form_submit" %>
+
+		</span>
+			<input type="text" name="pesquisa" size="50" maxlength="50" id="custom_search_text">
+			<input type="button" id="custom_search_button" value="Buscar" class="btn btn-primary" />
+			<br>
+			<label>
+				<input type="radio"  class="search_type" name="search_type" value="CEP" checked="checked" /> CEP
+			</label>
+			<label>
+				<input type="radio" class="search_type" name="search_type" value="year"> Data
+			</label>
+			<label>
+				<input type="radio" class="search_type" name="search_type" value="Fornecedor"> Fornecedor
+			</label>
+			<br><br>
+			<span style="color:#FFA500">
+			<b> Filtros </b>
+			<br>
+		</span>
+
+		<font style="padding-left: 10px;">
+		<b> Regiões </b></font>
+		<br>
+		<font style="padding-left: 20px;">
+			<input type="checkbox" name="regioes[norte]"> Norte
+			<input type="checkbox" name="regioes[nordeste]"> Nordeste
+			<input type="checkbox" name="regioes[sul]"> Sul
+			<input type="checkbox" name="regioes[centro-oeste]"> Centro-Oeste
+			<input type="checkbox" name="regioes[sudeste]"> Sudeste
+		</font>
+		<br>
+		<br>
+
+		<font style="padding-left: 10px;">
+		<b> Unidades Federativas </b></font>
+		<br>
+
+		<font style="padding-left: 20px;">
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AC"> AC
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AP"> AP
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AM"> AM
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="PA"> PA
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="RO"> RO
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="RR"> RR
+			<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="TO"> TO
+		</font>
+		<br>
+		<br>
+
+		<font style="padding-left: 10px;">
+		<b> Tipos de Atendimento </b></font>
+		<br>
+
+		<div style="padding-left:20px">
+			<input type="checkbox" name="Simples Consulta"> Simples Consulta
+			<br>
+			<input type="checkbox" name="Atendimento Preliminar"> Atendimento Preliminar
+			<br>
+			<input type="checkbox" name="Carta de Informações Preliminares"> Carta de Informações Preliminares
+			<br>
+			<input type="checkbox" name="Cálculo"> Cálculo
+			<br>
+			<input type="checkbox" name="Juizado Especial Civel"> Juizado Especial Civel
+			<br>
+			<input type="checkbox" name="Encaminhamento a Fiscalização"> Encaminhamento a Fiscalização
+			<br>
+			<input type="checkbox" name="Abertura Direta de Reclamação"> Abertura Direta de Reclamação
+			<br>
+			<input type="checkbox" name="Reclamação de Ofício"> Reclamação de Ofício
+			</b>
+		</div>
+		</form>
+		</body>
+	<left>
+</div>

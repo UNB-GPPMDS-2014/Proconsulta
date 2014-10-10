@@ -4,11 +4,20 @@ SISANPRO::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :customer_services, only: [:show, :index]
   resources :suppliers, only: [:show, :index]
+  resources :unity_procons, only: [:show, :index]
+  resources :faqs
+
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete 
   match '/allusers', to: 'users#allusers'
+  match '/ranking', to: 'unity_procons#ranking'
+
+  get "/customer_service/custom_search", to: "customer_services#custom_search"
+
+  match '/faq', to: 'faqs#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

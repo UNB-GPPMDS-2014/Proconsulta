@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140927000014) do
+ActiveRecord::Schema.define(:version => 20141004000018) do
 
   create_table "customer_services", :force => true do |t|
     t.string   "year_customer_service"
@@ -35,12 +35,14 @@ ActiveRecord::Schema.define(:version => 20140927000014) do
   add_index "customer_services", ["supplier_id"], :name => "index_customer_services_on_supplier_id"
 
   create_table "ratings", :force => true do |t|
-    t.integer  "user_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "description_rating"
     t.float    "value_rating"
+    t.integer  "unity_procon_id"
   end
+
+  add_index "ratings", ["unity_procon_id"], :name => "index_ratings_on_unity_procon_id"
 
   create_table "suppliers", :force => true do |t|
     t.string   "type_supplier"
@@ -54,6 +56,17 @@ ActiveRecord::Schema.define(:version => 20140927000014) do
   end
 
   add_index "suppliers", ["fantasy_name_supplier"], :name => "fantasy_name_supplier", :unique => true
+
+  create_table "unity_procons", :force => true do |t|
+    t.string   "address_unity_procon"
+    t.string   "name_coordinator_unity_procon"
+    t.string   "uf_procon"
+    t.string   "email_unity_procon"
+    t.string   "list_phones"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "position_unity_procon"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name_user"
