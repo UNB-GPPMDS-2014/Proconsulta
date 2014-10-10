@@ -16,11 +16,6 @@ describe SuppliersController, :type => :controller do
         end
     end
 
-    describe "GET index" do
-        it "should find the account by its id" do
-          get :index, :id => @supplier.id
-          assigns[:supplier].type_supplier.should == "SupplierTes"
-        end
-    end
+    
 
 end

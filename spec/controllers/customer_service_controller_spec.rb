@@ -19,11 +19,5 @@ describe CustomerServicesController, :type => :controller do
         end
     end
 
-    describe "GET index" do
-        it "should find the account by its id" do
-          get :index, :id => @customer_service.id
-          assigns[:supplier].description_problem_customer_service.should == "Duvida	"
-        end
-    end
 
 end
