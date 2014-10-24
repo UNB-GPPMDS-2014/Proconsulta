@@ -27,6 +27,20 @@ describe UsersController, :type => :controller do
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 	it { should be_valid }
+	describe "GET all users" do
+
+		it "should get all users" do
+			get :allusers, {}
+			expect(assigns(:allusers)).to be(@users)
+		end
+	end
+	describe "GET index" do
+
+		it "should get all users" do
+			get :index, {}
+			expect(assigns(:index)).to be(@users)
+		end
+	end
 
 	describe "GET show" do
     
