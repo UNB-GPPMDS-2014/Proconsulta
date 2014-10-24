@@ -13,11 +13,16 @@ describe CustomerServicesController, :type => :controller do
 			genre_customer_service: "Grave", cep_customer_service: "11111111")
 	end
 	describe "GET show" do
-        it "should find the account by its id" do
+        it "should find the customer_service by its id" do
           get :show, :id => @customer_service.id
           assigns[:customer_service].description_subject_customer_service.should == "Atendimento"
         end
     end
-
+	describe "GET index" do
+        it "should list all the customer_service" do
+          get :index 
+          expect(response).to have_http_status(:success)
+        end
+    end
 
 end
