@@ -1,14 +1,20 @@
 require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
+include SessionsHelper
 
 describe SessionsController, :type => :controller do 
+	before do
+		@user = FactoryGirl.create(:user)
+	end
+	let(:valid_session) { {} }
 	describe "POST destroy" do
-		it "expect destroy to delete current session" do
-		end
-
-		it "expect destroy to redirect to root_url" do
-		end
+		it "should logout" do
+		  sign_in(@user)
+		  get :destroy
+		  session[:user_id].should be(nil)
+		  response.should be_redirect
+  		end
 	end
 
 	describe "POST create" do
