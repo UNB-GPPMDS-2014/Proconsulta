@@ -18,6 +18,7 @@ gem 'rspec-its'
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'cucumber'
 end
 
 group :test do
