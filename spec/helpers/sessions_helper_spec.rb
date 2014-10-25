@@ -4,9 +4,7 @@ require 'rails_helper'
 
 describe SessionsHelper do
 	before do
-		@user = User.create(name_user: "UserTes", email_user: "usertest@test.com",
-		 password: "teste1234", address_user: "DF",
-		 password_confirmation: "teste1234")
+		@user = FactoryGirl.create(:user)
 	end
 
 	it "expect signed user return signed_in = true" do
