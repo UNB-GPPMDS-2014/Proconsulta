@@ -3,6 +3,7 @@ require 'spec_helper'
 require 'rails_helper'
 
 describe User do
+    let(:user) { FactoryGirl.create(:user) }
 	before do
 		@user = User.new(name_user: "UserTest", email_user: "usertest@test.com",
 		 password: "teste1234", address_user: "DF",

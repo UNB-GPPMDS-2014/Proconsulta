@@ -62,6 +62,11 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
     ffi (1.9.3)
     formatador (0.2.5)
     gherkin (2.12.2)
@@ -217,7 +222,11 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.6)
   capybara
   coffee-rails (~> 3.2.1)
+
   cucumber
+
+  factory_girl_rails (= 4.1.0)
+sessionscontroller tests
   guard-rspec
   jquery-rails
   less-rails
