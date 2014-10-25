@@ -31,4 +31,14 @@ describe SessionsHelper do
 		sign_out
 		expect(current_user).to be(nil)
 	end
+
+	it "expect current_uf to be uf from current_user" do
+		sign_in(@user)
+		expect(current_uf).to be(@user.address_user)
+	end
+
+	it "expect current_uf to match method current_uf=" do
+		current_uf=(@user.address_user)
+		expect(current_uf).to equal(@user.address_user)
+	end
 end

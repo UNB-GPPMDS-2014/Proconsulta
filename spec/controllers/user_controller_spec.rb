@@ -8,15 +8,7 @@ describe UsersController, :type => :controller do
 		 password: "teste1234", address_user: "DF",
 		 password_confirmation: "teste1234")
 	end
-	let(:valid_attributes) {
-    	skip(name_user: "UserTest", email_user: "usertest@test.com", 
-    		password: "teste1234", address_user: "DF")
-  	}
-
-  	let(:invalid_attributes) {
-    	skip(name_user: "", email_user: "emailerrado", 
-    		password: "zzzz", address_user: "")
-  	}
+	
 
   	let(:valid_session) { {} }
 
