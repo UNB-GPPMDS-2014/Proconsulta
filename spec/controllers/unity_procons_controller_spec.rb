@@ -15,4 +15,19 @@ describe UnityProconsController, :type => :controller do
           assigns[:unity_procon].address_unity_procon.should == "SQS BRASILIA"
         end
     end
+
+    describe "GET index" do
+        it "expect index to be valid" do
+          get :index, {}
+          expect(response).to have_http_status(:success)
+        end
+    end
+
+    describe "GET ranking" do
+        it "expect ranking to be valid" do
+          get :ranking, {}
+          expect(response).to have_http_status(:success)
+      end
+    end
+    
 end
