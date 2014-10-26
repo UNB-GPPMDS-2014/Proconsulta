@@ -5,6 +5,7 @@ FactoryGirl.define do
     password "teste123"
     password_confirmation "teste123"
     address_user "DF"
+    id "15"
   end
 
   factory :supplier do
