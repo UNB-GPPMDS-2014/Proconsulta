@@ -29,7 +29,7 @@ class UnityProconsController < ApplicationController
 		end
 
 		sql = sql
-		data = UnityProcons.where(params[:search]).paginate(:page=>1)
+		data = UnityProcons.where("right(address_unity_procon, 2) = ?", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json
 	end
 
