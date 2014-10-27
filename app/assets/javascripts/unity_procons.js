@@ -38,7 +38,7 @@
 		console.log("ready")
 		$("#unity_search_button").click(function()
 		{
-			var search = $("#unity_search_text").val();
+			var search = $("#unity_uf").val();
 
 			custom_search(search);
 		});
