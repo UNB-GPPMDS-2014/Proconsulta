@@ -11,13 +11,14 @@
 		return html;
 	}
 
-	function custom_search(search, unities)
+	function custom_search(search)
 	{
+		console.log("custom_search")
 		$.ajax(
 		{
 			url: "/unity_procon/custom_search",
 			type: "GET",
-			data: { "search":search, "unities":unities,"page":1 },
+			data: { "search":search, "page":1 },
 			success : function(response) 
 			{
 				var html = "";
@@ -34,14 +35,12 @@
 
 	$(document).ready(function()
 	{
-		$("#custom_search_button").click(function()
+		console.log("ready")
+		$("#unity_search_button").click(function()
 		{
-			var search = $("#custom_search_text").val();
-			var unities = [];
+			var search = $("#unity_search_text").val();
 
-			unities.push(element.value);
-
-			custom_search(search, unities);
+			custom_search(search);
 		});
 	});
 })();

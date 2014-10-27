@@ -22,12 +22,6 @@ class UnityProconsController < ApplicationController
 
 		sql = "1=1"
 
-		if !params[:unities].nil? and params[:unities].length > 0
-			params[:unities].each do |u|
-
-			end
-		end
-
 		sql = sql
 		data = UnityProcon.where("right(address_unity_procon, 2) = ?", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json

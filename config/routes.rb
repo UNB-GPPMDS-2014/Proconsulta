@@ -15,6 +15,7 @@ SISANPRO::Application.routes.draw do
   match '/ranking', to: 'unity_procons#ranking'
 
   get "/customer_service/custom_search", to: "customer_services#custom_search"
+  get "/unity_procon/custom_search", to: "unity_procons#custom_search"
 
   match '/faq', to: 'faqs#index'
 
