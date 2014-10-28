@@ -19,3 +19,21 @@ Funcionalidade: Abrir página de atendimentos
     Quando eu preencho "2010" em "Ano"
     E aperto "Buscar"
     Entao vejo a lista de atendimentos com os atendimentos ""
+
+
+    Cenário: Pesquisar atendimentos por filtros
+    Ao buscar atendimentos por meio de filtros, é mostrada uma lista com os atendimentos filtrados.
+
+    Quando eu preencho "2012" em "Ano"
+    E aperto "Buscar"
+    Entao vejo a lista de atendimentos com um atendimento:
+    |id     |uf_procon  |
+    |756    |GO         |
+
+
+    Cenário: Visualizar profile de um atendimento selecionado
+    Ao clicar em um atendimento, é mostrada as informações do atendimento selecionado.
+
+    Quando eu clico no atendimento "756"
+    Então vejo "7112345"
+    E vejo "Reclamação de produto com defeito"
