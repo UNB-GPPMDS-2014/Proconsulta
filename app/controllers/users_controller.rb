@@ -16,8 +16,8 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)	
     	if @user.save
     		sign_in @user
-    		# flash[:sucess] = "Seja bem-vindo!"
-      		 redirect_to :action => :show, :id => @user.id
+    		flash[:sucess] = "Seja bem-vindo!"
+      		redirect_to :action => :show, :id => @user.id
     	else
       		render 'new'
     	end
@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
+			flash[:sucess] = "Usuario editado com exito!"
       		redirect_to @user
     	else
       		render 'edit'
