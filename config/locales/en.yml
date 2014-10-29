@@ -3,3 +3,30 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      user:
+        email_user: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+        name_user: "Nome"
+        password_digest: ""
+    errors:
+      models:
+        user:
+          attributes:
+            email_user:
+              blank: "não preenchido."
+              invalid: "inválido."
+            password:
+              blank: "não preenchida."
+              invalid: "inválida."
+              too_short: "muito curta."
+            name_user:
+              blank: "em branco."
+            password_digest:
+              blank: ""
+
+
