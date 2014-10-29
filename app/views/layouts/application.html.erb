@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<html>
-  <head>    
-    <body>
-      <div class="container">
-
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html>     
+  <body>
+    <head> 
+      <%= stylesheet_link_tag    "application", media: "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+      <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-        <%= render 'layouts/header' %>
-        <%= render 'layouts/shim' %>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/shim' %>
 
-      <div class="container">
-      </br></br> </br> </br>      <%= yield %>
+    <div class="container">
+    </br></br></br></br> 
 
-      </body>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+  </body>
 </html>

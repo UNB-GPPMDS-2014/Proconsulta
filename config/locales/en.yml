@@ -12,7 +12,7 @@ en:
         password: "Senha"
         password_confirmation: "Confirmação de senha"
         name_user: "Nome"
-        password_digest: ""
+        password_digest: 
     errors:
       models:
         user:
@@ -20,6 +20,7 @@ en:
             email_user:
               blank: "não preenchido."
               invalid: "inválido."
+              too_long: "muito longo"
             password:
               blank: "não preenchida."
               invalid: "inválida."
