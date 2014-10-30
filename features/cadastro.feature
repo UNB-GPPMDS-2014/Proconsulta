@@ -8,7 +8,8 @@ Funcionalidade: Abrir página de cadastrar
   	Cenário: Carregar página de cadastrar
     Ao carregar página de cadastro, é mostrado um formulário de cadastro para o usuário 
 
-    Quando eu clico no link "Registrar"
+    Dado que eu estou na home page
+    Quando eu clico no link "Registre-se!"
     Entao vejo o formulario de cadastro
 
 
