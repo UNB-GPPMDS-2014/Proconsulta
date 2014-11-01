@@ -1,7 +1,33 @@
 <div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span4">
+				<body style= "width:1200px">
+					<br><br><br><br><br><br><br>
+					<h3>BUSCAR</br></h3>
+					<span style="color:#FFA500">
+					<b> Busca Textual </b><br>
+					<% # = form_tag('/customer_services/', method: :get) %>
+					<% # input type="text" name=idteste> %>
+					<% # = submit_tag "Pesquisar", class:"form_submit" %>
+					</span>
+					<input type="text" name="pesquisa" size="50" maxlength="50" id="custom_search_text">
+					<input type="button" id="custom_search_button" value="Buscar" class="btn btn-primary" />
+					<br>
+					<label>
+						<input type="radio"  class="search_type" name="search_type" value="fantasy_name" checked="checked" /> Nome
+					</label>
+					<label>
+						<input type="radio" class="search_type" name="search_type" value="cnpj"> CNPJ
+					</label>
+				</body>
+				
+	<left>
+		</div>
 	<center>
 		<h1>Lista de Fornecedores</h1>
 	</center>
+	<div class="span8">
 		<center>
 			<center>
 				<%= will_paginate %>
@@ -29,6 +55,7 @@
 					<%= will_paginate %>
 				</center>
 		</center>
+	</div>
 </div>
 
 
