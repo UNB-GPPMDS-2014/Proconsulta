@@ -1,19 +1,29 @@
 (function()
 {
+	function build_row(data) 
+	{
+		var html = "<tr>";
 
-	function custom_search(search, type_search, suppliers)
+		html += "<td>Nome: "+data.fantasy_name_supplier+"</td>";
+		html += "<td>CNPJ: "+data.cnpj+"</td>";
+
+		html += "</tr>";
+		return html;
+	}
+
+	function custom_search(search, type_search)
 	{
 		$.ajax(
 		{
 			url: "/supplier/custom_search",
 			type: "GET",
-			data: { "search":search, "type_search":type_search, "suppliers":suppliers,"page":1 },
+			data: { "search":search, "type_search":type_search,"page":1 },
 			success : function(response) 
 			{
 				var html = "";
 				for(var i = 0; i < response.length; i++) 
 				{
-					
+					html += build_row(response[i]);
 				}
 				$("#suppliers").html(html);
 			}
@@ -25,9 +35,8 @@
 		{
 			var search = $("#supplier_text").val();
 			var type_search = $(".search_type:checked").val();
-			var suppliers = [];
 
-			custom_search(search, type_search, suppliers);
+			custom_search(search, type_search);
 
 		});
 	});

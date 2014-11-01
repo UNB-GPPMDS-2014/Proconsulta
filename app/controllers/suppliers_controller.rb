@@ -17,7 +17,7 @@ class SuppliersController < ApplicationController
 		sql = "1=1"
 
 		if !params[:type_search].nil? !
-			sql += "AND #{params[:type_search]}_suppliers = ?"
+			sql += "AND #{params[:type_search]} = ?"
 		end
 
 		if !params[:unities].nil? and params[:unities].length > 0
@@ -27,7 +27,7 @@ class SuppliersController < ApplicationController
 		end
 
 		sql = sql
-		data = Supplier.where("#{params[:type_search]}_suppliers = ?", params[:search]).paginate(:page=>1)
+		data = Supplier.where("#{params[:type_search]} = ?", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json
 	end
 
