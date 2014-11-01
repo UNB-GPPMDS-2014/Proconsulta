@@ -16,17 +16,32 @@ Entao(/^vejo o formulario de cadastro$/) do
 end
 
 Quando(/^eu preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
+  pending # teste
+end
+
+E(/^preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
   fill_in arg1, with: arg2
 end
 
-Quando(/^preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
 Quando(/^pressionar o botão "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  click_button arg1
 end
 
 Entao(/^vejo "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  assert page.has_text?(arg1)
 end
+
+Entao(/^vejo o texto "(.*?)"$/) do |arg1|
+  assert page.has_text(arg1)
+end
+
+Entao(/^sou redirecionado para a pagina "(.*?)"$/) do |arg1|
+  page.should redirect_to(arg1)
+end
+
+Entao(/^erros aparecem"$/) do
+  page.should have_selector('div.alert.alert-error')
+end
+
+
+

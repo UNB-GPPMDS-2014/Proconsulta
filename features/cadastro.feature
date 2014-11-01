@@ -16,26 +16,25 @@ Funcionalidade: Abrir página de cadastrar
     Cenário: Cadastrar novo usuário
     Ao preencher informações do novo usuário e salvá-las, novo usuário é cadastrado.
 
-    
+    Dado que eu estou na home page
     Quando eu clico no link "Registrar"
     E preencho o campo "Nome" com "Eduardo"
     E preencho o campo "E-mail" com "eduardo@hotmail.com"
     E preencho o campo "Senha" com "123456"
     E preencho o campo "Repetir" com "123456"
-    E preencho o campo "Estado" com "DF"
     E pressionar o botão "Registrar conta"
-    Entao vejo "Nome: Eduardo"
-    E vejo "Estado: DF"
-    E vejo "E-Mail: moreira.edu@hotmail.com"
+    Entao sou redirecionado para a pagina "/users/1"
+    Entao vejo o texto "Seja bem-vindo"
 
 
     Cenário: Cadastrar usuário com senhas incompatíveis
     Ao preencher informações do novo usuário com senhas diferentes, usuário não deve ser cadastrado.
 
-    Quando eu preencho o campo "Nome" com "Eduardo"
+    Dado que eu estou na home page
+    Quando eu clico no link "Registrar"
+    E preencho o campo "Nome" com "Eduardo"
     E preencho o campo "E-mail" com "eduardo@hotmail.com"
     E preencho o campo "Senha" com "123456"
     E preencho o campo "Repetir" com "654321"
-    E preencho o campo "Estado" com "DF"
     E pressionar o botão "Registrar conta"
-    Entao vejo "passwords don't match"
+    Entao erros aparecem
