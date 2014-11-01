@@ -18,14 +18,13 @@ gem 'rspec-its'
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'cucumber'
-  gem 'capybara'
 end
 
 group :test do
   gem 'factory_girl_rails', '4.1.0'
   gem 'selenium-webdriver'
-  gem 'capybara'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 # Gems used only for assets and not required
