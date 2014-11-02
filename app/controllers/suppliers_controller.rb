@@ -8,6 +8,7 @@ class SuppliersController < ApplicationController
   def show
     @supplier = Supplier.find(params[:id])
   end
+
   def custom_search
 		unless request.xhr? or params[:page].nil? or params[:search].nil?
 			redirect_to "/"
@@ -16,14 +17,8 @@ class SuppliersController < ApplicationController
 
 		sql = "1=1"
 
-		if !params[:type_search].nil? !
+		if !params[:type_search].nil?
 			sql += "AND #{params[:type_search]} = ?"
-		end
-
-		if !params[:unities].nil? and params[:unities].length > 0
-			params[:unities].each do |u|
-
-			end
 		end
 
 		sql = sql
