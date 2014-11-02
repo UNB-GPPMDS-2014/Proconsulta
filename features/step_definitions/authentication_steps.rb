@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-Dado(/^que eu estou na home page$/) do
+Dado(/^que eu estou na homepage$/) do
   visit root_path
 end
 
@@ -23,7 +23,7 @@ E(/^preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
   fill_in arg1, with: arg2
 end
 
-Quando(/^pressionar o botão "(.*?)"$/) do |arg1|
+E(/^clico no botão "(.*?)"$/) do |arg1|
   click_button arg1
 end
 
@@ -36,12 +36,43 @@ Entao(/^vejo o texto "(.*?)"$/) do |arg1|
 end
 
 Entao(/^sou redirecionado para a pagina "(.*?)"$/) do |arg1|
-  page.should redirect_to(arg1)
+  pending # pendente
 end
 
 Entao(/^erros aparecem"$/) do
   page.should have_selector('div.alert.alert-error')
 end
 
+Entao(/^vejo a lista de atendimentos$/) do
+  pending # express the regexp above with the code you wish you had
+end
 
+Entao(/^vejo os filtros para pesquisar atendimento$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando(/^eu preencho "(.*?)" em "(.*?)"$/) do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando(/^aperto "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Entao(/^vejo a lista de atendimentos com os atendimentos "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Entao(/^vejo a lista de atendimentos com um atendimento:$/) do |table|
+  # table is a Cucumber::Ast::Table
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando(/^eu clico no atendimento "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Entao(/^erros aparecem$/) do
+  pending # express the regexp above with the code you wish you had
+end
 

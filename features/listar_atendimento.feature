@@ -8,6 +8,7 @@ Funcionalidade: Abrir página de atendimentos
   	Cenário: Carregar página de atendimentos
     Ao carregar página de atendimentos, é mostrada uma lista com os atendimentos do PROCON
 
+    Dado que eu estou na homepage
     Quando eu clico no link "Atendimentos"
     Entao vejo a lista de atendimentos
     E vejo os filtros para pesquisar atendimento
