@@ -24,7 +24,7 @@ Funcionalidade: Abrir página de cadastrar
     E preencho o campo "Repetir" com "123456"
     E clico no botão "Registrar conta"
     Entao sou redirecionado para a pagina "/users/1"
-    Entao vejo o texto "Seja bem-vindo"
+    Entao vejo o texto "Eduardo"
 
 
     Cenário: Cadastrar usuário com senhas incompatíveis

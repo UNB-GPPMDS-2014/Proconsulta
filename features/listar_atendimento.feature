@@ -20,9 +20,9 @@ Funcionalidade: Abrir página de atendimentos
     Dado que eu estou na homepage
     Quando eu clico no link "Atendimentos"
     E clico no filtro "Data"
-    E preencho o campo "campo" com "2010"
-    E clico no link "Buscar"
-    Entao vejo a lista de atendimentos com os atendimentos ""
+    E preencho o campo "pesquisa" com "2010"
+    E clico no botão "Buscar"
+    Entao vejo a lista de atendimentos com os atendimentos vazios
 
 
     Cenário: Pesquisar atendimentos por filtros
@@ -30,11 +30,11 @@ Funcionalidade: Abrir página de atendimentos
 
     Dado que eu estou na homepage
     Quando eu clico no link "Atendimentos"
-    Quando eu preencho "2012" em "Ano"
-    E aperto "Buscar"
-    Entao vejo a lista de atendimentos com um atendimento:
-    |id     |uf_procon  |
-    |756    |GO         |
+    E existe um atendimento
+    E clico no filtro "Data"
+    E preencho o campo "pesquisa" com "2014"
+    E clico no botão "Buscar"
+    Entao vejo um atendimento
 
 
     Cenário: Visualizar profile de um atendimento selecionado

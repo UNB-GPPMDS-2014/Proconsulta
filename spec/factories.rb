@@ -18,6 +18,7 @@ FactoryGirl.define do
   end
 
   factory :customer_service do
+    id "50"
   	year_customer_service "2014"
   	trimester_customer_service "2"
   	month_customer_service "05"

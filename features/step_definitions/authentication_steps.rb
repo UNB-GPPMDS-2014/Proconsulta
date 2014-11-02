@@ -11,7 +11,7 @@ end
 
 
 Quando(/^clico no filtro "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  choose(arg1)
 end
 
 Quando(/^clico no link "(.*?)"$/) do |arg1|
@@ -28,7 +28,7 @@ Quando(/^eu clico no atendimento "(.*?)"$/) do |arg1|
 end
 
 Entao(/^erros aparecem$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_selector('div.alert.alert-error')
 end
 
 E(/^preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
@@ -53,12 +53,12 @@ end
 
 
 Entao(/^vejo o texto "(.*?)"$/) do |arg1|
-  assert page.has_text(arg1)
+  assert page.has_text?(arg1)
 end
 
 
 Entao(/^sou redirecionado para a pagina "(.*?)"$/) do |arg1|
-  pending # pendente
+  visit arg1
 end
 
 Entao(/^erros aparecem"$/) do
@@ -88,13 +88,8 @@ Entao(/^vejo os filtros para pesquisar atendimento$/) do
   assert page.has_text?("Filtros")
 end
 
-Entao(/^vejo a lista de atendimentos com os atendimentos "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Entao(/^vejo a lista de atendimentos com um atendimento:$/) do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+Entao(/^vejo a lista de atendimentos com os atendimentos vazios$/) do
+  assert page.has_text?("")
 end
 
 E(/^existe um atendimento$/) do
@@ -106,5 +101,9 @@ Entao(/^vejo dados deste atendimento$/) do
   assert page.has_text?("DF")
   assert page.has_text?("11111111")
   assert page.has_text?("Centro-Oeste")
+end
+
+Entao(/^vejo um atendimento$/) do
+  page.has_link?("50")
 end
 
