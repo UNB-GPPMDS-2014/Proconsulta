@@ -13,7 +13,6 @@
 
 	function custom_search(search)
 	{
-		console.log("custom_search")
 		$.ajax(
 		{
 			url: "/unity_procon/custom_search",
@@ -35,7 +34,6 @@
 
 	$(document).ready(function()
 	{
-		console.log("ready")
 		$("#unity_search_button").click(function()
 		{
 			var search = $("#unity_uf").val();
