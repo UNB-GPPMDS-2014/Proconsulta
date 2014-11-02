@@ -9,8 +9,18 @@ Quando(/^eu clico no link "(.*?)"$/) do |arg1|
   click_link arg1
 end
 
+
+Quando(/^clico no filtro "(.*?)"$/) do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando(/^clico no link "(.*?)"$/) do |arg1|
+  click_link arg1
+end
+
+
 Quando(/^eu preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
-  pending # teste
+  fill_in arg1, with: arg2
 end
 
 Quando(/^eu clico no atendimento "(.*?)"$/) do |arg1|
@@ -73,7 +83,9 @@ Entao(/^vejo a lista de atendimentos$/) do
 end
 
 Entao(/^vejo os filtros para pesquisar atendimento$/) do
-  pending # express the regexp above with the code you wish you had
+  assert page.has_text?("BUSCAR")
+  assert page.has_text?("Busca Textual")
+  assert page.has_text?("Filtros")
 end
 
 Entao(/^vejo a lista de atendimentos com os atendimentos "(.*?)"$/) do |arg1|
@@ -85,5 +97,14 @@ Entao(/^vejo a lista de atendimentos com um atendimento:$/) do |table|
   pending # express the regexp above with the code you wish you had
 end
 
+E(/^existe um atendimento$/) do
+  @customer_service = FactoryGirl.create(:customer_service)
+end
 
+Entao(/^vejo dados deste atendimento$/) do
+  assert page.has_text?("2014")
+  assert page.has_text?("DF")
+  assert page.has_text?("11111111")
+  assert page.has_text?("Centro-Oeste")
+end
 
