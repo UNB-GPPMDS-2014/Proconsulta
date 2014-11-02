@@ -16,6 +16,7 @@ SISANPRO::Application.routes.draw do
 
   get "/customer_service/custom_search", to: "customer_services#custom_search"
   get "/unity_procon/custom_search", to: "unity_procons#custom_search"
+  get "/supplier/custom_search", to: "suppliers#custom_search"
 
   match '/faq', to: 'faqs#index'
 
