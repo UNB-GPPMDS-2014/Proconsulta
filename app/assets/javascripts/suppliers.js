@@ -31,9 +31,9 @@
 	}
 	$(document).ready(function()
 	{
-		$("#supplier_button").click(function()
+		$("#supplier_search_button").click(function()
 		{
-			var search = $("#supplier_text").val();
+			var search = $("#supplier_search_text").val();
 			var type_search = $(".search_type:checked").val();
 
 			custom_search(search, type_search);
