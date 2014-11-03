@@ -12,3 +12,11 @@ Funcionalidade: Abrir página de fornecedores
     Quando eu clico no link "Fornecedores"
     Entao vejo a lista de fornecedores
     E vejo os filtros para pesquisar fornecedores
+
+    Cenário: Pesquisar fornecedor pelo nome
+    Ao pesquisar fornecedor pelo nome, é mostrada uma lista com os fornecedores filtrados
+
+    Dado que eu estou na 
+    Quando eu preencho o campo "pesquisa" com "honda"
+    E clico no botão "Buscar"
+    Entao vejo "07431634000148"
