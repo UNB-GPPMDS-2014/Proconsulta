@@ -3,9 +3,9 @@
 	function build_row(data) 
 	{
 		var html = "<tr>";
-
-		html += "<td>Nome: "+data.fantasy_name_supplier+"</td>";
-		html += "<td>CNPJ: "+data.cnpj+"</td>";
+		
+		html += "<td><a href='/suppliers/"+data.id+"'>"+data.fantasy_name_supplier+"</a>"+"</td>";
+		html += "<td> "+data.cnpj+"</td>";
 
 		html += "</tr>";
 		return html;
