@@ -2,6 +2,7 @@ class CustomerServicesController < ApplicationController
 	
 	def index # List all Customer_Services
 		@customer_services = CustomerService.paginate(page: params[:page])
+		@hash_uf = return_hash
 	end
 
 	def show # List Customer_Service related to one especific id.
@@ -29,5 +30,18 @@ class CustomerServicesController < ApplicationController
 		sql = sql
 		data = CustomerService.where("#{params[:type_search]}_customer_service = ?", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json
+	end
+
+	def return_hash
+		hash = Hash.new
+		all_uf = UfHelper.all
+
+		all_uf.each do | uf|
+			hash[uf.description_uf] = uf.quantity_uf
+
+		end
+
+		hash	
+
 	end
 end
