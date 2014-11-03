@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem "chartkick"
 gem 'rails', '3.2.15'
 
 gem 'simplecov', :require => false, :group => :test
