@@ -32,7 +32,7 @@
 			<center>
 				<%= will_paginate %>
 			</center>
-				<table class="table table-striped" id="suppliers">
+				<table class="table table-striped">
 						<thead>
 							<tr>
 							    <th>Fornecedor</th>
@@ -40,7 +40,7 @@
 							    <th colspan = "3"></th>
 						  	</tr>
 						</thead>
-						<tbody>
+						<tbody id="suppliers">
 					    <% @suppliers.each do |sup| %>
 						      <tr>
 						      	<h6>

@@ -22,7 +22,7 @@ class SuppliersController < ApplicationController
 		end
 
 		sql = sql
-		data = Supplier.where("#{params[:type_search]} = ?", params[:search]).paginate(:page=>1)
+		data = Supplier.where("#{params[:type_search]} like '%' ? '%'", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json
 	end
 
