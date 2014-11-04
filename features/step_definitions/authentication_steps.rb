@@ -105,7 +105,6 @@ Entao(/^vejo um atendimento$/) do
   page.has_link?("50")
 end
 
-
 #listar
 Então(/^vejo o ranking de atendimentos$/) do
   assert page.has_text?("Posição")
@@ -145,4 +144,38 @@ end
 Entao(/^vejo o link de "(.*?)"$/) do |arg1|
    page.should have_link('Deslogar', href: signout_path)
 end
+
+#'supplier' methods
+
+Entao(/^vejo a lista de fornecedores$/) do
+  assert page.has_text?("Fornecedor")
+  assert page.has_text?("CNPJ")
+end
+
+Entao(/^vejo os filtros para pesquisar fornecedor$/) do
+  assert page.has_text?("BUSCAR")
+  assert page.has_text?("Busca Textual")
+end
+
+Entao(/^vejo a lista de fornecedores com os fornecedores vazios$/) do
+  assert page.has_text?("")
+end
+
+E(/^existe um fornecedor$/) do
+  @supplier = FactoryGirl.create(:supplier)
+end
+
+Entao(/^vejo o fornecedor por nome$/) do
+  assert page.has_link?("TIM CELULAR")
+end
+
+Entao(/^vejo o fornecedor por CNPJ$/) do
+  assert page.has_link?("TIM CELULAR")
+end
+
+Entao(/^vejo dados deste fornecedor$/) do
+  assert page.has_text?("BGN")
+  assert page.has_text?("00558456000171")
+ end
+
 

@@ -5,13 +5,14 @@ Funcionalidade: Abrir do página do FAQ
 	Como usuário
 	Quero acessar a página do faq
 
-  	Cenário: Carregar página do faq
-    Ao carregar página do faq, é mostrada uma lista com perguntas e respostas frequentes.
 
+  	Cenário: Carregar página de fornecedores
+    Ao carregar página de fornecedores, é mostrada uma lista com os fornecedores
+	
+	Dado que eu estou na homepage
     Quando eu clico no link "FAQ"
     Entao vejo a lista de perguntas
-
-
+ 
     Cenário: Visualizar resposta de uma pergunta
     Ao selecionar uma pergunta, é mostrada a resposta para essa pergunta.
 

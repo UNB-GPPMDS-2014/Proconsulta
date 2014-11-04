@@ -20,7 +20,7 @@ Funcionalidade: Abrir página de fornecedores
     Dado que eu estou na homepage
     Quando eu clico no link "Fornecedores"
     E clico no filtro "Nome"
-    E preencho o campo "Busca Textual" com "UnB"
+    E preencho o campo "pesquisa" com "UnB"
     E clico no botão "Buscar"
     Entao vejo a lista de fornecedores com os fornecedores vazios
 
@@ -32,9 +32,9 @@ Funcionalidade: Abrir página de fornecedores
     Quando eu clico no link "Fornecedores"
     E existe um fornecedor
     E clico no filtro "Nome"
-    E preencho o campo "Busca Textual" com "Tim"
+    E preencho o campo "pesquisa" com "Tim"
     E clico no botão "Buscar"
-    Entao vejo um fornecedor
+    Entao vejo o fornecedor por nome
 
 Cenário: Pesquisar fornecedores por filtro de CNPJ
     Ao buscar atendimentos por meio do filtro, é mostrada uma lista com os fornecedores filtrados.
@@ -43,9 +43,18 @@ Cenário: Pesquisar fornecedores por filtro de CNPJ
     Quando eu clico no link "Fornecedores"
     E existe um fornecedor
     E clico no filtro "CNPJ"
-    E preencho o campo "Busca Textual" com "04206050003015"
+    E preencho o campo "pesquisa" com "04206050003015"
     E clico no botão "Buscar"
-    Entao vejo um fornecedor
+    Entao vejo o fornecedor por CNPJ
+
+ Cenário: Visualizar profile de um fornecedor selecionado
+    Ao clicar em um fornecedor, é mostrada as informações do fornecedor selecionado
+
+    Dado que eu estou na homepage
+    E existe um fornecedor
+    Quando eu clico no link "Fornecedores"
+    E clico no link "BGN"
+    Entao vejo dados deste fornecedor
 
 
 
