@@ -9,7 +9,6 @@ Quando(/^eu clico no link "(.*?)"$/) do |arg1|
   click_link arg1
 end
 
-
 Quando(/^clico no filtro "(.*?)"$/) do |arg1|
   choose(arg1)
 end
@@ -17,7 +16,6 @@ end
 Quando(/^clico no link "(.*?)"$/) do |arg1|
   click_link arg1
 end
-
 
 Quando(/^eu preencho o campo "(.*?)" com "(.*?)"$/) do |arg1, arg2|
   fill_in arg1, with: arg2
@@ -51,11 +49,9 @@ Entao(/^vejo "(.*?)"$/) do |arg1|
   assert page.has_text?(arg1)
 end
 
-
 Entao(/^vejo o texto "(.*?)"$/) do |arg1|
   assert page.has_text?(arg1)
 end
-
 
 Entao(/^sou redirecionado para a pagina "(.*?)"$/) do |arg1|
   visit arg1
@@ -65,6 +61,7 @@ Entao(/^erros aparecem"$/) do
   page.should have_selector('div.alert.alert-error')
 end
 
+
 #'cadastrar' methods
 Entao(/^vejo o formulario de cadastro$/) do
   assert page.has_text?("Nome")
@@ -72,6 +69,7 @@ Entao(/^vejo o formulario de cadastro$/) do
   assert page.has_text?("Senha")
   assert page.has_text?("Repetir")
 end
+
 
 #'listar atendimento' methods
 
@@ -105,5 +103,46 @@ end
 
 Entao(/^vejo um atendimento$/) do
   page.has_link?("50")
+end
+
+
+#listar
+Então(/^vejo o ranking de atendimentos$/) do
+  assert page.has_text?("Posição")
+  assert page.has_text?("ID")
+  assert page.has_text?("UF")
+  assert page.has_text?("Telefone")
+  assert page.has_text?("Email")
+end
+
+
+#logar
+Então(/^vejo o formulario de login$/) do
+  assert page.has_text?("E-mail")
+  assert page.has_text?("Senha")
+end
+
+Dado(/^que eu estou na pagina de login$/) do
+  visit signin_path
+end
+
+Quando(/^preencho informacao invalida$/) do
+  click_button "Logar" 
+end
+
+Dado(/^possuo uma conta$/) do
+  @user = User.new(name_user: "User", email_user: "user@gmail.com",
+                      password: "135790", password_confirmation: "135790", 
+		      address_user: "AC")
+end
+
+Quando(/^submeto informacoes validas$/) do
+  fill_in "E-mail", with: @user.email_user
+  fill_in "Senha", with: @user.password
+  click_button "Logar" 
+end
+
+Entao(/^vejo o link de "(.*?)"$/) do |arg1|
+   page.should have_link('Deslogar', href: signout_path)
 end
 

@@ -1,13 +1,36 @@
-Feature: Signing in
+#language: pt
 
-  Scenario: Unsuccessful signin
-    Given a user visits the signin page
-    When they submit invalid signin information
-    Then they should see an error message
+Funcionalidade: Logar
+	Para poder utilizar as todas as funcionalidades do aplicativo
+	Como usuario
+	Quero poder realizar login no aplicativo
 
-  Scenario: Successful signin
-    Given a user visits the signin page
-      And the user has an account
-    When the user submits valid signin information
-    Then they should see their profile page
-      And they should see a signout link
+
+	Cenário: carregar pagina de login
+	Ao carregar pagina de login, deve aparecer um formulario de login
+
+	Dado que eu estou na homepage
+	Quando eu clico no link "Login"
+   	Então vejo o formulario de login
+
+
+	Cenário: login mal-sucedido 
+	Verificar se o login foi realizado com dados incorretos
+	
+	Dado que eu estou na pagina de login
+	Quando preencho informacao invalida
+	Entao vejo o texto "Combinacao invalida de email e password."
+	
+
+	Cenário: login bem sucedido
+	Verificar se o login foi realizado com dados corretos
+  
+	Dado que eu estou na pagina de login
+	E possuo uma conta 
+	Quando submeto informacoes validas 
+	Entao sou redirecionado para a pagina "/users/18"
+	Entao vejo o texto "User"
+	E vejo o link de "Deslogar"
+
+	
+       
