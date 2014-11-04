@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141004000018) do
+ActiveRecord::Schema.define(:version => 201411030000019) do
 
   create_table "customer_services", :force => true do |t|
     t.string   "year_customer_service"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20141004000018) do
   end
 
   add_index "suppliers", ["fantasy_name_supplier"], :name => "fantasy_name_supplier", :unique => true
+
+  create_table "uf_helpers", :force => true do |t|
+    t.string   "description_uf"
+    t.string   "quantity_uf"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "unity_procons", :force => true do |t|
     t.string   "address_unity_procon"

@@ -5,6 +5,11 @@ class CustomerServicesController < ApplicationController
 		@hash_uf = return_hash
 	end
 
+	def list
+		@customer_services = CustomerService.paginate(page: params[:page])
+		@hash_uf = return_hash
+	end
+
 	def show # List Customer_Service related to one especific id.
 	    @customer_service = CustomerService.find(params[:id])
 	end
