@@ -42,7 +42,11 @@ class CustomerServicesController < ApplicationController
 		all_uf = UfHelper.all
 
 		all_uf.each do | uf|
-			hash[uf.description_uf] = uf.quantity_uf
+			if (uf.description_uf == nil)
+				uf.description_uf = "vazio"
+			end	
+
+			hash[uf.description_uf] = uf.quantity_uf.to_i
 
 		end
 
