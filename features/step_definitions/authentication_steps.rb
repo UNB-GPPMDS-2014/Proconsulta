@@ -1,6 +1,12 @@
 # encoding: utf-8
 
 #common methods
+
+Quando(/^eu escolho a opção "(.*?)" na lista "(.*?)"$/) do |arg1, arg2|
+ select arg1, from: arg2
+end
+
+
 Dado(/^que eu estou na homepage$/) do
   visit root_path
 end
@@ -72,6 +78,11 @@ end
 
 
 #'listar atendimento' methods
+
+Dado(/^que eu estou na pagina de listar atendimento$/) do
+  visit "/list"
+end
+
 
 Entao(/^vejo a lista de atendimentos$/) do
   assert page.has_text?("Ano")

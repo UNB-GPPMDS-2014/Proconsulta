@@ -8,8 +8,7 @@ Funcionalidade: Abrir página de atendimentos
   	Cenário: Carregar página de atendimentos
     Ao carregar página de atendimentos, é mostrada uma lista com os atendimentos do PROCON
 
-    Dado que eu estou na homepage
-    Quando eu clico no link "Atendimentos"
+    Dado que eu estou na pagina de listar atendimento
     Entao vejo a lista de atendimentos
     Entao vejo os filtros para pesquisar atendimento
 
@@ -17,8 +16,7 @@ Funcionalidade: Abrir página de atendimentos
     Cenário: Pesquisar atendimentos inexistentes por filtros
     Ao buscar atendimentos por meio de filtros, é mostrada uma lista vazia
 
-    Dado que eu estou na homepage
-    Quando eu clico no link "Atendimentos"
+    Dado que eu estou na pagina de listar atendimento
     E clico no filtro "Data"
     E preencho o campo "pesquisa" com "2010"
     E clico no botão "Buscar"
@@ -28,8 +26,7 @@ Funcionalidade: Abrir página de atendimentos
     Cenário: Pesquisar atendimentos por filtros
     Ao buscar atendimentos por meio de filtros, é mostrada uma lista com os atendimentos filtrados.
 
-    Dado que eu estou na homepage
-    Quando eu clico no link "Atendimentos"
+    Dado que eu estou na pagina de listar atendimento
     E existe um atendimento
     E clico no filtro "Data"
     E preencho o campo "pesquisa" com "2014"
@@ -40,8 +37,7 @@ Funcionalidade: Abrir página de atendimentos
     Cenário: Visualizar profile de um atendimento selecionado
     Ao clicar em um atendimento, é mostrada as informações do atendimento selecionado
 
-    Dado que eu estou na homepage
+    Dado que eu estou na pagina de listar atendimento
     E existe um atendimento
-    Quando eu clico no link "Atendimentos"
     E clico no link "50"
     Entao vejo dados deste atendimento
