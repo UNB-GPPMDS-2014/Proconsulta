@@ -14,3 +14,10 @@ Funcionalidade: Abrir do página do FAQ
     Quando eu clico no link "FAQ"
     Entao vejo a lista de perguntas
  
+    Cenário: Visualizar resposta de uma pergunta
+    Ao selecionar uma pergunta, é mostrada a resposta para essa pergunta
+
+	Dado que eu estou na homepage
+ 	Quando eu clico no link "FAQ"
+    E eu clico na primeira pergunta 
+    Entao vejo sua resposta
