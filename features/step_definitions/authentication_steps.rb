@@ -185,7 +185,13 @@ Entao(/^vejo a lista de perguntas$/) do
   assert page.has_text?("Perguntas Frequentes sobre Lei de Acesso a Informação")
 end
 
+Quando(/^eu clico na primeira pergunta$/) do
+ page.has_link?("Qual a finalidade da Lei de Acesso à Informação?")
+end
 
+Entao(/^vejo sua resposta$/) do
+ page.has_text?("O art. 5º, inciso XXXIII da Constituição Federal prevê que todos têm direito a receber dos órgãos públicos informações de seu interesse particular, ou de interesse coletivo ou geral. A Lei nº 12.527, de 18 de novembro de 2011 além de garantir esse direito, colabora para o fortalecimento do controle social e da participação cidadão.")
+end
 
 
 
