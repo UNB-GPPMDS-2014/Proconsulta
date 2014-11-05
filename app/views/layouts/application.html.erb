@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<html>     
+<html>
+<% provide(:title, ' - Proconsulta') %>
+<title><%= yield(:title) %></title>   
   <body>
     <head> 
+      <%= stylesheet_link_tag "custom" %>
       <%= stylesheet_link_tag    "application", media: "all" %>
       <%= javascript_include_tag "application" %>
       <%= javascript_include_tag "//www.google.com/jsapi" %>
