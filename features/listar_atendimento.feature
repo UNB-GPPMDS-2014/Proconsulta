@@ -37,7 +37,7 @@ Funcionalidade: Abrir página de atendimentos
     Cenário: Visualizar profile de um atendimento selecionado
     Ao clicar em um atendimento, é mostrada as informações do atendimento selecionado
 
-    Dado que eu estou na pagina de listar atendimento
     E existe um atendimento
+    Dado que eu estou na pagina de listar atendimento
     E clico no link "50"
     Entao vejo dados deste atendimento
