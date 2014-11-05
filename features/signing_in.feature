@@ -28,9 +28,8 @@ Funcionalidade: Logar
 	Dado que eu estou na pagina de login
 	E possuo uma conta 
 	Quando submeto informacoes validas 
-	Entao sou redirecionado para a pagina "/users/18"
-	Entao vejo o texto "User"
-	E vejo o link de "Deslogar"
+	Entao sou redirecionado para a pagina "/users/1"
+	Entao vejo o texto "Nome"
 
 	
        

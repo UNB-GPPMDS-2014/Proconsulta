@@ -179,3 +179,13 @@ Entao(/^vejo dados deste fornecedor$/) do
  end
 
 
+# FAQ 'methods'
+
+Entao(/^vejo a lista de perguntas$/) do
+  assert page.has_text?("Perguntas Frequentes sobre Lei de Acesso a Informação")
+end
+
+
+
+
+
