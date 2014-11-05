@@ -1,13 +1,11 @@
-<div>
-	<%= render 'layouts/searcher' %>
-	<center>
-		<h1>Lista de Atendimentos</h1>
-	</center>
+<% provide(:title, "Atendimentos") %>
+<%= render 'layouts/searcher' %>
+
+<center>
+	<h1>Lista de Atendimentos</h1>
 	<div class="span8">
-		<center>
-			<center>
-				<%= will_paginate %>
-			</center>
+		<%= will_paginate %>
+	</center>
 			<table class="table table-striped" id="customer_services">
 				<thead>
 					<tr>

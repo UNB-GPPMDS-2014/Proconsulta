@@ -1,63 +1,11 @@
-<div>
-
-	<div class="container-fluid">
-<div class="row-fluid">
-<div class="span4">
-		<body style= "width:1200px">
-		<br><br><br><br><br><br><br>
-		<h3>BUSCAR</br></h3>
-		<span style="color:#FFA500">
-		<b> Busca Textual </b><br>
-
-			<% # = form_tag('/customer_services/', method: :get) %>
-			<% # input type="text" name=idteste> %>
-			<% # = submit_tag "Pesquisar", class:"form_submit" %>
-
-		<select name="estados" id="unity_uf">
-			<option value="" selected>Estado 
-			<option value="AC">AC 
-			<option value="AL">AL 
-			<option value="AM">AM 
-			<option value="BA">BA 
-			<option value="CE">CE 
-			<option value="DF">DF 
-			<option value="ES">ES 
-			<option value="GO">GO 
-			<option value="MA">MA 
-			<option value="MG">MG 
-			<option value="MS">MS 
-			<option value="MT">MT 
-			<option value="PA">PA 
-			<option value="PB">PB 
-			<option value="PE">PE 
-			<option value="PI">PI 
-			<option value="PR">PR 
-			<option value="RJ">RJ 
-			<option value="RN">RN 
-			<option value="RO">RO 
-			<option value="RR">RR 
-			<option value="RS">RS 
-			<option value="SC">SC 
-			<option value="SP">SP 
-			<option value="TO">TO 
-		</select>
-
-		</span>
-			<input type="button" id="unity_search_button" value="Buscar" class="btn btn-primary" />
-			<br>
-		</form>
-		</body>
-	<left>
-</div>
-
-	<center>
-		<h1>Lista de Unidades do Procon</h1>
-	</center>
+<% provide(:title, "Procons") %>
+<title><%= yield(:title) %></title>
+<%= render 'layouts/searcher' %>
+<center>
+	<h1>Lista de Unidades do Procon</h1>
 	<div class="span8">
-		<center>
-			<center>
-				<%= will_paginate =%>
-			</center>
+		<%= will_paginate =%>
+</center>
 				<table class="table table-striped">
 					<thead>
 						<tr>

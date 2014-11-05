@@ -1,3 +1,5 @@
+<!-- _searcher for customer_service -->
+<% if yield(:title) == "Atendimentos" %>
 <div class="container-fluid">
 <div class="row-fluid">
 <div class="span4">
@@ -85,3 +87,93 @@
 		</body>
 	<left>
 </div>
+<% end %>
+
+<!-- end _searcher for customer_service -->
+
+<!-- _searcher for unity_procon -->
+<% if yield(:title) == "Procons" %>
+<div>
+
+	<div class="container-fluid">
+<div class="row-fluid">
+<div class="span4">
+		<body style= "width:1200px">
+		<br><br><br><br><br><br><br>
+		<h3>BUSCAR</br></h3>
+		<span style="color:#FFA500">
+		<b> Busca Textual </b><br>
+
+			<% # = form_tag('/customer_services/', method: :get) %>
+			<% # input type="text" name=idteste> %>
+			<% # = submit_tag "Pesquisar", class:"form_submit" %>
+
+		<select name="estados" id="unity_uf">
+			<option value="" selected>Estado 
+			<option value="AC">AC 
+			<option value="AL">AL 
+			<option value="AM">AM 
+			<option value="BA">BA 
+			<option value="CE">CE 
+			<option value="DF">DF 
+			<option value="ES">ES 
+			<option value="GO">GO 
+			<option value="MA">MA 
+			<option value="MG">MG 
+			<option value="MS">MS 
+			<option value="MT">MT 
+			<option value="PA">PA 
+			<option value="PB">PB 
+			<option value="PE">PE 
+			<option value="PI">PI 
+			<option value="PR">PR 
+			<option value="RJ">RJ 
+			<option value="RN">RN 
+			<option value="RO">RO 
+			<option value="RR">RR 
+			<option value="RS">RS 
+			<option value="SC">SC 
+			<option value="SP">SP 
+			<option value="TO">TO 
+		</select>
+
+		</span>
+			<input type="button" id="unity_search_button" value="Buscar" class="btn btn-primary" />
+			<br>
+		</form>
+		</body>
+	<left>
+</div>
+<% end %>
+<!-- end _searcher for unity_procon -->
+
+<!-- _searcher for suppliers -->
+<% if yield(:title) == "Fornecedores" %>
+<div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span4">
+				<body style= "width:1200px">
+					<br><br><br><br><br><br><br>
+					<h3>BUSCAR</br></h3>
+					<span style="color:#FFA500">
+					<b> Busca Textual </b><br>
+					<% # = form_tag('/customer_services/', method: :get) %>
+					<% # input type="text" name=idteste> %>
+					<% # = submit_tag "Pesquisar", class:"form_submit" %>
+					</span>
+					<input type="text" name="pesquisa" size="50" maxlength="50" id="supplier_search_text">
+					<input type="button" id="supplier_search_button" value="Buscar" class="btn btn-primary" />
+					<br>
+					<label>
+						<input type="radio"  class="search_type" name="search_type" value="fantasy_name_supplier" checked="checked" /> Nome
+					</label>
+					<label>
+						<input type="radio" class="search_type" name="search_type" value="cnpj"> CNPJ
+					</label>
+				</body>
+
+	<left>
+		</div>
+<% end %>
+<!-- end _searcher for supplier -->
