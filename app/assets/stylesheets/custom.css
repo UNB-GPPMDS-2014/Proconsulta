@@ -1,0 +1,7 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+body {
+  /*Espaço entre header e o início do html */
+  padding-top: 150px;
+}
