@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 5px;
 }
 
 section {
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 25px;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -60,4 +60,32 @@ h3 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 30%;
+  margin-bottom: 11px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
