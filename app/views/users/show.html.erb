@@ -1,12 +1,15 @@
-<center><h2>
+<% provide(:title, @user.name_user) %>
+<title><%= yield(:title) %></title>
+<center>
+	<h2>
 	Nome: <%= @user.name_user %></br>
 	Estado: <%= @user.address_user %></br>
 	E-Mail: <%= @user.email_user %></br>
 	ID: <%= @user.id %></br>
-</h2>
-<h1>
-
-<%= link_to "Editar Dados", "/users/"+@user.id.to_s+"/edit" %></br>
-
-	<%= link_to "Deletar Conta", @user.id.to_s, method: :delete, data: { confirm: "Você tem certeza?" } %>
-</h1></center>
+	</h2>
+	<h1>
+	<%= link_to "Editar Dados", "/users/"+@user.id.to_s+"/edit" %></br>
+	<%= link_to "Deletar Conta", @user.id.to_s,
+	 method: :delete, data: { confirm: "Você tem certeza?" } %>
+	</h1>
+</center>

@@ -1,8 +1,12 @@
-<h1>Lista de usuários registrados:</br></h1>
-<% @users.each do |user| %>
-      <tr>
-      <h2>
-        <td><%= user.name_user %></td>, id: <%= user.id %></br>
-      </tr>
-      </h2>
-<% end %>
+<% provide(:title, "Usuários") %>
+<title><%= yield(:title) %></title>
+<h1>
+	Lista de usuários registrados:</br>
+</h1>
+<h2>
+	<% @users.each do |user| %>
+    <tr>
+      <td><%= user.name_user %></td>, id: <%= user.id %></br>
+    </tr>      
+	<% end %>
+</h2>
