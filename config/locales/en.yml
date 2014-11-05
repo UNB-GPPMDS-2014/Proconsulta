@@ -18,13 +18,16 @@ en:
         user:
           attributes:
             email_user:
+              taken: "está em uso."
               blank: "não preenchido."
               invalid: "inválido."
               too_long: "muito longo"
+              taken: "já está em uso."
             password:
               blank: "não preenchida."
               invalid: "inválida."
               too_short: "muito curta."
+              confirmation: "não confirmada."
             name_user:
               blank: "em branco."
             password_digest:
