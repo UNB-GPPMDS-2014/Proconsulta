@@ -1,16 +1,14 @@
 <% provide(:title, @supplier.fantasy_name_supplier) %>
 <title><%= yield(:title) %></title>
-<h1>Fornecedor:</h1></br>
+<div class="center jumbotron">
 <center><font face="Architect" color="#FFCC66"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></center></br>
-<right>
-
+	<div align="left">
 	<% a = @supplier %><h5>
-		<font face="verdana" color="gray">ID Fornecedor:      </font><div align="justify"><%= a.id %></div></br>
-		<font face="verdana" color="gray">Tipo de Fornecedor: </font><div align="justify"><%= a.type_supplier %></div></br>
-		<font face="verdana" color="gray">Razão Social:       </font><div align="justify"><%= a.social_reason_supplier %></div></br>
-		<font face="verdana" color="gray">CNPJ:               </font><div align="justify"><%= a.cnpj %></div></br>
-		<font face="verdana" color="gray">CNAEP:              </font><div align="justify"><%= a.cnaep_main_code_supplier %></div></br>
-		<font face="verdana" color="gray">Descrição:          </font><div align="justify"><%= a.description_cnaep_code_supplier %></div></br>
-	</h5>
-</right>
-
+		<h3>
+		ID Fornecedor: <%= a.id %></br></br>
+		Tipo de Fornecedor: <%= a.type_supplier %></br></br>
+		Razão Social: <%= a.social_reason_supplier %></br></br>
+		CNPJ: <%= a.cnpj %></br></br>
+		CNAEP: <%= a.cnaep_main_code_supplier %></br></br>
+		Descrição: <%= a.description_cnaep_code_supplier %></br></br>
+</div>

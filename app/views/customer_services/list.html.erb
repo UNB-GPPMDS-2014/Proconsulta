@@ -16,14 +16,14 @@
 				</thead>
 				<tbody>
 					<% @customer_services.each do |cs| %>
-				  		<tr>
-					  		<h6>
-						        <td><%= cs.year_customer_service %></td>
-						        <td><%= cs.uf_customer_service %></td>
-						        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
-						        <td><%= cs.description_problem_customer_service %></td>
-					      	</h6>
-				       	</tr>
+			  		<tr>
+				  		<h6>
+				        <td><%= cs.year_customer_service %></td>
+				        <td><%= cs.uf_customer_service %></td>
+				        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
+				        <td><%= cs.description_problem_customer_service %></td>
+		      	  </h6>
+		       	</tr>
 					<% end %>
 				</tbody>
 			</table>
