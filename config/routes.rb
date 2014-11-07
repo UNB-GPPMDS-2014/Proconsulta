@@ -6,6 +6,7 @@ SISANPRO::Application.routes.draw do
   resources :suppliers, only: [:show, :index]
   resources :unity_procons, only: [:show, :index]
   resources :faqs
+  resources :ratings
 
 
   match '/signup', to: 'users#new'
