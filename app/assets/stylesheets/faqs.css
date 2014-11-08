@@ -1,0 +1,29 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+.panel-warning {
+  border-color: #FFA500;
+}
+
+.panel-warning > .panel-heading {
+  color: #383838;
+  background-color: #FFA500;
+  border-color: #FFA500;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
+  color: #555;
+  text-decoration: none;
+  background-color:#faebcc;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #faebcc;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
