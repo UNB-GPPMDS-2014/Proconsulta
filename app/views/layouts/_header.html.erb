@@ -5,20 +5,18 @@
       
       <ul class="nav pull-right">
     		<li><%= link_to "Home", root_path%></li>  
-    		<li><%= link_to "Procons", '/unity_procons' %></li>
-       
         <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Atendimento <b class="caret"></b>
+              Dados <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Gráfico", customer_services_path %></li>
-              <li><%= link_to "Listar", list_path %></li>
+              <li><%= link_to "Unidades do Procon", '/unity_procons' %></li>
+              <li><%= link_to "Atendimentos", list_path %></li>
+              <li><%= link_to "Fornecedores", '/suppliers' %></li>
+              <li><%= link_to "Ranking de Unidades do Procon", '/ranking' %></li>
             </ul>
           </li>  
-
-        <li><%= link_to "Fornecedores", '/suppliers' %></li>
-    		<li><%= link_to "Ranking", '/ranking' %></li>
+        <li><%= link_to "Gráficos", customer_services_path %></li>
         <li><%= link_to "FAQ", '/faq' %></li>
 
         <% if signed_in? %>
