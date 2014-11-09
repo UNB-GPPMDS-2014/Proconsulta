@@ -178,7 +178,7 @@
 <% end %>
 <!-- end _searcher for supplier -->
 
-<!-- _searcher for customer_service -->
+<!-- Filter for customer_service -->
 <% if yield(:title) == "Gráficos de Atendimentos" %>
 <div class="container-fluid">
 <div class="row-fluid">
@@ -191,18 +191,18 @@
 
 			<select name="atendimentos" id="type_services", style="width: 300px" >
 				<option value="" selected>----- Selecione uma Opção ----- 
-				<option value="quantity_direct_complaint"> Abertura Direta de Reclamação
-				<option value="quantity_preliminary_service"> Atendimento Preliminar
-				<option value="quantity_calculation"> Cálculo
-				<option value="quantity_cip"> CIP (Carta de Informações Preliminares)
-				<option value="quantity_forward_supervision"> Encaminhamento a Fiscalização
-				<option value="quantity_initial_jec,"> Inicial JEC
-				<option value="quantity_letter_complaint"> Reclamação de Ofício
-				<option value="quantity_simple_consult"> Simples Consulta
+				<option value="1"> Abertura Direta de Reclamação
+				<option value="2"> Atendimento Preliminar
+				<option value="3"> Cálculo
+				<option value="4"> CIP (Carta de Informações Preliminares)
+				<option value="5"> Encaminhamento a Fiscalização
+				<option value="6"> Inicial JEC
+				<option value="7"> Reclamação de Ofício
+				<option value="8"> Simples Consulta
 			</select>
 		</span>
 
-		<input type="button" id="service_filter_button" value="Buscar" class="btn btn-primary" />
+		<br><br><input type="button" id="service_filter_button" value="Buscar" class="btn btn-primary" />
 	</body>
 </div>
 <% end %>
