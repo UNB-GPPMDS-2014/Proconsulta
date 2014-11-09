@@ -54,10 +54,6 @@ class CustomerServicesController < ApplicationController
 
 	end
 
-	def filter_customer_service_by_type(type)
-		hash = Hash.new
-		all_uf = UfHelper.all
-		
 		QUANTITY_DIRECT_COMPLAINT = 1
 		QUANTITY_PRELIMINARY_SERVICE = 2
 		QUANTITY_CALCULATION = 3
@@ -66,6 +62,10 @@ class CustomerServicesController < ApplicationController
 		QUANTITY_INITIAL_JEC = 6
 		QUANTITY_LETTER_COMPLAINT = 7
 		QUANTITY_SIMPLE_CONSULT = 8
+
+	def filter_customer_service_by_type(type)
+		hash = Hash.new
+		all_uf = UfHelper.all
 
 		all_uf.each do | uf|
 			if (uf.description_uf == nil)
