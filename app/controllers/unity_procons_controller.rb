@@ -26,4 +26,8 @@ class UnityProconsController < ApplicationController
 		data = UnityProcon.where("uf_procon = ?", params[:search]).paginate(:page=>1)
 		render :json=>data.to_json
 	end
+
+	def add_rating
+		redirect_to UnityProcon.last
+	end
 end

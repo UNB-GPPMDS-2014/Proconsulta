@@ -8,7 +8,7 @@ SISANPRO::Application.routes.draw do
   resources :faqs
   resources :ratings
 
-
+  match '/unity_procons/add_rating', to: 'unity_procons#add_rating'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete 

@@ -42,17 +42,30 @@
 			<center>
 				<body style= "width:1200px">
 					<h2>Avalie essa unidade!</h2>
-					<%= link_to "Avaliar", new_rating_path,{:Controller => "ratings", :action => "new", :rating => a } %>
+
+					<label>
+						<input type="radio"  class="search_type" name="search_type" value="POSITIVO" checked="checked" /> +
+					</label>
 					
+					<label>
+						<input type="radio"  class="search_type" "glyphicon glyphicon-minus" name="search_type" value="NEGATIVO" checked="checked" /> -
+					</label>
+
+					<br>
+						Descrição:
+						<textarea class="form-control" rows="3"></textarea>
+					<br>
+
+					<%= button_to "Avaliar", { :controller => :unity_procons, :action => :add_rating } %>
 				</body>
 			</center>
 		</div>
-
 	</div>
 </div>
 
 <style>
-.btn {
+.btn 
+{
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
