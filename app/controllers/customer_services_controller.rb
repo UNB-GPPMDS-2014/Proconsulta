@@ -53,4 +53,56 @@ class CustomerServicesController < ApplicationController
 		hash	
 
 	end
+
+	def filter_customer_service_by_type(type)
+		hash = Hash.new
+		all_uf = UfHelper.all
+		
+		QUANTITY_DIRECT_COMPLAINT = 1
+		QUANTITY_PRELIMINARY_SERVICE = 2
+		QUANTITY_CALCULATION = 3
+		QUANTITY_CIP = 4
+		QUANTITY_FORWARD_SUPERVISION = 5
+		QUANTITY_INITIAL_JEC = 6
+		QUANTITY_LETTER_COMPLAINT = 7
+		QUANTITY_SIMPLE_CONSULT = 8
+
+		all_uf.each do | uf|
+			if (uf.description_uf == nil)
+				uf.description_uf = "vazio"
+			end	
+
+			case type
+				when QUANTITY_DIRECT_COMPLAINT
+					hash[uf.description_uf] = uf.quantity_direct_complaint.to_i
+
+				when QUANTITY_PRELIMINARY_SERVICE
+					hash[uf.description_uf] = uf.quantity_preliminary_service.to_i				
+
+				when QUANTITY_CALCULATION
+					hash[uf.description_uf] = uf.quantity_calculation.to_i
+
+				when QUANTITY_CIP
+					hash[uf.description_uf] = uf.quantity_direct_cip.to_i		
+
+				when QUANTITY_FORWARD_SUPERVISION
+					hash[uf.description_uf] = uf.quantity_forward_supervision.to_i
+
+				when QUANTITY_INITIAL_JEC
+					hash[uf.description_uf] = uf.quantity_initial_jec.to_i
+					
+				when QUANTITY_LETTER_COMPLAINT																			
+					hash[uf.description_uf] = uf.quantity_letter_complaint.to_i	
+
+				when QUANTITY_SIMPLE_CONSULT
+					hash[uf.description_uf] = uf.quantity_simple_consult.to_i		
+			
+			end
+			
+		end	
+
+		hash	
+
+	end
+
 end
