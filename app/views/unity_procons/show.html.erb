@@ -1,3 +1,4 @@
+<%include Rating%>
 <% provide(:title, "Unidade do Procon") %>
 <title><%= yield(:title) %></title>
 <% a = @unity_procon %>
@@ -50,13 +51,12 @@
 					<label>
 						<input type="radio"  class="search_type" "glyphicon glyphicon-minus" name="search_type" value="NEGATIVO" checked="checked" /> -
 					</label>
-
 					<br>
 						Descrição:
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" id="Descricao_rating" rows="3"></textarea>
 					<br>
 
-					<%= button_to "Avaliar", { :controller => :unity_procons, :action => :add_rating } %>
+					 <%= button_to "Avaliar", { :controller => :unity_procons, :action => :add_rating, :unity_procon_id => @unity_procon.id, :rating_id => @rating.id } %>
 				</body>
 			</center>
 		</div>
