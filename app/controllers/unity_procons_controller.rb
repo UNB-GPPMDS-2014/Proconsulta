@@ -7,7 +7,8 @@ class UnityProconsController < ApplicationController
 	# Show one especific procon unity associated with one especific id.
 
 	def show
-	    @unity_procon = UnityProcon.find(params[:id])
+	     @unity_procon = UnityProcon.find(params[:id])
+	   	 @rating = Rating.create
 	end
 
 	def ranking
@@ -28,6 +29,13 @@ class UnityProconsController < ApplicationController
 	end
 
 	def add_rating
-		redirect_to UnityProcon.last
+		rating = Rating.find( params[:rating_id])
+		unity_procon = UnityProcon.find( params[:unity_procon_id] )
+		unless rating.blank?
+			unity_procon.ratings << rating	
+		else
+			# Nothing To Do
+		end
+		redirect_to unity_procon
 	end
 end
