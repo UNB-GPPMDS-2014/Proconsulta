@@ -16,7 +16,7 @@ class CustomerServicesController < ApplicationController
 
 	def custom_search
 		unless request.xhr? or params[:page].nil? or params[:search].nil?
-			redirect_to "/"
+			redirect_to root_path
 			return
 		end
 
