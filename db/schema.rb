@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 201411030000019) do
+ActiveRecord::Schema.define(:version => 20140927000013) do
 
   create_table "customer_services", :force => true do |t|
     t.string   "year_customer_service"
@@ -35,14 +35,10 @@ ActiveRecord::Schema.define(:version => 201411030000019) do
   add_index "customer_services", ["supplier_id"], :name => "index_customer_services_on_supplier_id"
 
   create_table "ratings", :force => true do |t|
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "description_rating"
-    t.float    "value_rating"
-    t.integer  "unity_procon_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
-
-  add_index "ratings", ["unity_procon_id"], :name => "index_ratings_on_unity_procon_id"
 
   create_table "suppliers", :force => true do |t|
     t.string   "type_supplier"
@@ -60,8 +56,16 @@ ActiveRecord::Schema.define(:version => 201411030000019) do
   create_table "uf_helpers", :force => true do |t|
     t.string   "description_uf"
     t.string   "quantity_uf"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "quantity_direct_complaint"
+    t.integer  "quantity_preliminary_service"
+    t.integer  "quantity_calculation"
+    t.integer  "quantity_cip"
+    t.integer  "quantity_forward_supervision"
+    t.integer  "quantity_initial_jec"
+    t.integer  "quantity_letter_complaint"
+    t.integer  "quantity_simple_consult"
   end
 
   create_table "unity_procons", :force => true do |t|

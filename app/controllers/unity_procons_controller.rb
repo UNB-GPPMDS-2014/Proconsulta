@@ -29,12 +29,17 @@ class UnityProconsController < ApplicationController
 	end
 
 	def add_rating
+		puts params
 		rating = Rating.find( params[:rating_id])
 		unity_procon = UnityProcon.find( params[:unity_procon_id] )
-		unless rating.blank?
-			unity_procon.ratings << rating	
-		else
-			# Nothing To Do
+
+		unless rating.blank? 
+			unity_procon.ratings << rating
+			if (unity_procon.save)	
+				flash[:notice] = "Avaliação concluida"
+			else
+				flash[:notice] = "ERRO!"
+			end
 		end
 		redirect_to unity_procon
 	end
