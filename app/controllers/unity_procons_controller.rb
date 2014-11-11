@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class UnityProconsController < ApplicationController
 	# Show all procon units
 	def index
