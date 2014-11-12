@@ -3,6 +3,7 @@ class CustomerServicesController < ApplicationController
 	def index # List all Customer_Services
 		@customer_services = CustomerService.paginate(page: params[:page])
 		@hash_uf = return_hash
+		@hash_uf_filter = Hash.new
 	end
 
 	def list
@@ -47,11 +48,9 @@ class CustomerServicesController < ApplicationController
 			end	
 
 			hash[uf.description_uf] = uf.quantity_uf.to_i
-
 		end
 
-		hash	
-
+		hash
 	end
 
 		QUANTITY_DIRECT_COMPLAINT = 1
@@ -63,46 +62,45 @@ class CustomerServicesController < ApplicationController
 		QUANTITY_LETTER_COMPLAINT = 7
 		QUANTITY_SIMPLE_CONSULT = 8
 
-	def filter_customer_service_by_type(type)
+	def filter_customer_service_by_type
 		hash = Hash.new
 		all_uf = UfHelper.all
 
-		all_uf.each do | uf|
+		type_service = params[:type].to_i
+
+		all_uf.each do |uf|
 			if (uf.description_uf == nil)
 				uf.description_uf = "vazio"
-			end	
+			end
 
-			case type
+			hash[uf.description_uf] = case type_service
 				when QUANTITY_DIRECT_COMPLAINT
-					hash[uf.description_uf] = uf.quantity_direct_complaint.to_i
+					then uf.quantity_direct_complaint
 
 				when QUANTITY_PRELIMINARY_SERVICE
-					hash[uf.description_uf] = uf.quantity_preliminary_service.to_i				
+					then uf.quantity_preliminary_service
 
 				when QUANTITY_CALCULATION
-					hash[uf.description_uf] = uf.quantity_calculation.to_i
+					then uf.quantity_calculation
 
 				when QUANTITY_CIP
-					hash[uf.description_uf] = uf.quantity_direct_cip.to_i		
+					then uf.quantity_direct_cip
 
 				when QUANTITY_FORWARD_SUPERVISION
-					hash[uf.description_uf] = uf.quantity_forward_supervision.to_i
+					then uf.quantity_forward_supervision
 
 				when QUANTITY_INITIAL_JEC
-					hash[uf.description_uf] = uf.quantity_initial_jec.to_i
+					then uf.quantity_initial_jec
 					
-				when QUANTITY_LETTER_COMPLAINT																			
-					hash[uf.description_uf] = uf.quantity_letter_complaint.to_i	
+				when QUANTITY_LETTER_COMPLAINT
+					then uf.quantity_letter_complaint
 
 				when QUANTITY_SIMPLE_CONSULT
-					hash[uf.description_uf] = uf.quantity_simple_consult.to_i		
-			
+					then uf.quantity_simple_consult
+					
 			end
-			
 		end	
 
-		hash	
-
+		render :json => hash.to_json
 	end
-
 end
