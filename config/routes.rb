@@ -14,17 +14,16 @@ SISANPRO::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete 
   match '/allusers', to: 'users#allusers'
   match '/ranking', to: 'unity_procons#ranking'
+  match '/faq', to: 'faqs#index'
+  match '/cdc', to: 'cdcs#index'
+  
   get '/list', to: 'customer_services#list'
-
   get "/customer_service/filter_customer_service_by_type", to: "customer_services#filter_customer_service_by_type"
   get "/customer_service/filter_customer_service_by_type_region", to: "customer_services#filter_customer_service_by_type_region"
   get "/customer_service/custom_search", to: "customer_services#custom_search"
   get "/customer_service/index", to: "customer_services#index"
   get "/unity_procon/custom_search", to: "unity_procons#custom_search"
   get "/supplier/custom_search", to: "suppliers#custom_search"
-
-  match '/faq', to: 'faqs#index'
-  match '/cdc', to: 'cdcs#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
