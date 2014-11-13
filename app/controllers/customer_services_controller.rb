@@ -54,6 +54,7 @@ class CustomerServicesController < ApplicationController
 		hash
 	end
 
+		QUANTITY_ALL = 0
 		QUANTITY_DIRECT_COMPLAINT = 1
 		QUANTITY_PRELIMINARY_SERVICE = 2
 		QUANTITY_CALCULATION = 3
@@ -75,6 +76,10 @@ class CustomerServicesController < ApplicationController
 			end
 
 			hash[uf.description_uf] = case type_service
+				
+				when QUANTITY_ALL
+					then uf.quantity_uf
+
 				when QUANTITY_DIRECT_COMPLAINT
 					then uf.quantity_direct_complaint
 

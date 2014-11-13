@@ -9,7 +9,7 @@
     <div class="span8">
 
 	    <script>
-
+	    	var chart;
 	    	/*
 	    		Responsible for converting an object of type Hash to an Array of arrays, where each array represents a pair [key: value].
 	    	*/
@@ -225,7 +225,7 @@
 					send_type_of_customer_service_region(type);
 				});
 
-		        var chart = new Highcharts.Chart({
+		        chart = new Highcharts.Chart({
 		            chart: 
 		            {
 		                renderTo: 'container',
@@ -370,6 +370,7 @@
 
         <h1>Gráfico de Atendimentos</h1>
     	<div class="span8">
+
         <div id="container_region" st.yle="height: 300px"></div>
 
     </div>

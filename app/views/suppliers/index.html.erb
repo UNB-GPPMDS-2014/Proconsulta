@@ -19,15 +19,15 @@
 						  	</tr>
 						</thead>
 						<tbody id="suppliers">
-					    <% @suppliers.each do |sup| %>
-						      <tr>
-						      	<h6>
-							        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %></td>
-							        <td><%= sup.cnpj %></td>
-							    </h6>
+					    	<% @suppliers.each do |sup| %>
+						        <tr>
+							      	<h6>
+								        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %></td>
+								        <td><%= sup.cnpj %></td>
+								    </h6>
 					          </tr>
 							<% end %>
-					</tbody>
+						</tbody>
 				</table>
 				<center>
 					<%= will_paginate %>
