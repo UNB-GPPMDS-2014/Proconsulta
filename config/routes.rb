@@ -24,6 +24,7 @@ SISANPRO::Application.routes.draw do
   get "/supplier/custom_search", to: "suppliers#custom_search"
 
   match '/faq', to: 'faqs#index'
+  match '/cdc', to: 'cdcs#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
