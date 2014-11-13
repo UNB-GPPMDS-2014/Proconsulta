@@ -18,5 +18,11 @@ describe CustomerServicesController, :type => :controller do
           expect(response).to have_http_status(:success)
         end
     end
+  describe "GET list" do
+        it "should find all the customer_service" do
+          get :list 
+          expect(response).to have_http_status(:success)
+        end
+    end  
 
 end
