@@ -116,6 +116,95 @@
 				});
 			}
 
+			/*
+				Draws the graph according to the type of calls filtered by user.
+			*/
+	    	function send_type_of_customer_service_region(type)
+			{
+				$.ajax(
+				{
+					url: "/customer_service/filter_customer_service_by_type_region",
+					type: "GET",
+					data: { "type":type },
+					success: function(response) {
+
+						var hash = key_value_to_array( response );
+
+						console.log(hash);
+
+						var chart = new Highcharts.Chart({
+				            chart: 
+				            {
+				                renderTo: 'container_region',
+				                type: 'pie',
+
+				                options3d: 
+				                {
+				                    enabled: true,
+				                    alpha: 45,
+				                    beta: 0
+				                }
+				            },
+
+				            title: 
+				            {
+				                text: 'Atendimentos por Região'
+				            },
+
+				            tooltip: 
+				            {
+				                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				            },
+
+				            plotOptions: 
+				            {
+				                pie: 
+				                {
+				                    allowPointSelect: true,
+				                    cursor: 'pointer',
+				                    depth: 35,
+
+				                    dataLabels: 
+				                    {
+				                        enabled: false,
+				                        format: '{point.name}'
+				                    }
+				                }
+				            },
+
+				            legend:
+				            {
+				                layout: 'vertical',
+				                align: 'right',
+				                verticalAlign: 'top',
+				                x: -10,
+				                y: 100,
+				                borderWidth: 0,
+
+				                labelFormatter: function() 
+				                {
+				                    if(this.name!='series')
+				                    {
+				                        return this.name;
+				                    } else
+				                    {
+				                        return 'Legend';
+				                    }
+				                }
+				            },
+
+				            series: [{
+				                showInLegend:true,
+				                type: 'pie',
+				                name: 'Atendimentos',
+				                data: hash
+				            }]
+				        });
+					}
+				});
+			}
+
+
 	        $(document).ready(function()
 			{
 				$("#service_filter_button").click(function()
@@ -125,6 +214,15 @@
 					console.log(type);
 
 					send_type_of_customer_service(type);
+				});
+
+				$("#service_filter_region_button").click(function()
+				{
+					var type = $("#type_services_region").val();
+
+					console.log(type);
+
+					send_type_of_customer_service_region(type);
 				});
 
 		        var chart = new Highcharts.Chart({
@@ -195,9 +293,84 @@
 		                data: <%=raw @hash_uf.map { |key, value| [key, value] } %>
 		            }]
 		        });
+
+				var chart = new Highcharts.Chart({
+		            chart: 
+		            {
+		                renderTo: 'container_region',
+		                type: 'pie',
+
+		                options3d: 
+		                {
+		                    enabled: true,
+		                    alpha: 45,
+		                    beta: 0
+		                }
+		            },
+
+		            title: 
+		            {
+		                text: 'Atendimentos por Região'
+		            },
+
+		            tooltip: 
+		            {
+		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		            },
+
+		            plotOptions: 
+		            {
+		                pie: 
+		                {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    depth: 35,
+
+		                    dataLabels: 
+		                    {
+		                        enabled: false,
+		                        format: '{point.name}'
+		                    }
+		                }
+		            },
+
+		            legend:
+		            {
+		                layout: 'vertical',
+		                align: 'right',
+		                verticalAlign: 'top',
+		                x: -10,
+		                y: 100,
+		                borderWidth: 0,
+
+		                labelFormatter: function() 
+		                {
+		                    if(this.name!='series')
+		                    {
+		                        return this.name;
+		                    } else
+		                    {
+		                        return 'Legend';
+		                    }
+		                }
+		            },
+
+		            series: [{
+		                showInLegend:true,
+		                type: 'pie',
+		                name: 'Atendimentos',
+		                data: <%=raw @hash_region.map { |key, value| [key, value] } %>
+		            }]
+		        });
 			});
 	    </script>
 
+	    
         <div id="container" st.yle="height: 300px"></div>
+
+        <h1>Gráfico de Atendimentos</h1>
+    	<div class="span8">
+        <div id="container_region" st.yle="height: 300px"></div>
+
     </div>
 </center>
