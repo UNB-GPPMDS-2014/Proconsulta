@@ -17,8 +17,15 @@ describe SessionsController, :type => :controller do
   		end
 	end
 
+	describe "GET new" do
+		it "should render signin page" do
+			get :new
+			expect(response).to have_http_status(:success)
+		end
+	end
 	describe "POST create" do
 		it "expect user to be finded by email" do
+			post :create, session: { email_user: @user.email_user }
 		end
 
 		it "expect user finded to be signed" do
