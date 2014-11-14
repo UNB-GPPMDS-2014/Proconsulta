@@ -1,21 +1,28 @@
 class RatingsController < ApplicationController
-
-
-	def new
-		@rating = Rating.new
+	
+	def index
+		@rating = Rating.create
+	end
+	
+	def show
+	  rating = Rating.find( params[:rating_id])
+	  unity_procon = UnityProcon.find( params[:unity_procon_id])
 	end
 
-	def create
-		@rating = Rating.new(rating_params)	
-    	if @rating.save
-      		redirect_to unity_procons_path
-    	else
-      		render 'new'
-    	end
-	end
+    def add_rating
+		puts params
+		rating = Rating.find( params[:rating_id])
+		unity_procon = UnityProcon.find( params[:unity_procon_id] )
 
-	def rating_params
-      params.require(:rating).permit(:value_rating,:unity_procon_rating, :description_rating)
-    end
+		unless rating.blank? 
+			unity_procon.ratings << rating
+			if (unity_procon.save)	
+				flash[:notice] = ""
+			else
+				flash[:notice] = "ERRO!"
+			end
+		end
+		redirect_to unity_procon
+	end
 
 end

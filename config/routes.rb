@@ -6,7 +6,7 @@ SISANPRO::Application.routes.draw do
   resources :suppliers, only: [:show, :index]
   resources :unity_procons, only: [:show, :index]
   resources :faqs
-  resources :ratings
+  resources :ratings, only: [:show, :index]
 
   match '/unity_procons/add_rating', to: 'unity_procons#add_rating'
   match '/signup', to: 'users#new'
@@ -16,6 +16,7 @@ SISANPRO::Application.routes.draw do
   match '/ranking', to: 'unity_procons#ranking'
   match '/faq', to: 'faqs#index'
   match '/cdc', to: 'cdcs#index'
+  match '/avaliar', to: 'ratings#index'
   
   get '/list', to: 'customer_services#list'
   get "/customer_service/filter_customer_service_by_type", to: "customer_services#filter_customer_service_by_type"
@@ -24,6 +25,7 @@ SISANPRO::Application.routes.draw do
   get "/customer_service/index", to: "customer_services#index"
   get "/unity_procon/custom_search", to: "unity_procons#custom_search"
   get "/supplier/custom_search", to: "suppliers#custom_search"
+  #get "/rating/avaliar", to: "ratings#add_rating"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
