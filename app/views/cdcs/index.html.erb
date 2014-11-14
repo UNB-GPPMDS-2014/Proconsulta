@@ -1,8 +1,11 @@
+<% provide(:title, "Legislação") %>
+<title><%= yield(:title) %></title>
+
 <%= stylesheet_link_tag "cdcs" %>
 <div class="tree well">
     <ul>
         <li>
-            <span><i class="icon-folder-open"></i> Parent</span> <a href="">Goes somewhere</a>
+            <span><i class="icon-folder-open"></i> Parent</span>
             <ul>
                 <li>
                     <span><i class="icon-minus-sign"></i> Child</span> <a href="">Goes somewhere</a>
@@ -48,7 +51,7 @@
             </ul>
         </li>
         <li>
-            <span><i class="icon-folder-open"></i> Parent2</span> <a href="">Goes somewhere</a>
+            <span><i class="icon-folder-open"></i> Parent2</span>
             <ul>
                 <li>
                     <span><i class="icon-leaf"></i> Child</span> <a href="">Goes somewhere</a>

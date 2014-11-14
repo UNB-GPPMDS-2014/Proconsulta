@@ -7,6 +7,7 @@ SISANPRO::Application.routes.draw do
   resources :unity_procons, only: [:show, :index]
   resources :faqs
   resources :ratings, only: [:show, :index]
+  resources :cdcs
 
   match '/unity_procons/add_rating', to: 'unity_procons#add_rating'
   match '/signup', to: 'users#new'
