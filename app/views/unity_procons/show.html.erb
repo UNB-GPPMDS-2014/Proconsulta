@@ -57,13 +57,12 @@
 					<body style= "width:1200px">
 						<h2>Avalie essa unidade!</h2>
 
-						<label>
-							<input type="radio"  class="search_type" name="search_type" value="POSITIVO" checked="checked" /> +
-						</label>
-						
-						<label>
-							<input type="radio"  class="search_type" "glyphicon glyphicon-minus" name="search_type" value="NEGATIVO" checked="checked" /> -
-						</label>
+						<%= f.label :value_rating, "Pontuação" %></br>
+    					<%= f.select :value_rating, options_for_select([
+    						[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
+    						[5,'5']]) %>
+
+
 						<br>
 
 						  <%= f.label :description_rating, "Descrição" %>
