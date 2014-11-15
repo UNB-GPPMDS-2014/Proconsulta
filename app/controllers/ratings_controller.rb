@@ -5,14 +5,13 @@ class RatingsController < ApplicationController
 	end
 	
 	def show
-	  rating = Rating.find( params[:rating_id])
-	  unity_procon = UnityProcon.find( params[:unity_procon_id])
+	    @unity_procon = UnityProcon.find( params[:id])
 	end
 
     def add_rating
 		puts params
-		rating = Rating.find( params[:rating_id])
-		unity_procon = UnityProcon.find( params[:unity_procon_id] )
+		rating = Rating.find(params[:id])
+		unity_procon = UnityProcon.find(params[:id])
 
 		unless rating.blank? 
 			unity_procon.ratings << rating
