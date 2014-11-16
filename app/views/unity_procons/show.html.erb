@@ -36,11 +36,6 @@
 					<font face="verdana" color="gray">
 						Email:
 					</font>
-					<div>
-						 <% a.ratings.each do |rating| %>
-						 <%= rating.description_rating %>
-					<% end %>
-					</div>
 					<div align="justify">
 						<%= a.email_unity_procon %>
 					</div></br>
@@ -49,7 +44,7 @@
 				<left>
 			</div>
 
-
+	<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
 	<%= f.fields_for :ratings, @rating  do |ff| %>
 
 			<div class="span4">
@@ -69,7 +64,7 @@
 						  <%= ff.label :description_rating, "Descrição" %>
 						  <%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
 
-						 <%= f.submit "Avaliar" %>
+						 <%= ff.submit "Avaliar" %>
 
 					</body>
 				</center>
@@ -77,6 +72,7 @@
 		<% end %>
 		</div>
 	</div>
+	<% end %>
 
 <%end %>
 	<style>

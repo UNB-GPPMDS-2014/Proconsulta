@@ -9,8 +9,8 @@ class UnityProconsController < ApplicationController
 
 	def show
 	     @unity_procon = UnityProcon.find(params[:id])
-	   	 @rating = Rating.create
-	   	 @unity_procon.ratings << @rating
+	   	 @rating = Rating.new
+	   	 #@unity_procon.ratings << @rating
 	end
 
 	def ranking

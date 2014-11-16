@@ -9,7 +9,7 @@ SISANPRO::Application.routes.draw do
   resources :ratings, only: [:show, :index]
   resources :cdcs
 
-  match '/add_rating', to: 'unity_procons#add_rating'
+  match '/add_rating', to: 'unity_procons#update'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete 
