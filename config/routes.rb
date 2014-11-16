@@ -4,7 +4,7 @@ SISANPRO::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :customer_services, only: [:show, :index]
   resources :suppliers, only: [:show, :index]
-  resources :unity_procons, only: [:show, :index]
+  resources :unity_procons
   resources :faqs
   resources :ratings, only: [:show, :index]
   resources :cdcs

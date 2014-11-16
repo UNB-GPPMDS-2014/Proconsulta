@@ -5,6 +5,7 @@
 	<% provide(:title, "Unidade do Procon") %>
 	<title><%= yield(:title) %></title>
 
+	<%= form_for @unity_procon do |f| %>
 	<% a = @unity_procon %>
 	<center>
 	<h1>Unidade do Procon <%= @unity_procon.id %>:</h1></br>
@@ -47,9 +48,9 @@
 				</body>
 				<left>
 			</div>
-<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
 
-	<%= form_for @rating, :url => {:controller => "unity_procons" , :action => "add_rating",  :unity_procon_id => @unity_procon.id, :rating_id => @rating.id} do |f| %>
+
+	<%= f.fields_for :ratings, @rating  do |ff| %>
 
 			<div class="span4">
 
@@ -57,16 +58,16 @@
 					<body style= "width:1200px">
 						<h2>Avalie essa unidade!</h2>
 
-						<%= f.label :value_rating, "Pontuação" %></br>
-    					<%= f.select :value_rating, options_for_select([
+						<%= ff.label :value_rating, "Pontuação" %></br>
+    					<%= ff.select :value_rating, options_for_select([
     						[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
     						[5,'5']]) %>
 
 
 						<br>
 
-						  <%= f.label :description_rating, "Descrição" %>
-						  <%= f.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
+						  <%= ff.label :description_rating, "Descrição" %>
+						  <%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
 
 						 <%= f.submit "Avaliar" %>
 
@@ -76,7 +77,8 @@
 		<% end %>
 		</div>
 	</div>
-<% end %>
+
+<%end %>
 	<style>
 	.btn 
 	{

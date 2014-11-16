@@ -10,10 +10,13 @@ class UnityProconsController < ApplicationController
 	def show
 	     @unity_procon = UnityProcon.find(params[:id])
 	   	 @rating = Rating.create
+	   	 @unity_procon.ratings << @rating
 	end
 
 	def ranking
 		@unity_procons = UnityProcon.order(:position_unity_procon)
+	end
+	def edit
 	end
 
 	def custom_search
@@ -29,19 +32,21 @@ class UnityProconsController < ApplicationController
 		render :json=>data.to_json
 	end
 
-	def add_rating
-		puts params
-		rating = Rating.find( params[:rating_id])
-		unity_procon = UnityProcon.find( params[:unity_procon_id] )
+	def update
+		@unity_procon = UnityProcon.find( params[:id])
+    
 
-		unless rating.blank? 
-			unity_procon.ratings << rating
-			if (unity_procon.save)	
+			if (@unity_procon.update_attributes(params[:unity_procon]))
+
 				flash[:notice] = "Avaliação concluida"
 			else
 				flash[:notice] = "ERRO!"
 			end
-		end
-		redirect_to unity_procon
+		
+		redirect_to @unity_procon
 	end
+
+	
+
+	
 end
