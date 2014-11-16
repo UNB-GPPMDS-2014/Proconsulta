@@ -10,7 +10,6 @@ class UnityProconsController < ApplicationController
 	def show
 	     @unity_procon = UnityProcon.find(params[:id])
 	   	 @rating = Rating.new
-	   	 #@unity_procon.ratings << @rating
 	end
 
 	def ranking
@@ -34,9 +33,12 @@ class UnityProconsController < ApplicationController
 
 	def update
 		@unity_procon = UnityProcon.find( params[:id])
-    
+ 		 @user = current_user
 
 			if (@unity_procon.update_attributes(params[:unity_procon]))
+				@rating = @unity_procon.ratings.last
+				@rating.user_id = @user.id
+				@rating.save
 
 				flash[:notice] = "Avaliação concluida"
 			else
