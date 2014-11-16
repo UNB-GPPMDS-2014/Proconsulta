@@ -89,3 +89,40 @@ input {
     color: $state-danger-text;
   }
 }
+
+.dropshadow {
+height: auto;
+-webkit-box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+-moz-box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+}
+
+.span4 {
+  margin-left: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
+}
+
+.span8 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 15px;
+  height: auto;
+}
+
+.footer {
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+}

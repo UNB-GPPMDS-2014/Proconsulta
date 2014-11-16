@@ -18,14 +18,14 @@
     <%= render 'layouts/header' %>
     <%= render 'layouts/shim' %>
 
-    <div class="container">
-    </br></br></br></br> 
+    <div class="container" id="yield-container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>      
+      <%= yield %>
+    </div>
 
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    
-    <%= yield %>
+    <%= render 'layouts/footer' %>
 
   </body>
 </html>
