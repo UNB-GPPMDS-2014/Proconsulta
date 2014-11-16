@@ -99,10 +99,9 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
 
 .span4 {
   margin-left: 0px;
-  padding-bottom: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  height: auto;
+  height: 560px;
   box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
 }
 
@@ -113,6 +112,9 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   padding-left: 0px;
   padding-right: 15px;
   height: auto;
+  overflow-y:scroll;
+  width:699px;
+  height:490px;"
 }
 
 .footer {
