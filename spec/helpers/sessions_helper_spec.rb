@@ -39,4 +39,12 @@ describe SessionsHelper do
 		current_uf=(@user.address_user)
 		expect(current_uf).to equal(@user.address_user)
 	end
+
+	it "expect current_uf= to match current_uf" do
+		sign_in(@user)
+		expect(current_uf).to eq(current_user.address_user)
+		current_uf=("DF")
+		expect(current_uf).to eq("DF")
+	end
+
 end
