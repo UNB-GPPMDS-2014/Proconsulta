@@ -3,6 +3,17 @@ class UnityProconsController < ApplicationController
 	# Show all procon units
 	def index
 		@unity_procons = UnityProcon.paginate(page: params[:page])
+		@unity_procons = UnityProcon.all
+		@hash = Gmaps4rails.build_markers(@unity_procons) do |unity_procon, marker|
+		    marker.lat unity_procon.latitude
+		    marker.lng unity_procon.longitude
+		    marker.infowindow unity_procons.description	
+		    marker.picture({
+		       "url" => "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+		       "width" =>  32,
+		       "height" => 32})
+		    marker.json({title: unity_procon.title})
+		end
 	end
 	
 	# Show one especific procon unity associated with one especific id.
