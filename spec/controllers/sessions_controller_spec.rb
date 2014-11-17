@@ -25,19 +25,8 @@ describe SessionsController, :type => :controller do
 	end
 	describe "POST create" do
 		it "expect user to be finded by email" do
-			post :create, session: { email_user: @user.email_user }
-		end
-
-		it "expect user finded to be signed" do
-		end
-
-		it "expect signed user to be redirected to his profile" do
-		end
-
-		it "expect invalid user to return error message" do
-		end
-
-		it "expect invalid user to rerender the session view" do
+			post :create, session: { email_user: "teste@teste.com", password: "teste123" }
+			expect(signed_in?).to be(!nil) 
 		end
 	end
 
