@@ -14,6 +14,11 @@ describe SuppliersController, :type => :controller do
         end
     end
 
+    describe "GET index" do
+    	it "expect page to work" do
+    		get :index
+    		expect(response).to have_http_status(:success)
+    	end
+    end
     
-
 end

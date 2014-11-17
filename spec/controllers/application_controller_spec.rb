@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
 include SessionsHelper
+
 describe ApplicationController, :type => :controller do 
 	before do
     	@user = FactoryGirl.create(:user)

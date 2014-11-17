@@ -14,7 +14,7 @@ FactoryGirl.define do
   	fantasy_name_supplier "Tchanananas"
   	cnpj "222777-13"
   	cnaep_main_code_supplier "aCnaepCode"
-	description_cnaep_code_supplier "aCnaepDescription"
+	 description_cnaep_code_supplier "aCnaepDescription"
   end
 
   factory :customer_service do
@@ -35,6 +35,7 @@ FactoryGirl.define do
   end
 
   factory :unity_procon do
+    id "250"
   	address_unity_procon "Shopping Venancio"
   	name_coordinator_unity_procon "Roberto"
 	uf_procon "DF"
