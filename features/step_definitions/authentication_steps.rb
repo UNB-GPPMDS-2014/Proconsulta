@@ -1,10 +1,33 @@
 # encoding: utf-8
 
 #common methods
+include SessionsHelper
 
 Quando(/^eu escolho a opção "(.*?)" na lista "(.*?)"$/) do |arg1, arg2|
  select arg1, from: arg2
 end
+
+Dado(/^que eu estou logado$/) do
+  @user = FactoryGirl.create(:user)
+  simple_sign_in(@user)
+end
+
+Dado(/^estou na pagina "(.*?)"$/) do |arg1|
+  visit arg1
+end
+
+Quando(/^eu clico em determinado ID de Unidade Procon$/) do
+  click_link '758'  
+end
+
+Entao(/^sou redirecionado para a pagina dessa Unidade Procon$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Entao(/^vejo os campos para avaliar essa Unidade do Procon$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 
 
 Dado(/^que eu estou na homepage$/) do
@@ -118,7 +141,7 @@ end
 
 #listar
 Então(/^vejo o ranking de atendimentos$/) do
-  assert page.has_text?("Posição")
+  ssert page.has_text?("Posição")
   assert page.has_text?("ID")
   assert page.has_text?("UF")
   assert page.has_text?("Telefone")
@@ -202,6 +225,12 @@ end
 
 Entao(/^vejo sua resposta$/) do
  page.has_text?("O art. 5º, inciso XXXIII da Constituição Federal prevê que todos têm direito a receber dos órgãos públicos informações de seu interesse particular, ou de interesse coletivo ou geral. A Lei nº 12.527, de 18 de novembro de 2011 além de garantir esse direito, colabora para o fortalecimento do controle social e da participação cidadão.")
+end
+
+# Avaliar unidade do procon
+
+Dado(/^existe uma unidade Procon$/) do
+  @unity_procon = FactoryGirl.create(:unity_procon)
 end
 
 
