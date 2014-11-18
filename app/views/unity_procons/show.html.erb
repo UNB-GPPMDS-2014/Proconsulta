@@ -2,85 +2,91 @@
    não precisa dessa inclusão
 %>
  
-	<% provide(:title, "Unidade do Procon") %>
-	<title><%= yield(:title) %></title>
+<% provide(:title, "Unidade do Procon") %>
+<title><%= yield(:title) %></title>
 
-	<%= form_for @unity_procon do |f| %>
+<%= form_for @unity_procon do |f| %>
 	<% a = @unity_procon %>
-	<center>
-	<h1>Unidade do Procon <%= @unity_procon.id %>:</h1></br>
-	</center>
+
 	<div class="container-fluid">
 		<div class="row-fluid">
-
-			<div class="span8">
+			<div class="span4">
 				<body style= "width:1200px">
-					<font face="verdana" color="gray">
-						Endereço:
-					</font>
+					<center>
+						<h1>Unidade do Procon <%= @unity_procon.id %>:</h1>
+					</center>
+					<span style="color:#FFA500">
+						<b> Informações </b>
+					</span><br>
 					<div align="justify">
+							<font style="padding-left: 15px;" face="verdana" color="gray">
+								Endereço:
+							</font>
 						<%= a.address_unity_procon %>
-					</div></br>
-					<font face="verdana" color="gray">
-						Coordenador:
-					</font>
+					</div>
 					<div align="justify">
+						<font style="padding-left: 15px;" face="verdana" color="gray">
+							Coordenador:
+						</font>
 						<%= a.name_coordinator_unity_procon %>
-					</div></br>
-					<font face="verdana" color="gray">
-						UF:
-					</font>
+					</div>
 					<div align="justify">
+						<font style="padding-left: 15px;" face="verdana" color="gray">
+							UF:
+						</font>
 						<%= a.uf_procon %>
-					</div></br>
-					<font face="verdana" color="gray">
-						Email:
-					</font>
+					</div>
 					<div align="justify">
+						<font style="padding-left: 15px;" face="verdana" color="gray">
+							Email:
+						</font>
 						<%= a.email_unity_procon %>
-					</div></br>
+					</div>
+					<span style="color:#FFA500">
+						<b> Reputação </b>
+					</span><br>
+					</h5>
+
+					<span style="color:#FFA500">
+						<b> Avaliação </b>
+					</span><br>
 					</h5>
 				</body>
 				<left>
+				<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
+					<%= f.fields_for :ratings, @rating  do |ff| %>
+
+
+							<center>
+
+								<%= ff.label :value_rating, "Pontuação" %></br>
+								<%= ff.select :value_rating, options_for_select([
+									[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
+									[5,'5']]) %>
+
+
+								<br>
+
+								<%= ff.label :description_rating, "Descrição" %>
+								<%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
+
+								<%= ff.submit "Avaliar" %>
+
+							</center>
+						</div>
+					<% end %>
+				<% end %>
 			</div>
-
-	<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
-	<%= f.fields_for :ratings, @rating  do |ff| %>
-
-			<div class="span4">
-
-				<center>
-					<body style= "width:1200px">
-						<h2>Avalie essa unidade!</h2>
-
-						<%= ff.label :value_rating, "Pontuação" %></br>
-    					<%= ff.select :value_rating, options_for_select([
-    						[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
-    						[5,'5']]) %>
-
-
-						<br>
-
-						<%= ff.label :description_rating, "Descrição" %>
-						<%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
-
-						<%= ff.submit "Avaliar" %>
-
-					</body>
-				</center>
-			</div>
-		<% end %>
 		</div>
 	</div>
-	<% end %>
+<% end %>
 
-<%end %>
-	<style>
-	.btn 
-	{
-	   -webkit-border-radius: 20px;
-	   -moz-border-radius: 20px;
-	   border-radius: 20px;
-	}
-	</style>
+<style>
+.btn 
+{
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+</style>
 	
