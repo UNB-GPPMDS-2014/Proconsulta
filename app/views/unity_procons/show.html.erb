@@ -46,14 +46,14 @@
 						<b> Reputação </b>
 					</span><br>
 					</h5>
-
-					<span style="color:#FFA500">
-						<b> Avaliação </b>
-					</span><br>
-					</h5>
 				</body>
 				<left>
 				<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
+					<span style="color:#FFA500">
+						<b> Avaliação </b>
+					</span>
+					<br>
+
 					<%= f.fields_for :ratings, @rating  do |ff| %>
 
 
