@@ -47,17 +47,5 @@ class UnityProconsController < ApplicationController
 		
 		redirect_to @unity_procon
 	end
-
-	def redirect
-		if(current_user == nil)
-			redirect_to root_path
-			flash[:notice] = "Necessário estar logado"
-
-		end
-
-
-	end
-	
-
 	
 end

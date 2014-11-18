@@ -1,17 +1,18 @@
 <% provide(:title, "Avaliação") %>
 <title><%= yield(:title) %></title>
-<% if signed_in? %>
-	<% unity_procons = UnityProcon.where(:uf_procon => current_user.address_user) %>
-	<div class="container-fluid">
+<% unity_procons = UnityProcon.where(:uf_procon => current_user.address_user) %>
+<div class="container-fluid">
 	<div class="row-fluid">
-	<div class="span4">
-	<body style= "width:1200px">
-		<h2>Região:</h2> <h3><%= current_user.address_user%></h3>
-	<left>
-	</div>	
-	<center>
-		<h1>Avaliar Unidade do Procon</h1>
-		<div class="span7">
+		<div class="span3">
+			<font style="padding-left">
+				<h2>Região:</h2>
+				<h3><%= current_user.address_user%></h3>
+			</font>
+			<left>
+			</div>	
+			<center>
+				<h1>Avaliar Unidade do Procon</h1>
+				<div class="span7">
 					<table class="table table-striped">
 						<thead>
 							<tr>
@@ -21,25 +22,18 @@
 						  	</tr>
 						</thead>
 						<tbody id="unity_procons">
-						<% unity_procons.each do |un| %>
+							<% unity_procons.each do |un| %>
 						      	<tr>
-						      	  <h6>
-							        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
-							        <td><%= un.address_unity_procon %></td>
-							      </h6>
+						      		<h6>
+								        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
+								        <td><%= un.address_unity_procon %></td>
+						    		</h6>
 						        </tr>
-						<% end %>
-					</tbody>
-				</table>
-				<center>
-					
-				</center>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
 			</center>
 		</div>
 	</div>
-
-<% else %>
-
-
-
-<% end %>
+</div>
