@@ -105,6 +105,15 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
 }
 
+.span3 {
+  margin-left: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
+}
+
 .span8 {
   margin-left: 0px;
   margin-right: 0px;
