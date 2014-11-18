@@ -5,6 +5,6 @@ class UnityProcon < ActiveRecord::Base
 	accepts_nested_attributes_for :ratings
 	# Creating atributs to model unity_procon
 	attr_accessible :address_unity_procon, :name_coordinator_unity_procon,
-	 :uf_procon, :email_unity_procon, :list_phones, :position_unity_procon, :ratings_attributes
+	 :uf_procon, :email_unity_procon, :list_phones, :position_unity_procon, :ratings_attributes, :average_pontuation
 
 end
