@@ -29,7 +29,7 @@
 			}
 
 			/*
-				Draws the graph according to the type of calls filtered by user.
+				Draws the uf graph according to the type of calls filtered by user.
 			*/
 	    	function send_type_of_customer_service(type)
 			{
@@ -78,7 +78,7 @@
 
 				                    dataLabels: 
 				                    {
-				                        enabled: false,
+				                        enabled: true,
 				                        format: '{point.name}'
 				                    }
 				                }
@@ -91,7 +91,7 @@
 				                verticalAlign: 'top',
 				                x: -10,
 				                y: 100,
-				                borderWidth: 0,
+				                borderWidth: 1,
 
 				                labelFormatter: function() 
 				                {
@@ -117,7 +117,7 @@
 			}
 
 			/*
-				Draws the graph according to the type of calls filtered by user.
+				Draws the region graph according to the type of calls filtered by user.
 			*/
 	    	function send_type_of_customer_service_region(type)
 			{
@@ -166,7 +166,7 @@
 
 				                    dataLabels: 
 				                    {
-				                        enabled: false,
+				                        enabled: true,
 				                        format: '{point.name}'
 				                    }
 				                }
@@ -179,7 +179,7 @@
 				                verticalAlign: 'top',
 				                x: -10,
 				                y: 100,
-				                borderWidth: 0,
+				                borderWidth: 1,
 
 				                labelFormatter: function() 
 				                {
@@ -246,7 +246,7 @@
 
 		            tooltip: 
 		            {
-		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		                pointFormat: '{point.}{series.name}: <b>{point.percentage:.1f}%</b>'
 		            },
 
 		            plotOptions: 
@@ -259,7 +259,7 @@
 
 		                    dataLabels: 
 		                    {
-		                        enabled: false,
+		                        enabled: true,
 		                        format: '{point.name}'
 		                    }
 		                }
@@ -272,14 +272,15 @@
 		                verticalAlign: 'top',
 		                x: -10,
 		                y: 100,
-		                borderWidth: 0,
+		                borderWidth: 1,
 
 		                labelFormatter: function() 
 		                {
 		                    if(this.name!='series')
 		                    {
 		                        return this.name;
-		                    } else
+		                    }
+		                    else
 		                    {
 		                        return 'Legend';
 		                    }
@@ -328,7 +329,7 @@
 
 		                    dataLabels: 
 		                    {
-		                        enabled: false,
+		                        enabled: true,
 		                        format: '{point.name}'
 		                    }
 		                }
@@ -341,14 +342,15 @@
 		                verticalAlign: 'top',
 		                x: -10,
 		                y: 100,
-		                borderWidth: 0,
+		                borderWidth: 1,
 
 		                labelFormatter: function() 
 		                {
 		                    if(this.name!='series')
 		                    {
 		                        return this.name;
-		                    } else
+		                    }
+		                    else
 		                    {
 		                        return 'Legend';
 		                    }
