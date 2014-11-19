@@ -26,6 +26,7 @@ SISANPRO::Application.routes.draw do
   get "/customer_service/index", to: "customer_services#index"
   get "/unity_procon/custom_search", to: "unity_procons#custom_search"
   get "/supplier/custom_search", to: "suppliers#custom_search"
+  get "/unity_procon/custom_search_ranking", to: "unity_procons#custom_search_ranking"
   #get "/rating/avaliar", to: "ratings#add_rating"
 
   # The priority is based upon order of creation:
