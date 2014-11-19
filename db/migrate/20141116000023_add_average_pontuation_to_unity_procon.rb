@@ -1,5 +1,5 @@
-class AddUserIdToRating < ActiveRecord::Migration
+class AddAveragePontuationToUnityProcon < ActiveRecord::Migration
   def change
-    add_column :ratings, :user_id, :integer
+    add_column :unity_procons, :average_pontuation, :float
   end
 end
