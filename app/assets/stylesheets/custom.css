@@ -128,3 +128,15 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   border-color: #252525;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
+
+.span9 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 15px;
+  height: auto;
+  overflow-y:scroll;
+  width:994px;
+  height:540px;
+}
