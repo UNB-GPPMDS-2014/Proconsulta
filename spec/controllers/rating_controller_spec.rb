@@ -13,10 +13,15 @@ describe RatingsController, :type => :controller do
 		#controller.index
 		it "expect get to return sucess" do
 		end
-		it "expect get to redirect if user isn't signed_in" do
+		it "expect get to not redirect if user is signed_in" do
 			sign_in(@user)
 			get :index
 			response.should_not be_redirect
+		end
+		it "expect get to redirect if user isn't signed_in" do
+			sign_out
+			get :index
+			response.should be_redirect
 		end
 	end 
 	
