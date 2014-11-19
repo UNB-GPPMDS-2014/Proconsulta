@@ -39,7 +39,8 @@ class UnityProconsController < ApplicationController
 				@rating = @unity_procon.ratings.last
 				@rating.user_id = @user.id
 				@rating.save
-
+				@unity_procon.average_pontuation = Rating.where("unity_procon_id =?", @unity_procon.id).average(:value_rating)
+				@unity_procon.save
 				flash[:notice] = "Avaliação concluida"
 			else
 				flash[:notice] = "ERRO!"
