@@ -45,7 +45,7 @@ class UnityProconsController < ApplicationController
 	end
 
 	def update
-		@unity_procon = UnityProcon.find( params[:id])
+		@unity_procon = UnityProcon.find(params[:id])
  		 @user = current_user
 
 			if (@unity_procon.update_attributes(params[:unity_procon]))

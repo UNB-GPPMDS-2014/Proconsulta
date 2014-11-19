@@ -70,6 +70,7 @@ describe UsersController, :type => :controller do
         end
 	end
 
+	#PUT update
 	describe "PUT Update" do
 		before { @user.id = "15" }
 		context "with valid params" do

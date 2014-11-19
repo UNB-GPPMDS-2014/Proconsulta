@@ -30,5 +30,9 @@ describe SessionsController, :type => :controller do
 		end
 	end
 
+	describe "PUT update" do
+		
+	end
+
 
 end

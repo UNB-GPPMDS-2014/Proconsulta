@@ -8,7 +8,8 @@ describe UnityProconsController, :type => :controller do
     	@unity_procon = FactoryGirl.create(:unity_procon)
       @user = FactoryGirl.create(:user)
       @unity_procon_test = UnityProcon.first
-
+      @unity_procon.ratings.create(description_rating: "uma descricao", 
+        value_rating: 3)
   	end
 
     #GET
@@ -32,12 +33,21 @@ describe UnityProconsController, :type => :controller do
         expect(response).to have_http_status(:success)
       end
     end
+
     describe "POST update" do
      it "should accept nested attributes for units" do
-     expect {
-       @unity_procon_test.update_attributes("ratings_attributes"=>{"0"=>{"value_rating"=>"3", "description_rating"=>"esse e bao"}})
-     }.to change { Rating.count }.by(1)
-end
-end 
+      expect {
+        @unity_procon_test.update_attributes("ratings_attributes"=>{"0"=>{"value_rating"=>"3", "description_rating"=>"esse e bao"}})
+           }.to change { Rating.count }.by(1)
+      end
+    end 
+
+    #PUT
+    describe "PUT update do" do
+      it "should not allow a wrong unity_procon" do
+        sign_in(@user)
+        put :update, unity_procon: { position_unity_procon: 5 }, id: @unity_procon.id 
+      end
+    end
 
 end

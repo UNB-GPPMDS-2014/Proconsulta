@@ -43,4 +43,13 @@ FactoryGirl.define do
 	list_phones "32323232"
 	position_unity_procon "1"
   end
+
+  factory :rating do
+    id "45"
+    description_rating "uma descricao"
+    value_rating "3"
+    unity_procon_id "50"
+    user_id "15"
+
+  end
 end
