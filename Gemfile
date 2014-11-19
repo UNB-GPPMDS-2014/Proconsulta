@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem "chartkick"
 gem 'rails', '3.2.15'
 gem 'highcharts-rails', '~> 4.0.4'
+gem 'ransack'
 
 gem 'simplecov', :require => false, :group => :test
 

@@ -197,31 +197,29 @@
 
 <!-- _searcher for suppliers -->
 <% if yield(:title) == "Fornecedores" %>
-	<div>
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span4">
-
-						<h3>BUSCAR</br></h3>
-						<span style="color:#FFA500">
-						<b> Busca Textual </b><br>
-						<% # = form_tag('/customer_services/', method: :get) %>
-						<% # input type="text" name=idteste> %>
-						<% # = submit_tag "Pesquisar", class:"form_submit" %>
-						</span>
-						<input type="text" name="pesquisa" size="50" maxlength="50" id="supplier_search_text">
-						<input type="button" id="supplier_search_button" value="Buscar" class="btn btn-primary" />
-						<br>
-						<label>
-							<input type="radio"  class="search_type" name="search_type" value="fantasy_name_supplier" checked="checked" /> Nome
-						</label>
-						<label>
-							<input type="radio" class="search_type" name="search_type" value="cnpj"> CNPJ
-						</label>
-
-		<left>
-	</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span4">		
+				<h3>BUSCAR</h3>
+				<span style="color:#FFA500">
+				<%= search_form_for @search do |f| %>
+					<div class="field">
+						<%= f.label :fantasy_name_supplier_cont, "Nome contém" %>
+						<%= f.text_field :fantasy_name_supplier_cont %>							
+					</div>
+					<div class="field">
+						<%= f.label :cnpj_cont, "Cnpj" %>
+						<%= f.text_field :cnpj_cont %>
+					</div>
+					<div class="actions">
+						<%= f.submit "Pesquisar" %>
+					</div>
+				<% end %>
+				</span>
+			</div>
 <% end %>
+
+
 <!-- end _searcher for supplier -->
 
 <!-- Filter for customer_service -->
