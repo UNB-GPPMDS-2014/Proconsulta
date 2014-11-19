@@ -30,15 +30,6 @@ describe UnityProconsController, :type => :controller do
         expect(response).to have_http_status(:success)
       end
     end
-
-
-    describe "redirect method" do
-      it "not redirect if a user is signed_in" do
-        sign_in(@user)
-        controller.redirect
-        expect(controller.redirect).not_to redirect_to(root_path)
-      end
-    end
     
 
 end
