@@ -235,3 +235,20 @@ end
 
 
 
+# CDC methods
+
+Entao(/^vejo o codigo do consumidor$/) do
+  assert page.has_text?("Código do Consumidor")
+end
+
+Quando(/^eu clico na arvore$/) do
+  page.has_link?("Capítulo I")
+end
+
+Entao(/^vejo o capitulo$/) do
+  assert page.has_text?("CAPÍTULO I")
+end
+
+
+
+

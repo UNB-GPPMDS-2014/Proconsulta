@@ -7,8 +7,8 @@ Funcionalidade: Abrir do página do FAQ
 
 
   	
-  	Cenário: Carregar página de fornecedores
-    Ao carregar página de fornecedores, é mostrada uma lista com os fornecedores
+  	Cenário: Carregar página de faq
+    Ao carregar página de faq, é mostrada uma lista com as perguntas
 
 	Dado que eu estou na homepage
     Quando eu clico no link "FAQ"
