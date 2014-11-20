@@ -1,5 +1,5 @@
 class CustomerServicesController < ApplicationController
-	
+
 	def index # List all Customer_Services
 		@customer_services = CustomerService.paginate(page: params[:page])
 		@hash_uf = return_hash
@@ -8,7 +8,9 @@ class CustomerServicesController < ApplicationController
 	end
 
 	def list
-		@customer_services = CustomerService.paginate(page: params[:page])
+		@search = CustomerService.search(params[:q])
+		@customer_services_search = @search.result
+		@customer_services = @customer_services_search.paginate(page: params[:page])
 		@hash_uf = return_hash
 	end
 
@@ -46,7 +48,7 @@ class CustomerServicesController < ApplicationController
 		all_uf.each do | uf|
 			if (uf.description_uf == nil)
 				uf.description_uf = "vazio"
-			end	
+			end
 
 			hash[uf.description_uf] = uf.quantity_uf.to_i
 		end
@@ -76,7 +78,7 @@ class CustomerServicesController < ApplicationController
 			end
 
 			hash[uf.description_uf] = case type_service
-				
+
 				when QUANTITY_ALL
 					then uf.quantity_uf
 
@@ -97,15 +99,15 @@ class CustomerServicesController < ApplicationController
 
 				when QUANTITY_INITIAL_JEC
 					then uf.quantity_initial_jec
-					
+
 				when QUANTITY_LETTER_COMPLAINT
 					then uf.quantity_letter_complaint
 
 				when QUANTITY_SIMPLE_CONSULT
 					then uf.quantity_simple_consult
-					
+
 			end
-		end	
+		end
 
 		render :json => hash.to_json
 	end
@@ -117,7 +119,7 @@ class CustomerServicesController < ApplicationController
 		all_region.each do |region|
 			if (region.description_region == nil)
 				region.description_region = "vazio"
-			end	
+			end
 
 			hash[region.description_region] = region.quantity_region.to_i
 		end
@@ -154,15 +156,15 @@ class CustomerServicesController < ApplicationController
 
 				when QUANTITY_INITIAL_JEC
 					then region.quantity_initial_jec
-					
+
 				when QUANTITY_LETTER_COMPLAINT
 					then region.quantity_letter_complaint
 
 				when QUANTITY_SIMPLE_CONSULT
 					then region.quantity_simple_consult
-					
+
 			end
-		end	
+		end
 
 		render :json => hash.to_json
 	end

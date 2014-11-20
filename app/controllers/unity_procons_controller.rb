@@ -2,9 +2,11 @@
 class UnityProconsController < ApplicationController
 	# Show all procon units
 	def index
-		@unity_procons = UnityProcon.paginate(page: params[:page])
+		@search = UnityProcon.search(params[:q])
+		@unity_procons_search = @search.result
+		@unity_procons = @unity_procons_search.paginate(page: params[:page])
 	end
-	
+
 	# Show one especific procon unity associated with one especific id.
 
 	def show
@@ -58,8 +60,8 @@ class UnityProconsController < ApplicationController
 			else
 				flash[:notice] = "ERRO!"
 			end
-		
+
 		redirect_to @unity_procon
 	end
-	
+
 end

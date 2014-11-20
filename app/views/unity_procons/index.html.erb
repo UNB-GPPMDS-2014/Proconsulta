@@ -1,34 +1,33 @@
 <% provide(:title, "Procons") %>
 <title><%= yield(:title) %></title>
 <%= render 'layouts/searcher' %>
-<center>
-	<h1>Lista de Unidades do Procon</h1>
-	<div class="span8">
+<h1>Lista de Unidades do Procon</h1>
+<div class="span8">
+	<%= will_paginate =%>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+				    <th><%= sort_link @search, :id, "ID" %></th>
+				    <th><%= sort_link @search, :address_unity_procon, "Endereço" %></th>
+				    <th colspan = "3"></th>
+			  	</tr>
+			</thead>
+			<tbody id="unity_procons">
+			<% @unity_procons.each do |un| %>
+			      	<tr>
+			      	  <h6>
+				        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
+				        <td><%= un.address_unity_procon %></td>
+				      </h6>
+			        </tr>
+			<% end %>
+		</tbody>
+	</table>
+	<center>
 		<%= will_paginate =%>
-				<table class="table table-striped">
-					<thead>
-						<tr>
-						    <th>ID</th>
-						    <th>Endereço</th> 
-						    <th colspan = "3"></th>
-					  	</tr>
-					</thead>
-					<tbody id="unity_procons">
-					<% @unity_procons.each do |un| %>
-					      	<tr>
-					      	  <h6>
-						        <td><%= link_to un.id, '/unity_procons/'+un.id.to_s %></td>
-						        <td><%= un.address_unity_procon %></td>
-						      </h6>
-					        </tr>
-					<% end %>
-				</tbody>
-			</table>
-			<center>
-				<%= will_paginate =%>
-			</center>
-		</center>
-	</div>
+	</center>
+</center>
+</div>
 </div>
 
 

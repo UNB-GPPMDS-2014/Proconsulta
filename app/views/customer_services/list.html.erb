@@ -7,10 +7,10 @@
 			<table class="table table-striped" id="customer_services">
 				<thead>
 					<tr>
-					    <th>Ano</th>
-					    <th>UF</th> 
-					    <th>ID</th>
-					    <th>Descrição</th>
+					    <th><%= sort_link @search, :year_customer_service, "Ano" %></th>
+					    <th><%= sort_link @search, :uf_customer_service, "UF" %></th>
+					    <th><%= sort_link @search, :id, "ID" %></th>
+					    <th><%= sort_link @search, :description_problem_customer_service, "Descrição" %></th>
 					    <th colspan = "3"></th>
 				  	</tr>
 				</thead>
