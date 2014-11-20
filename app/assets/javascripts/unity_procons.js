@@ -44,9 +44,6 @@
 				}
 				
 				$("#unity_procons").html(html);
-
-				//if (response.length==0)
-
 			}
 		});
 	} 
@@ -69,6 +66,9 @@
 				}
 				
 				$("#ranking_filter").html(html);
+
+				if (response.length==0)
+					alert("Nenhuma unidade do estado '" + search + "' foi avaliada ainda!")
 			}
 		});
 	} 	
