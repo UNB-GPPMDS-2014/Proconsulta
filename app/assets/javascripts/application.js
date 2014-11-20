@@ -27,6 +27,8 @@
 //= require highcharts/adapters/standalone-framework
 //= require highcharts/highcharts-more
 //= require highcharts/modules/exporting
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 //= require bootstrap
 //= require bootstrap.min
