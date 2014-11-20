@@ -1,91 +1,38 @@
 <!-- _searcher for customer_service -->
 <% if yield(:title) == "Atendimentos" %>
-	<div class="container-fluid">
+<div class="container-fluid">
 	<div class="row-fluid">
-	<div class="span4">
-			<h3>BUSCAR</br></h3>
+		<div class="span4">
+			<h3>BUSCAR</h3>
 			<span style="color:#FFA500">
-			<b> Busca Textual </b><br>
-
-				<% # = form_tag('/customer_services/', method: :get) %>
-				<% # input type="text" name=idteste> %>
-				<% # = submit_tag "Pesquisar", class:"form_submit" %>
-
+			<%= search_form_for @search do |f| %>
+				<div class="field">
+					<%= f.label :id , "ID" %>
+					<%= f.text_field :id %>
+				</div>
+				<div class="field">
+					<%= f.label :year_customer_service_cont, "Ano" %>
+					<%= f.text_field :year_customer_service_cont %>
+				</div>
+				<div class="field">
+					<%= f.label :description_customer_service_cont, "Descrição contém" %>
+					<%= f.text_field :description_customer_service_cont %>
+				</div>
+				<div class="field">
+					<%= f.label :region_customer_service_cont, "Região" %>
+					<%= f.text_field :region_customer_service_cont %>
+				</div>
+				<div class="field">
+					<%= f.label :uf_customer_service_cont, "UF" %>
+					<%= f.text_field :uf_customer_service_cont %>
+				</div>
+				<div class="actions">
+					<%= f.submit "Pesquisar" %>
+				</div>
+				<% end %>
 			</span>
-				<input type="text" name="pesquisa" size="50" maxlength="50" id="custom_search_text">
-				<input type="button" id="custom_search_button" value="Buscar" class="btn btn-primary" />
-				<br>
-				<label>
-					<input type="radio"  class="search_type" name="search_type" value="CEP" checked="checked" /> CEP
-				</label>
-				<label>
-					<input type="radio" class="search_type" name="search_type" value="year"> Data
-				</label>
-				<label>
-					<input type="radio" class="search_type" name="search_type" value="Fornecedor"> Fornecedor
-				</label>
-				<br><br>
-				<span style="color:#FFA500">
-				<b> Filtros </b>
-				<br>
-			</span>
-
-			<font style="padding-left: 10px;">
-			<b> Regiões </b></font>
-			<br>
-			<font style="padding-left: 20px;">
-				<input type="checkbox" name="regioes[norte]"> Norte
-				<input type="checkbox" name="regioes[nordeste]"> Nordeste
-				<input type="checkbox" name="regioes[sul]"> Sul
-				<input type="checkbox" name="regioes[centro-oeste]"> Centro-Oeste
-				<input type="checkbox" name="regioes[sudeste]"> Sudeste
-			</font>
-			<br>
-			<br>
-
-			<font style="padding-left: 10px;">
-			<b> Unidades Federativas </b></font>
-			<br>
-
-			<font style="padding-left: 20px;">
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AC"> AC
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AP"> AP
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="AM"> AM
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="PA"> PA
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="RO"> RO
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="RR"> RR
-				<input type="checkbox" class="unidades_checkbox" name="unidades[]" value="TO"> TO
-			</font>
-			<br>
-			<br>
-
-			<font style="padding-left: 10px;">
-			<b> Tipos de Atendimento </b></font>
-			<br>
-
-			<div style="padding-left:20px">
-				<input type="checkbox" name="Simples Consulta"> Simples Consulta
-				<br>
-				<input type="checkbox" name="Atendimento Preliminar"> Atendimento Preliminar
-				<br>
-				<input type="checkbox" name="Carta de Informações Preliminares"> Carta de Informações Preliminares
-				<br>
-				<input type="checkbox" name="Cálculo"> Cálculo
-				<br>
-				<input type="checkbox" name="Juizado Especial Civel"> Juizado Especial Civel
-				<br>
-				<input type="checkbox" name="Encaminhamento a Fiscalização"> Encaminhamento a Fiscalização
-				<br>
-				<input type="checkbox" name="Abertura Direta de Reclamação"> Abertura Direta de Reclamação
-				<br>
-				<input type="checkbox" name="Reclamação de Ofício"> Reclamação de Ofício
-				</b>
-			</div>
-			</form>
-		<left>
-	</div>
-<% end %>
-
+		</div>
+	<% end %>
 <!-- end _searcher for customer_service -->
 
 <!-- _searcher for unity_procon -->
@@ -105,32 +52,32 @@
 				<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
 			<select name="estados" id="unity_uf">
-				<option value="" selected>Estado 
-				<option value="AC">AC 
-				<option value="AL">AL 
-				<option value="AM">AM 
-				<option value="BA">BA 
-				<option value="CE">CE 
-				<option value="DF">DF 
-				<option value="ES">ES 
-				<option value="GO">GO 
-				<option value="MA">MA 
-				<option value="MG">MG 
-				<option value="MS">MS 
-				<option value="MT">MT 
-				<option value="PA">PA 
-				<option value="PB">PB 
-				<option value="PE">PE 
-				<option value="PI">PI 
-				<option value="PR">PR 
-				<option value="RJ">RJ 
-				<option value="RN">RN 
-				<option value="RO">RO 
-				<option value="RR">RR 
-				<option value="RS">RS 
-				<option value="SC">SC 
-				<option value="SP">SP 
-				<option value="TO">TO 
+				<option value="" selected>Estado
+				<option value="AC">AC
+				<option value="AL">AL
+				<option value="AM">AM
+				<option value="BA">BA
+				<option value="CE">CE
+				<option value="DF">DF
+				<option value="ES">ES
+				<option value="GO">GO
+				<option value="MA">MA
+				<option value="MG">MG
+				<option value="MS">MS
+				<option value="MT">MT
+				<option value="PA">PA
+				<option value="PB">PB
+				<option value="PE">PE
+				<option value="PI">PI
+				<option value="PR">PR
+				<option value="RJ">RJ
+				<option value="RN">RN
+				<option value="RO">RO
+				<option value="RR">RR
+				<option value="RS">RS
+				<option value="SC">SC
+				<option value="SP">SP
+				<option value="TO">TO
 			</select>
 
 			</span>
@@ -157,32 +104,32 @@
 				<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
 			<select name="estados" id="unity_uf">
-				<option value="" selected>Estado 
-				<option value="AC">AC 
-				<option value="AL">AL 
-				<option value="AM">AM 
-				<option value="BA">BA 
-				<option value="CE">CE 
-				<option value="DF">DF 
-				<option value="ES">ES 
-				<option value="GO">GO 
-				<option value="MA">MA 
-				<option value="MG">MG 
-				<option value="MS">MS 
-				<option value="MT">MT 
-				<option value="PA">PA 
-				<option value="PB">PB 
-				<option value="PE">PE 
-				<option value="PI">PI 
-				<option value="PR">PR 
-				<option value="RJ">RJ 
-				<option value="RN">RN 
-				<option value="RO">RO 
-				<option value="RR">RR 
-				<option value="RS">RS 
-				<option value="SC">SC 
-				<option value="SP">SP 
-				<option value="TO">TO 
+				<option value="" selected>Estado
+				<option value="AC">AC
+				<option value="AL">AL
+				<option value="AM">AM
+				<option value="BA">BA
+				<option value="CE">CE
+				<option value="DF">DF
+				<option value="ES">ES
+				<option value="GO">GO
+				<option value="MA">MA
+				<option value="MG">MG
+				<option value="MS">MS
+				<option value="MT">MT
+				<option value="PA">PA
+				<option value="PB">PB
+				<option value="PE">PE
+				<option value="PI">PI
+				<option value="PR">PR
+				<option value="RJ">RJ
+				<option value="RN">RN
+				<option value="RO">RO
+				<option value="RR">RR
+				<option value="RS">RS
+				<option value="SC">SC
+				<option value="SP">SP
+				<option value="TO">TO
 			</select>
 
 			</span>
@@ -199,13 +146,13 @@
 <% if yield(:title) == "Fornecedores" %>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span4">		
+			<div class="span4">
 				<h3>BUSCAR</h3>
 				<span style="color:#FFA500">
 				<%= search_form_for @search do |f| %>
 					<div class="field">
 						<%= f.label :fantasy_name_supplier_cont, "Nome contém" %>
-						<%= f.text_field :fantasy_name_supplier_cont %>							
+						<%= f.text_field :fantasy_name_supplier_cont %>
 					</div>
 					<div class="field">
 						<%= f.label :cnpj_cont, "Cnpj" %>
@@ -234,7 +181,7 @@
 				<b> Tipos de Atendimentos </b><br>
 
 				<select name="atendimentos" id="type_services", style="width: 300px" >
-					<option value="0d" selected>----- Selecione uma Opção ----- 
+					<option value="0d" selected>----- Selecione uma Opção -----
 					<option value="1"> Abertura Direta de Reclamação
 					<option value="2"> Atendimento Preliminar
 					<option value="3"> Cálculo
@@ -255,7 +202,7 @@
 					<b> Tipos de Atendimentos </b><br>
 
 					<select name="atendimentos" id="type_services_region", style="width: 300px" >
-						<option value="0" selected>----- Selecione uma Opção ----- 
+						<option value="0" selected>----- Selecione uma Opção -----
 						<option value="1"> Abertura Direta de Reclamação
 						<option value="2"> Atendimento Preliminar
 						<option value="3"> Cálculo
@@ -267,7 +214,7 @@
 					</select>
 				</span>
 
-				<br><br><input type="button" id="service_filter_region_button" value="Buscar" class="btn btn-primary" />					
+				<br><br><input type="button" id="service_filter_region_button" value="Buscar" class="btn btn-primary" />
 			</div>
 		</body>
 	</div>
@@ -321,7 +268,7 @@
 			                        	<li>
 					                       <a href="#SeçãoIa"><span><i class="icon-leaf"></i> Da Proteção à Saúde e Segurança</span></a>
 					                    </li>
-			                        </ul> 
+			                        </ul>
                         		</li>
                         		<li>
 			                        <span><i class="icon-plus-sign"></i> SEÇÃO II</span>
@@ -354,7 +301,7 @@
 					                       <a href="#SeçãoVa"><span><i class="icon-leaf"></i> Da Desconsideração da Personalidade Jurídica</span></a>
 					                    </li>
 			                        </ul>
-			                    </li> 
+			                    </li>
                     		</ul>
                 		</li>
 	                </ul>
@@ -371,7 +318,7 @@
 			                        	<li>
 					                       <a href="#SeçãoIb"><span><i class="icon-leaf"></i> Das Disposições Gerais</span></a>
 					                    </li>
-			                        </ul> 
+			                        </ul>
                         		</li>
                         		<li>
 			                        <span><i class="icon-plus-sign"></i> SEÇÃO II</span>
@@ -429,7 +376,7 @@
 			                        	<li>
 					                       <a href="#SeçãoIc"><span><i class="icon-leaf"></i> Disposições Gerais</span></a>
 					                    </li>
-			                        </ul> 
+			                        </ul>
                         		</li>
                         		<li>
 			                        <span><i class="icon-plus-sign"></i> SEÇÃO II</span>

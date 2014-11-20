@@ -1,17 +1,17 @@
 class CustomerServicesController < ApplicationController
 
 	def index # List all Customer_Services
-		@customer_services = CustomerService.paginate(page: params[:page])
-		@hash_uf = return_hash
-		@hash_uf_filter = Hash.new
-		@hash_region = return_hash_region
-	end
-
-	def list
 		@search = CustomerService.search(params[:q])
 		@customer_services_search = @search.result
 		@customer_services = @customer_services_search.paginate(page: params[:page])
 		@hash_uf = return_hash
+	end
+
+	def graphs
+		@customer_services = CustomerService.paginate(page: params[:page])
+		@hash_uf = return_hash
+		@hash_uf_filter = Hash.new
+		@hash_region = return_hash_region
 	end
 
 	def show # List Customer_Service related to one especific id.

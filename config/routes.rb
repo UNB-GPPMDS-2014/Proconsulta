@@ -12,13 +12,15 @@ SISANPRO::Application.routes.draw do
   match '/add_rating', to: 'unity_procons#update'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete 
+  match '/signout', to: 'sessions#destroy', via: :delete
   match '/allusers', to: 'users#allusers'
   match '/ranking', to: 'unity_procons#ranking'
   match '/faq', to: 'faqs#index'
   match '/cdc', to: 'cdcs#index'
   match '/avaliar', to: 'ratings#index'
-  
+
+  get "/graphs", to: 'customer_services#graphs'
+
   get '/list', to: 'customer_services#list'
   get "/customer_service/filter_customer_service_by_type", to: "customer_services#filter_customer_service_by_type"
   get "/customer_service/filter_customer_service_by_type_region", to: "customer_services#filter_customer_service_by_type_region"
