@@ -17,6 +17,7 @@
 		html += " <td>" + count + "</td>";
 		html += " <td>" + data.average_pontuation + "</td>";
 		html += "<td><a href='/unity_procons/"+data.id+"'>"+data.id+"</a>"+"</td>";
+		html += "<td>"+data.uf_procon+"</td>";
 		html += "<td>"+data.address_unity_procon+"</td>";
 		html += "<td>"+data.list_phones+"</td>";
 		html += "<td>"+data.email_unity_procon+"</td>";
@@ -43,6 +44,9 @@
 				}
 				
 				$("#unity_procons").html(html);
+
+				//if (response.length==0)
+
 			}
 		});
 	} 
@@ -83,7 +87,7 @@
 		{
 			var search = $("#unity_uf").val();
 
-			custom_search(search);
+			custom_search_ranking(search);
 		});
 	});
 })();

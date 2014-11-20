@@ -42,7 +42,7 @@ class UnityProconsController < ApplicationController
 		sql = "1=1"
 
 		sql = sql
-		data = UnityProcon.where("uf_procon = ? ", params[:search]).paginate(:page=>1)
+		data = UnityProcon.where("uf_procon = ? and average_pontuation is not null", params[:search]).order('average_pontuation DESC').paginate(:page=>1)
 		render :json=>data.to_json
 	end
 
