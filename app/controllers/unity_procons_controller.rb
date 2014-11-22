@@ -13,6 +13,12 @@ class UnityProconsController < ApplicationController
 	     @unity_procon = UnityProcon.find(params[:id])
 	   	 @rating = Rating.new
 	   	 @ratings = Rating.where("unity_procon_id = ?", params[:id]).order("created_at DESC")
+	   	
+	   	 @hash = Gmaps4rails.build_markers(@unity_procon) do |unity_procon, marker|
+  		 marker.lat unity_procon.latitude
+ 		 marker.lng unity_procon.longitude
+		end
+
 	end
 
 	def ranking
