@@ -1,31 +1,31 @@
 <% provide(:title, "Atendimentos") %>
 <%= render 'layouts/searcher' %>
-<h1>Lista de Atendimentos</h1>
-<div class="span8" charset="utf-8">
-	<%= will_paginate %>
-	<table class="table table-striped" id="customer_services">
-		<thead>
-			<tr>
-			    <th><%= sort_link @search, :year_customer_service, "Ano" %></th>
-			    <th><%= sort_link @search, :uf_customer_service, "UF" %></th>
-			    <th><%= sort_link @search, :id, "ID" %></th>
-			    <th><%= sort_link @search, :description_problem_customer_service, "Descrição" %></th>
-			    <th colspan = "3"></th>
-		  	</tr>
-		</thead>
-		<tbody>
-			<% @customer_services.each do |cs| %>
-		  		<tr>
-			  		<h6>
-					        <td><%= cs.year_customer_service %></td>
-					        <td><%= cs.uf_customer_service %></td>
-					        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
-					        <td><%= cs.description_problem_customer_service %></td>
-		      	  		</h6>
-	       		</tr>
-			<% end %>
-		</tbody>
-	</table>
-	<center><%= will_paginate %></center>
-</div>
-
+<center><h1>Lista de Atendimentos</h1>
+	<div class="span8" charset="utf-8">
+		<%= will_paginate %>
+		<table class="table table-striped" id="customer_services">
+			<thead>
+				<tr>
+				    <th><%= sort_link @search, :year_customer_service, "Ano" %></th>
+				    <th><%= sort_link @search, :uf_customer_service, "UF" %></th>
+				    <th><%= sort_link @search, :id, "ID" %></th>
+				    <th><%= sort_link @search, :description_problem_customer_service, "Descrição" %></th>
+				    <th colspan = "3"></th>
+			  	</tr>
+			</thead>
+			<tbody>
+				<% @customer_services.each do |cs| %>
+			  		<tr>
+				  		<h6>
+						        <td><%= cs.year_customer_service %></td>
+						        <td><%= cs.uf_customer_service %></td>
+						        <td><%= link_to cs.id, '/customer_services/'+cs.id.to_s %></td>
+						        <td><%= cs.description_problem_customer_service %></td>
+			      	  		</h6>
+		       		</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<%= will_paginate %>
+	</div>
+<center>

@@ -44,69 +44,78 @@
 					</div>
 					<span style="color:#FFA500">
 						<b> Reputação </b>
-					</span><br>
-					</h5>
-				</body>
-				<left>
-				<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
-					<span style="color:#FFA500">
-						<b> Avaliação </b>
-					</span>
+					</span> <h2>MEDIA</h2>
 					<br>
 
-					<%= f.fields_for :ratings, @rating  do |ff| %>
+					</h5>
+					
+					<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
+						<span style="color:#FFA500">
+							<b> Avaliar </b>
+						</span>
+						<br>
 
+						<%= f.fields_for :ratings, @rating  do |ff| %>
 
 							<center>
-
 								<%= ff.label :value_rating, "Pontuação" %></br>
 								<%= ff.select :value_rating, options_for_select([
 									[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
 									[5,'5']]) %>
-
 								<br>
-
 								<%= ff.label :description_rating, "Descrição" %>
 								<%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
-
 								<%= ff.submit "Avaliar" %>
-
 							</center>
-						</div>
+						<% end %>
 					<% end %>
-				<% end %>
+
+					<span style="color:#FFA500">
+						<b> Avaliações </b>
+					</span>
+
+					<% @ratings.each do |r| %>
+						<font color="gray">
+							<h3><%= current_user.name_user %>:
+						</font>
+						<%= r.value_rating %></h3>
+						<%= r.description_rating %>
+					<% end %>
+
+				</body>
+				<left>
+			</div>
+			<div class="span7">
+				<div class="mapGoogle">
+				 	<div id="map" style='width: 900px; height: 560px;'></div>
+				</div>
+
+				<script type="text/javascript">
+					handler = Gmaps.build('Google');
+					handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+						markers = handler.addMarkers(<%=raw @hash.to_json %>);
+						handler.bounds.extendWith(markers);
+						handler.fitMapToBounds();
+					});
+				</script>
 			</div>
 		</div>
 	</div>
 <% end %>
 
 <style>
-.btn 
-	{
+.btn {
 	   -webkit-border-radius: 20px;
 	   -moz-border-radius: 20px;
 	   border-radius: 20px;
 	}
 
-	.mapGoogle{
-		position:absolute;
-		right:50px;
-		top:150px;
-		width:800px;
-
-	}
-	</style>
+.mapGoogle{
+	position:absolute;
+	padding-left: 0px;
+	right:110px;
+	top:58px;
+	width:800px;
+}
+</style>
 	
-<div class="mapGoogle">
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
-
-<script type="text/javascript">
-	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-	  handler.bounds.extendWith(markers);
-	  handler.fitMapToBounds();
-	});
-</script>
-
