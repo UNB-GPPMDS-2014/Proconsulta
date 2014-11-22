@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
 
-describe CustomerServicesController, :type => :controller do 
+describe CustomerServicesController, :type => :controller do
 	before do
 		@customer_service = FactoryGirl.create(:customer_service)
 	end
@@ -14,15 +14,22 @@ describe CustomerServicesController, :type => :controller do
     end
 	describe "GET index" do
         it "should list all the customer_service" do
-          get :index 
+          get :index
           expect(response).to have_http_status(:success)
         end
     end
   describe "GET list" do
         it "should find all the customer_service" do
-          get :list 
+          get :list
           expect(response).to have_http_status(:success)
         end
-    end  
+    end
+
+    describe "GET graphs" do
+      it "should work" do
+        get :graphs
+        expect(response).to have_http_status(:success)
+      end
+    end
 
 end

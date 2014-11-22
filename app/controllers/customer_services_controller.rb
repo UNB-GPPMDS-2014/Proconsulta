@@ -11,35 +11,32 @@ class CustomerServicesController < ApplicationController
 		@customer_services = CustomerService.paginate(page: params[:page])
 		@hash_uf = return_hash
 		@hash_uf_filter = Hash.new
-		@hash_region = return_hash_region
+		@hash_region = return_hash_region#
 	end
 
 	def show # List Customer_Service related to one especific id.
 	    @customer_service = CustomerService.find(params[:id])
 	end
 
-	def custom_search
-		unless request.xhr? or params[:page].nil? or params[:search].nil?
-			redirect_to root_path
-			return
-		end
-
-		sql = "1=1"
-
-		if !params[:type_search].nil? and params[:type_search] != "Fornecedor"
-			sql += "AND #{params[:type_search]}_customer_service = ? "
-		end
-
-		if !params[:unities].nil? and params[:unities].length > 0
-			params[:unities].each do |u|
-
-			end
-		end
-
-		sql = sql
-		data = CustomerService.where("#{params[:type_search]}_customer_service = ?", params[:search]).paginate(:page=>1)
-		render :json=>data.to_json
-	end
+#	def custom_search
+#		unless request.xhr? or params[:page].nil? or params[:search].nil?
+#			redirect_to root_path
+#			return
+#		end
+#
+#		sql = "1=1"
+#
+#			sql += "AND #{params[:type_search]}_customer_service = ? "
+#		end
+#
+#		if !params[:unities].nil? and params[:unities].length > 0
+#			params[:unities].each do |u|
+#			end
+#		end
+#		sql = sql
+#		data = CustomerService.where("#{params[:type_search]}_customer_service = ?", params[:search]).paginate(:page=>1)
+#		render :json=>data.to_json
+#	end
 
 	def return_hash
 		hash = Hash.new

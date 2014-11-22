@@ -20,18 +20,17 @@ class UnityProconsController < ApplicationController
 	def edit
 	end
 
-	def custom_search
-		unless request.xhr? or params[:page].nil? or params[:search].nil?
-			redirect_to root_path
-			return
-		end
-
-		sql = "1=1"
-
-		sql = sql
-		data = UnityProcon.where("uf_procon = ?", params[:search]).paginate(:page=>1)
-		render :json=>data.to_json
-	end
+#	def custom_search
+#		unless request.xhr? or params[:page].nil? or params[:search].nil?
+#			redirect_to root_path
+#		end
+#
+#		sql = "1=1"
+#
+#		sql = sql
+#		data = UnityProcon.where("uf_procon = ?", params[:search]).paginate(:page=>1)
+#		render :json=>data.to_json
+#	end
 
 	def custom_search_ranking
 		unless request.xhr? or params[:page].nil? or params[:search].nil?

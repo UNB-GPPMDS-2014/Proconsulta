@@ -47,4 +47,9 @@ describe SessionsHelper do
 		expect(current_uf).to eq("DF")
 	end
 
+	it "expect simple_sign_in to set current_user" do
+		simple_sign_in(@user)
+		expect(current_user).to eq(@user)
+	end
+
 end
