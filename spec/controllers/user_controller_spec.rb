@@ -2,13 +2,14 @@ require 'rails_helper'
 require 'spec_helper'
 require 'capybara/rspec'
 
-describe UsersController, :type => :controller do 
+describe UsersController, :type => :controller do
 	before do
 		@user = FactoryGirl.create(:user)
+		sign_in(@user)
 	end
-	
+
   	let(:valid_session) { {} }
-  	let(:valid_attributes) { FactoryGirl.attributes_for :user, email_user: 'newuser@example.com' }    
+  	let(:valid_attributes) { FactoryGirl.attributes_for :user, email_user: 'newuser@example.com' }
   	#GET#allusers
 	describe "GET all users" do
 		it "should get all users" do
@@ -24,7 +25,7 @@ describe UsersController, :type => :controller do
 		end
 	end
 	#GET#show
-	describe "GET show" do    
+	describe "GET show" do
 	    it "should find the account by its id" do
 	      get :show, :id => @user.id
 	      assigns[:user].name_user.should == "User Test"
@@ -64,7 +65,7 @@ describe UsersController, :type => :controller do
       	describe "with invalid params" do
         	subject { post :create, user: {} }
 
-        	it "not increase number of users" do	
+        	it "not increase number of users" do
         		expect { subject }.to_not change(User, :count)
         	end
         end

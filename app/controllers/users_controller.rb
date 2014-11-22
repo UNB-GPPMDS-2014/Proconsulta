@@ -54,7 +54,7 @@ class UsersController < ApplicationController
 	# delete one user.
 	def destroy
 		@user = User.find(params[:id])
-		if !signed_in? && current_user != @user
+		if current_user != @user
 			redirect_to root_path
 			flash[:error] = "Esta conta nao e sua."
 		else
