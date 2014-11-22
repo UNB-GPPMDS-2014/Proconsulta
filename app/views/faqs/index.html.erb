@@ -1,5 +1,6 @@
 <% provide(:title, "FAQ") %>
 <title><%= yield(:title) %></title>
-<%= render 'faqs/questions' %>
-<%= stylesheet_link_tag "faqs" %>
-
+<div class="span12">
+	<%= render 'faqs/questions' %>
+	<%= stylesheet_link_tag "faqs" %>
+</div>

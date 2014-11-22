@@ -1,16 +1,19 @@
-<div class="center jumbotron">
 <% provide(:title, "Seja Bem-vindo!") %>
 <title><%= yield(:title) %></title>
 <center>
-	<img src="/assets/LogoComSombra.png">
-	<br>
-	<img src="/assets/NomeLogo.png">
-	<h1>	
-	<% if signed_in? %>
-		<h2>Seja bem-vindo,  <%= current_user.name_user %></h2>
-	<% else %>
-		Novo? <%= link_to "Registre-se!", signup_path %></br>
-		<%= link_to "Logar", signin_path %></br>
-	<% end %>
-</h1>
-</div>
+	<div class="span12">
+		<div class="center jumbotron">
+			<img src="/assets/LogoComSombra.png">
+			<br>
+			<img src="/assets/NomeLogo.png">
+			<h1>	
+			<% if signed_in? %>
+				<h1>Seja bem-vindo,  <%= current_user.name_user %>.</h1>
+			<% else %>
+				Novo? <%= link_to "Registre-se!", signup_path %></br>
+				<%= link_to "Logar", signin_path %></br>
+			<% end %>
+			</h1>
+		</div>
+	</div>
+</center>
