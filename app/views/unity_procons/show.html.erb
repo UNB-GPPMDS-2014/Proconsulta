@@ -44,7 +44,10 @@
 					</div>
 					<span style="color:#FFA500">
 						<b> Reputação </b>
-					</span> <h2>MEDIA</h2>
+					</span>
+					<br>
+					<%= pie_chart @ratings.group(:value_rating).count, height: "200px", colors: ["red","orange","gray","green","blue"] %>
+					<center><h2>Nota: <%= a.average_pontuation %></h2></center>
 					<br>
 
 					</h5>
@@ -60,8 +63,7 @@
 							<center>
 								<%= ff.label :value_rating, "Pontuação" %></br>
 								<%= ff.select :value_rating, options_for_select([
-									[0,'0'], [1,'1'], [2, '2'], [3,'3'], [4,'4'],
-									[5,'5']]) %>
+									['Péssimo',1], ['Ruim',2], ['Regular',3], ['Bom',4], ['Ótimo',5]]) %>
 								<br>
 								<%= ff.label :description_rating, "Descrição" %>
 								<%= ff.text_area :description_rating,  class: "form-control", id: "Descricao_rating", rows: "3" %>
