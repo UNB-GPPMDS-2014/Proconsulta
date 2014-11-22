@@ -12,6 +12,7 @@ class UnityProconsController < ApplicationController
 	def show
 	     @unity_procon = UnityProcon.find(params[:id])
 	   	 @rating = Rating.new
+	   	 @ratings = Rating.where("unity_procon_id = ?", params[:id]).order("created_at DESC")
 	end
 
 	def ranking
