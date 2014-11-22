@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 	# Edit one user.
 	def edit
 		@user = User.find(params[:id])
-		if !signed_in? && current_user != @user
+		if !signed_in? || current_user != @user
 			redirect_to root_path
 			flash[:danger] = "Esta conta nao e sua."
 		end
