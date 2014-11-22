@@ -1,56 +1,52 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-  <a class="brand" href= '/'+root_path ><img src="/assets/PROCONSULTA.png"></a>
-    <div class="container">
+	<div class="navbar-inner">
+		<a class="brand" href= '/'+root_path ><img src="/assets/PROCONSULTA.png"></a>
+		<div class="container">
+			<ul class="nav pull-right">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Avaliar Procon", avaliar_path %></li>
+				<li id="fat-menu" class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				Dados <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><%= link_to "Atendimentos", customer_services_path %></li>
+					<li><%= link_to "Fornecedores", suppliers_path %></li>
+					<li><%= link_to "Ranking de Unidades do Procon", '/ranking' %></li>
+					<li><%= link_to "Unidades do Procon", unity_procons_path %></li>
+				</ul>
 
-      <ul class="nav pull-right">
-    		<li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Avaliar Procon", avaliar_path %></li>
-        <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Dados <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Atendimentos", customer_services_path %></li>
-              <li><%= link_to "Fornecedores", suppliers_path %></li>
-              <li><%= link_to "Ranking de Unidades do Procon", '/ranking' %></li>
-              <li><%= link_to "Unidades do Procon", unity_procons_path %></li>
+				<li><%= link_to "Gráficos", graphs_path %></li>
+				<li><%= link_to "Legislação", cdcs_path %></li>
+				<li><%= link_to "FAQ", faqs_path %></li>
 
-           </ul>
-          </li>
-        <li><%= link_to "Gráficos", graphs_path %></li>
-        <li><%= link_to "Legislação", cdcs_path %></li>
-        <li><%= link_to "FAQ", faqs_path %></li>
-
-        <% if signed_in? %>
-          <li><%= link_to "Usuários", allusers_path %></li>
-          <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= current_user.name_user %> <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Conta", current_user %></li>
-              <li><%= link_to "Editar", '/users/'+current_user.id.to_s+'/edit' %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Deslogar", signout_path, method: "delete" %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Acesso <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Registrar", signup_path %></li>
-              <li><%= link_to "Login", signin_path %></li>
-            </ul>
-          </li>
-        <% end %>
-
-
-      </ul>
-    </div>
-  </div>
+				<% if signed_in? %>
+					<li><%= link_to "Usuários", allusers_path %></li>
+					<li id="fat-menu" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<%= current_user.name_user %> <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><%= link_to "Conta", current_user %></li>
+							<li><%= link_to "Editar", '/users/'+current_user.id.to_s+'/edit' %></li>
+							<li class="divider"></li>
+							<li>
+							<%= link_to "Deslogar", signout_path, method: "delete" %>
+							</li>
+						</ul>
+					</li>
+				<% else %>
+					<li id="fat-menu" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Acesso <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><%= link_to "Registrar", signup_path %></li>
+							<li><%= link_to "Login", signin_path %></li>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
 </header>

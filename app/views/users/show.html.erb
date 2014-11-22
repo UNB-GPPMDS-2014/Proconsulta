@@ -8,8 +8,10 @@
 	ID: <%= @user.id %></br>
 	</h2>
 	<h1>
-	<%= link_to "Editar Dados", "/users/"+@user.id.to_s+"/edit" %></br>
-	<%= link_to "Deletar Conta", @user.id.to_s,
-	 method: :delete, data: { confirm: "Você tem certeza?" } %>
+	<% if current_user == @user %>
+		<%= link_to "Editar Dados", "/users/"+@user.id.to_s+"/edit" %></br>
+		<%= link_to "Deletar Conta", @user.id.to_s,
+		 method: :delete, data: { confirm: "Você tem certeza?" } %>
+	<% end %>
 	</h1>
 </center>

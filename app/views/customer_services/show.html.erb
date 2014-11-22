@@ -1,20 +1,21 @@
 <div class="center jumbotron">
-<% provide(:title, "Atendimento "+@customer_service.id.to_s ) %>
-<title><%= yield(:title) %></title>
-<% a = @customer_service %>
-<h1>Atendimento <%= a.id%>:</h1></br>
-<right>
-	<h3>
-    <div align="left">
-    ID Customer Service: <%= a.id %></br></br>
-    ID Supplier: <%= a.supplier_id %></br></br>
-    Código do problema: <%= a.code_problem_customer_service %></br>
-</br>
-    Descrição: <%= a.description_problem_customer_service %></br></br>
-    Ano: <%= a.year_customer_service %></br></br>
-    Região: <%= a.region_customer_service %></br></br>
-    UF: <%= a.uf_customer_service %></br></br>
-    CEP empresa: <%= a.cep_customer_service%></br></br>
-    </h3>
-</right>
+	<% provide(:title, "Atendimento "+@customer_service.id.to_s ) %>
+	<title><%= yield(:title) %></title>
+
+	<% a = @customer_service %>
+	<h1>Atendimento <%= a.id%>:</h1></br>
+	<right>
+		<h3>
+		<div align="left">
+			ID Customer Service: <%= a.id %></br></br>
+			ID Supplier: <%= a.supplier_id %></br></br>
+			Código do problema: <%= a.code_problem_customer_service %></br>
+			</br>
+			Descrição: <%= a.description_problem_customer_service %></br></br>
+			Ano: <%= a.year_customer_service %></br></br>
+			Região: <%= a.region_customer_service %></br></br>
+			UF: <%= a.uf_customer_service %></br></br>
+			CEP empresa: <%= a.cep_customer_service%></br></br>
+		</h3>
+	</right>
 </div>

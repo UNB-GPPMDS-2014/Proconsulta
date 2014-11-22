@@ -1,26 +1,23 @@
 <% provide(:title, "Editar perfil") %>
 <title><%= yield(:title) %></title>
 <%= form_for(@user) do |f| %>
-  <center>    
-    <%= render 'shared/error_messages' %><br>
-    <%= f.label :name_user, "Nome: " %></br>
-    <%= f.text_field :name_user %></br>
-    <br>
-    <%= f.label :address_user, "Estado: " %></br>
-    <%= f.select :address_user, options_for_select([[@user.address_user, @user.address_user], ["AC", "AC"], ["AL", "AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PR", "PR"], ["PB", "PB"], ["PA", "PA"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SE", "SE"], ["SP", "SP"], ["TO", "TO"]]) %>
-    <br><br>
+	<center>
+	  <%= render 'shared/error_messages' %><br>
+	  <h1><%= @user.name_user %> - Editando Conta</h1></br>
+	  <%= f.label :address_user, "Mudar Estado:" %></br>
+	  <%= f.select :address_user, options_for_select([[@user.address_user, @user.address_user], ["AC", "AC"], ["AL", "AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PR", "PR"], ["PB", "PB"], ["PA", "PA"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SE", "SE"], ["SP", "SP"], ["TO", "TO"]]) %>
+	  <br><br>
 
-    <%= f.label :email_user, "E-mail" %></br>
-    <%= f.text_field :email_user %></br>
-    <br>
+	  <%= f.label :email_user, "Mudar E-mail:" %></br>
+	  <%= f.text_field :email_user %></br>
+	  <br>
 
 
-    <%= f.label :password, "Nova Senha" %>
+	  <%= f.label :password, "Mudar Senha:" %></br>
 
-    <%= f.password_field :password %></br>
-    <br></br>
+	  <%= f.password_field :password %></br>
+	  <br>
 
-    <%= f.submit "Salvar mudanças", class: "btn btn-large btn-primary" %>
-   
-  </center>
+	  <%= f.submit "Salvar mudanças", class: "btn btn-large btn-primary" %>
+	</center>
 <% end %>
