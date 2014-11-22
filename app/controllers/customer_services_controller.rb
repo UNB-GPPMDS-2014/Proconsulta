@@ -124,6 +124,35 @@ class CustomerServicesController < ApplicationController
 		hash
 	end
 
+	def compare_customer_service_by_type(hash, region, type_service)
+		hash[region.description_region] = case type_service
+			when QUANTITY_DIRECT_COMPLAINT
+				then region.quantity_direct_complaint
+
+			when QUANTITY_PRELIMINARY_SERVICE
+				then region.quantity_preliminary_service
+
+			when QUANTITY_CALCULATION
+				then region.quantity_calculation
+
+			when QUANTITY_CIP
+				then region.quantity_direct_cip
+
+			when QUANTITY_FORWARD_SUPERVISION
+				then region.quantity_forward_supervision
+
+			when QUANTITY_INITIAL_JEC
+				then region.quantity_initial_jec
+
+			when QUANTITY_LETTER_COMPLAINT
+				then region.quantity_letter_complaint
+
+			when QUANTITY_SIMPLE_CONSULT
+				then region.quantity_simple_consult
+
+		end
+	end
+
 	def filter_customer_service_by_type_region
 		hash = Hash.new
 		all_region = Region.all
@@ -134,33 +163,7 @@ class CustomerServicesController < ApplicationController
 			if (region.description_region == nil)
 				region.description_region = "vazio"
 			end
-
-			hash[region.description_region] = case type_service
-				when QUANTITY_DIRECT_COMPLAINT
-					then region.quantity_direct_complaint
-
-				when QUANTITY_PRELIMINARY_SERVICE
-					then region.quantity_preliminary_service
-
-				when QUANTITY_CALCULATION
-					then region.quantity_calculation
-
-				when QUANTITY_CIP
-					then region.quantity_direct_cip
-
-				when QUANTITY_FORWARD_SUPERVISION
-					then region.quantity_forward_supervision
-
-				when QUANTITY_INITIAL_JEC
-					then region.quantity_initial_jec
-
-				when QUANTITY_LETTER_COMPLAINT
-					then region.quantity_letter_complaint
-
-				when QUANTITY_SIMPLE_CONSULT
-					then region.quantity_simple_consult
-
-			end
+			compare_customer_service_by_type(hash, region, type_service)
 		end
 
 		render :json => hash.to_json
