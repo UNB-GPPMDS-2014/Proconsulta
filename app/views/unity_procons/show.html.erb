@@ -52,7 +52,7 @@
 
 					</h5>
 					
-					<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
+					<% if url_for(:back)=="http://localhost:3000/avaliar" %>
 						<span style="color:#FFA500">
 							<b> Avaliar </b>
 						</span>
@@ -78,7 +78,7 @@
 
 					<% @ratings.each do |r| %>
 						<font color="gray">
-							<h3><%= current_user.name_user %>:
+							<h3><%= r.user.name_user %>:
 						</font>
 						<%= r.value_rating %></h3>
 						<%= r.description_rating %>
@@ -89,7 +89,7 @@
 			</div>
 			<div class="span7">
 				<div class="mapGoogle">
-				 	<div id="map" style='width: 900px; height: 560px;'></div>
+				 	<div id="map" style='width: 560px; height: 560px;'></div>
 				</div>
 
 				<script type="text/javascript">
@@ -114,8 +114,8 @@
 
 .mapGoogle{
 	position:absolute;
-	padding-left: 0px;
-	right:110px;
+	padding-left: 250px;
+	right:0px;
 	top:58px;
 	width:800px;
 }
