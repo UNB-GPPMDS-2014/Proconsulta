@@ -3,6 +3,8 @@ gem "chartkick"
 gem 'rails', '3.2.15'
 gem 'highcharts-rails', '~> 4.0.4'
 gem 'ransack'
+gem 'gmaps4rails'
+gem 'geocoder'
 
 gem 'simplecov', :require => false, :group => :test
 
