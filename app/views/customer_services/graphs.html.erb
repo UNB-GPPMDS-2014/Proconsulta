@@ -7,169 +7,174 @@
     <h1>Gráfico de Atendimentos</h1>
     <div class="span8">
 
-      <script>
+    <script>
+
         var chart;
         /*
-          Responsible for converting an object of type Hash to an Array of arrays, where each array represents a pair [key: value].
+            Responsible for converting an object of type Hash to an Array of arrays, where each array represents a pair [key: value].
         */
         function key_value_to_array( hash )
         {
-        var resp = [];
+            var resp = [];
 
-        for(var key in hash)
-        {
-          if( hash.hasOwnProperty(key) )
-          {
-            resp.push([key, hash[key]]);
-          }
+            for(var key in hash)
+            {
+                if( hash.hasOwnProperty(key) )
+                {
+                    resp.push([key, hash[key]]);
+                }
+            }
+
+            return resp;
         }
 
-        return resp;
-      }
+        /*
+          Draws the uf graph according to the type of calls filtered by user.
+        */
 
-      /*
-        Draws the uf graph according to the type of calls filtered by user.
-      */
         function send_type_of_customer_service(type)
-      {
-        $.ajax(
         {
-          url: "/customer_service/filter_customer_service_by_type",
-          type: "GET",
-          data: { "type":type },
-          success: function(response) {
+            $.ajax(
+            {
+                url: "/customer_service/filter_customer_service_by_type",
+                type: "GET",
+                data: { "type":type },
+                success: function(response) 
+                {
 
-            var hash = key_value_to_array( response );
+                    var hash = key_value_to_array( response );
 
-            console.log(hash);
+                    console.log(hash);
 
-            var chart = new Highcharts.Chart({
-                    chart:
-                    {
-                        renderTo: 'container',
-                        type: 'pie',
-
-                        options3d:
+                    var chart = new Highcharts.Chart({
+                        chart:
                         {
-                            enabled: true,
-                            alpha: 45,
-                            beta: 0
-                        }
-                    },
-
-                    title:
-                    {
-                        text: 'Atendimentos por Estado'
-                    },
-
-                    tooltip:
-                    {
-                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                    },
-
-                    plotOptions:
-                    {
-                        pie:
-                        {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            depth: 35,
-
-                            dataLabels:
+                            renderTo: 'container',
+                            type: 'pie',
+                            options3d:
                             {
-                                enabled: true,
-                                format: '{point.name}'
+                              enabled: true,
+                              alpha: 45,
+                              beta: 0
                             }
-                        }
-                    },
+                        },
 
-                    legend:
-                    {
-                        layout: 'vertical',
-                        align: 'right',
-                        verticalAlign: 'top',
-                        x: -10,
-                        y: 100,
-                        borderWidth: 1,
-
-                        labelFormatter: function()
+                        title:
                         {
-                            if(this.name!='series')
+                            text: 'Atendimentos por Estado'
+                        },
+
+                        tooltip:
+                        {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+
+                        plotOptions:
+                        {
+                            pie:
                             {
-                                return this.name;
-                            } else
-                            {
-                                return 'Legend';
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+
+                                dataLabels:
+                                {
+                                    enabled: true,
+                                    format: '{point.name}'
+                                }
                             }
-                        }
-                    },
+                        },
 
-                    series: [{
-                        showInLegend:true,
-                        type: 'pie',
-                        name: 'Atendimentos',
-                        data: hash
-                    }]
-                });
-          }
-        });
-      }
+                        legend:
+                        {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'top',
+                            x: -10,
+                            y: 100,
+                            borderWidth: 1,
 
-      /*
-        Draws the region graph according to the type of calls filtered by user.
-      */
+                            labelFormatter: function()
+                            {
+                                if(this.name!='series')
+                                {
+                                    return this.name;
+                                }
+                                else
+                                {
+                                    return 'Legend';
+                                }
+                            }
+                        },
+
+                        series: [{
+                            showInLegend:true,
+                            type: 'pie',
+                            name: 'Atendimentos',
+                            data: hash
+                        }]
+                    });
+                }
+            });
+        }
+
+        /*
+          Draws the region graph according to the type of calls filtered by user.
+        */
         function send_type_of_customer_service_region(type)
-      {
-        $.ajax(
         {
-          url: "/customer_service/filter_customer_service_by_type_region",
-          type: "GET",
-          data: { "type":type },
-          success: function(response) {
+            $.ajax(
+            {
+                url: "/customer_service/filter_customer_service_by_type_region",
+                type: "GET",
+                data: { "type":type },
+                success: function(response) 
+                {
 
-            var hash = key_value_to_array( response );
+                    var hash = key_value_to_array( response );
 
-            console.log(hash);
+                    console.log(hash);
 
-            var chart = new Highcharts.Chart({
-                    chart:
+                    var chart = new Highcharts.Chart(
                     {
-                        renderTo: 'container_region',
-                        type: 'pie',
-
-                        options3d:
+                        chart:
                         {
-                            enabled: true,
-                            alpha: 45,
-                            beta: 0
-                        }
-                    },
+                            renderTo: 'container_region',
+                            type: 'pie',
 
-                    title:
-                    {
-                        text: 'Atendimentos por Região'
-                    },
-
-                    tooltip:
-                    {
-                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                    },
-
-                    plotOptions:
-                    {
-                        pie:
-                        {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            depth: 35,
-
-                            dataLabels:
+                            options3d:
                             {
                                 enabled: true,
-                                format: '{point.name}'
+                                alpha: 45,
+                                beta: 0
                             }
-                        }
-                    },
+                        },
+
+                        title:
+                        {
+                            text: 'Atendimentos por Região'
+                        },
+
+                        tooltip:
+                        {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+
+                        plotOptions:
+                        {
+                            pie:
+                            {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                depth: 35,
+
+                                dataLabels:
+                                {
+                                  enabled: true,
+                                  format: '{point.name}'
+                                }
+                            }
+                        },
 
                     legend:
                     {
@@ -200,176 +205,169 @@
                         data: hash
                     }]
                 });
-          }
+            }
         });
-      }
+    }
 
 
-          $(document).ready(function()
-      {
+    $(document).ready(function()
+    {
         $("#service_filter_button").click(function()
         {
-          var type = $("#type_services").val();
+            var type = $("#type_services").val();
 
-          console.log(type);
+            console.log(type);
 
-          send_type_of_customer_service(type);
+            send_type_of_customer_service(type);
         });
 
         $("#service_filter_region_button").click(function()
         {
-          var type = $("#type_services_region").val();
+            var type = $("#type_services_region").val();
 
-          console.log(type);
+            console.log(type);
 
-          send_type_of_customer_service_region(type);
+            send_type_of_customer_service_region(type);
         });
 
-            chart = new Highcharts.Chart({
-                chart:
+        chart = new Highcharts.Chart(
+        {
+            chart:
+            {
+                renderTo: 'container',
+                type: 'pie',
+                options3d:
                 {
-                    renderTo: 'container',
-                    type: 'pie',
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
 
-                    options3d:
+            title:
+            {
+                text: 'Atendimentos por Estado'
+            },
+
+            tooltip:
+            {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+
+            plotOptions:
+            {
+                pie:
+                {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+
+                    dataLabels:
                     {
                         enabled: true,
-                        alpha: 45,
-                        beta: 0
+                        format: '{point.name}'
                     }
-                },
+                }
+            },
 
-                title:
-                {
-                    text: 'Atendimentos por Estado'
-                },
+            legend:
+            {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -10,
+                y: 100,
+                borderWidth: 1,
 
-                tooltip:
+                labelFormatter: function()
                 {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                },
-
-                plotOptions:
-                {
-                    pie:
+                    if(this.name!='series')
                     {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        depth: 35,
-
-                        dataLabels:
-                        {
-                            enabled: true,
-                            format: '{point.name}'
-                        }
+                        return this.name;
                     }
-                },
-
-                legend:
-                {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'top',
-                    x: -10,
-                    y: 100,
-                    borderWidth: 1,
-
-                    labelFormatter: function()
+                    else
                     {
-                        if(this.name!='series')
-                        {
-                            return this.name;
-                        }
-                        else
-                        {
-                            return 'Legend';
-                        }
+                        return 'Legend';
                     }
-                },
+                }
+            },
 
-                series: [{
-                    showInLegend:true,
-                    type: 'pie',
-                    name: 'Atendimentos',
-                    data: <%=raw @hash_uf.map { |key, value| [key, value] } %>
-                }]
-            });
+            series: [{
+                showInLegend:true,
+                type: 'pie',
+                name: 'Atendimentos',
+                data: <%=raw @hash_uf.map { |key, value| [key, value] } %>
+            }]
+        });
 
         var chart = new Highcharts.Chart({
-                chart:
+            chart:
+            {
+                renderTo: 'container_region',
+                type: 'pie',
+                options3d:
                 {
-                    renderTo: 'container_region',
-                    type: 'pie',
-
-                    options3d:
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title:
+            {
+                text: 'Atendimentos por Região'
+            },
+            tooltip:
+            {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions:
+            {
+                pie:
+                {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels:
                     {
                         enabled: true,
-                        alpha: 45,
-                        beta: 0
+                        format: '{point.name}'
                     }
-                },
-
-                title:
+                }
+            },
+            legend:
+            {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -10,
+                y: 100,
+                borderWidth: 1,
+                labelFormatter: function()
                 {
-                    text: 'Atendimentos por Região'
-                },
-
-                tooltip:
-                {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                },
-
-                plotOptions:
-                {
-                    pie:
+                    if(this.name!='series')
                     {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        depth: 35,
-
-                        dataLabels:
-                        {
-                            enabled: true,
-                            format: '{point.name}'
-                        }
+                        return this.name;
                     }
-                },
-
-                legend:
-                {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'top',
-                    x: -10,
-                    y: 100,
-                    borderWidth: 1,
-
-                    labelFormatter: function()
+                    else
                     {
-                        if(this.name!='series')
-                        {
-                            return this.name;
-                        }
-                        else
-                        {
-                            return 'Legend';
-                        }
+                        return 'Legend';
                     }
-                },
+                }
+            },
 
-                series: [{
-                    showInLegend:true,
-                    type: 'pie',
-                    name: 'Atendimentos',
-                    data: <%=raw @hash_region.map { |key, value| [key, value] } %>
-                }]
-            });
-      });
-      </script>
+            series: [{
+                showInLegend:true,
+                type: 'pie',
+                name: 'Atendimentos',
+                data: <%=raw @hash_region.map { |key, value| [key, value] } %>
+            }]
+        });
+    });
+    </script>
 
-        <div id="container" style="height: 450px"></div>
+    <div id="container" style="height: 450px"></div>
 
-        <div id="container_region" style="height: 450px"></div>
+    <div id="container_region" style="height: 450px"></div>
 
     </div>
 </center>
