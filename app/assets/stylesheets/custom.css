@@ -100,7 +100,6 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   padding-right: 15px;
   height: 560px;
   box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
-  overflow-y:scroll;
 }
 
 .span3 {
@@ -136,17 +135,16 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   padding-left: 0px;
   padding-right: 15px;
   overflow-y:scroll;
-  width:994px;
-  height: 490px;
+  
 }
 
 .span12 {
+  position:fixed;
   margin-left: 0px;
   margin-right: 0px;
   padding-bottom: 10px;
   padding-left: 0px;
   padding-right: 15px;
-  overflow-y:scroll;
   height: 550px;
   width:1365px;
 
