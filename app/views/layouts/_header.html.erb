@@ -21,14 +21,12 @@
 				<li><%= link_to "FAQ", faqs_path %></li>
 
 				<% if signed_in? %>
-					<li><%= link_to "Usuários", allusers_path %></li>
 					<li id="fat-menu" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<%= current_user.name_user %> <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
 							<li><%= link_to "Conta", current_user %></li>
-							<li><%= link_to "Editar", '/users/'+current_user.id.to_s+'/edit' %></li>
 							<li class="divider"></li>
 							<li>
 							<%= link_to "Deslogar", signout_path, method: "delete" %>

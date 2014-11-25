@@ -148,12 +148,13 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   padding-left: 0px;
   padding-right: 15px;
   overflow-y:scroll;
-  height: 560px;
+  height: 550px;
   width:1365px;
 
 }
 
 .footer {
+  position:fixed;
   background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
@@ -163,5 +164,11 @@ box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
   background-repeat: repeat-x;
   border-color: #252525;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  height: 35px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
 }
+
 
