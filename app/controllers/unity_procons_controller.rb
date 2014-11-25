@@ -10,13 +10,14 @@ class UnityProconsController < ApplicationController
 	# Show one especific procon unity associated with one especific id.
 
 	def show
-	     @unity_procon = UnityProcon.find(params[:id])
-	   	 @rating = Rating.new
-	   	 @ratings = Rating.where("unity_procon_id = ?", params[:id]).order("created_at DESC")
+	    @unity_procon = UnityProcon.find(params[:id])
+	   	@rating = Rating.new
+	   	@ratings = Rating.where("unity_procon_id = ?", params[:id]).order("created_at DESC")
+	   	@ratingpie = Rating.where("unity_procon_id = ?", params[:id])
 	   	
-	   	 @hash = Gmaps4rails.build_markers(@unity_procon) do |unity_procon, marker|
-  		 marker.lat unity_procon.latitude
- 		 marker.lng unity_procon.longitude
+	   	@hash = Gmaps4rails.build_markers(@unity_procon) do |unity_procon, marker|
+	  		marker.lat unity_procon.latitude
+	 		marker.lng unity_procon.longitude
 		end
 
 	end

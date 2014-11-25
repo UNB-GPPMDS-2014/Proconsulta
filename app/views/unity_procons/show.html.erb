@@ -42,15 +42,19 @@
 						</font>
 						<%= a.email_unity_procon %>
 					</div>
-					<span style="color:#FFA500">
-						<b> Reputação </b>
-					</span>
-					<br>
-					<%= pie_chart @ratings.group(:value_rating).count, height: "200px", colors: ["red","orange","gray","green","blue"] %>
-					<center><h2>Nota: <%= a.average_pontuation %></h2></center>
-					<br>
 
-					</h5>
+					<% if ! @ratings.empty? %>
+
+						<span style="color:#FFA500">
+							<b> Reputação </b>
+						</span>
+						<br>
+						<% @ratingpie.order("value_rating") %>
+						<%= pie_chart @ratingpie.group("value_rating").count, height: "200px", colors: ["#FF0000","#FF8000","#FFFF00","#00FF00","#0040FF"] %>
+						<center><h2>Nota: <%= a.average_pontuation %></h2></center>
+						<br>
+
+					<% end %>
 					
 					<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
 						<span style="color:#FFA500">
@@ -72,17 +76,36 @@
 						<% end %>
 					<% end %>
 
-					<span style="color:#FFA500">
-						<b> Avaliações </b>
-					</span>
+					<% if ! @ratings.empty? %>
 
-					<% @ratings.each do |r| %>
-						<font color="gray">
-							<h3><%= r.user.name_user %>:
-						</font>
-						<%= r.value_rating %></h3>
-						<%= r.description_rating %>
+						<span style="color:#FFA500">
+							<b> Avaliações </b>
+						</span>
+
+						<% @ratings.each do |r| %>
+							<font color="gray">
+								<h3><%= r.user.name_user %>:
+							</font>
+
+							<% if r.value_rating == 1 %>
+								Péssimo
+							<% elsif r.value_rating == 2 %>
+								Ruim
+							<% elsif r.value_rating == 3 %>
+								Regular
+							<% elsif r.value_rating == 4 %>
+								Bom
+							<% elsif r.value_rating == 5 %>
+								Ótimo
+							<% end %> 
+
+							</h3>
+							<%= r.description_rating %>
+						<% end %>
+
 					<% end %>
+
+					<br><br>
 
 				</body>
 				<left>
@@ -106,18 +129,20 @@
 <% end %>
 
 <style>
-.btn {
+	.btn
+	{
 	   -webkit-border-radius: 20px;
 	   -moz-border-radius: 20px;
 	   border-radius: 20px;
 	}
 
-.mapGoogle{
-	position:absolute;
-	padding-left: 250px;
-	right:0px;
-	top:58px;
-	width:800px;
-}
+	.mapGoogle
+	{
+		position:absolute;
+		padding-left: 250px;
+		right:0px;
+		top:58px;
+		width:800px;
+	}
 </style>
 	
