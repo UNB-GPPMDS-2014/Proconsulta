@@ -1,15 +1,57 @@
 <% provide(:title, @supplier.fantasy_name_supplier) %>
 <title><%= yield(:title) %></title>
-<div class="center jumbotron">
-<center><font face="Architect" color="#FFCC66"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></center></br>
-	<div align="left">
-	<% a = @supplier %><h5>
-		<h3>
-		ID Fornecedor: <%= a.id %></br></br>
-		Tipo de Fornecedor: <%= a.type_supplier %></br></br>
-		Razão Social: <%= a.social_reason_supplier %></br></br>
-		CNPJ: <%= a.cnpj %></br></br>
-		CNAEP: <%= a.cnaep_main_code_supplier %></br></br>
-		Descrição: <%= a.description_cnaep_code_supplier %></br></br>
-            </h3>
+<% a = @supplier %><h5>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4">
+			<body style= "width:1200px">
+				<center>
+					<h1><font face="Architect"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></h1>
+				</center>
+				<span style="color:#FFA500">
+					<b> Informações </b>
+				</span>
+				<br><br>
+				<div align="justify">
+						<font style="padding-left: 15px;" face="verdana" color="gray">
+							ID Fornecedor:
+						</font>
+					<%= a.id %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						Razão Social:
+					</font>
+					<%= a.social_reason_supplier %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						CNPJ:
+					</font>
+					<%= a.cnpj %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						CNAEP:
+					</font>
+					<%= a.cnaep_main_code_supplier %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						Descrição:
+					</font>
+					<%= a.description_cnaep_code_supplier %>
+				</div>
+
+			</body>
+			<left>
+		</div>
+		<div class="span7">
+			Gráfico aqui!
+		</div>
+	</div>
 </div>
