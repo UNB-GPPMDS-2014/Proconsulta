@@ -2,32 +2,32 @@
 <% if yield(:title) == "Atendimentos" %>
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span4">
+		<div class="span3">
 			<h3>BUSCAR</h3>
 			<span style="color:#FFA500">
 			<%= search_form_for @search do |f| %>
 				<div class="field">
-					<%= f.label :id , "ID" %>
+					<%= f.label :id , "ID:" %></br>
 					<%= f.text_field :id %>
 				</div>
 				<div class="field">
-					<%= f.label :year_customer_service_cont, "Ano" %>
+					<%= f.label :year_customer_service_cont, "Ano:" %></br>
 					<%= f.text_field :year_customer_service_cont %>
 				</div>
 				<div class="field">
-					<%= f.label :description_customer_service_cont, "Descrição contém" %>
+					<%= f.label :description_customer_service_cont, "Descrição:" %></br>
 					<%= f.text_field :description_customer_service_cont %>
 				</div>
 				<div class="field">
-					<%= f.label :region_customer_service_cont, "Região" %>
+					<%= f.label :region_customer_service_cont, "Região:" %></br>
 					<%= f.text_field :region_customer_service_cont %>
 				</div>
 				<div class="field">
-					<%= f.label :uf_customer_service_cont, "UF" %>
+					<%= f.label :uf_customer_service_cont, "UF:" %></br>
 					<%= f.text_field :uf_customer_service_cont %>
 				</div>
-				<div class="actions">
-					<%= f.submit "Pesquisar" %>
+				<div class="actions"></br>
+					<%= f.submit "Pesquisar", class: "btn btn-large btn-primary" %>
 				</div>
 				<% end %>
 			</span>
@@ -41,7 +41,7 @@
 
 		<div class="container-fluid">
 	<div class="row-fluid">
-	<div class="span4">
+	<div class="span2">
 
 			<h3>BUSCAR</br></h3>
 			<span style="color:#FFA500">
@@ -52,7 +52,7 @@
 				<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
 			<select name="estados" id="unity_uf">
-				<option value="" selected>Estado
+				<option value="" selected>UF
 				<option value="AC">AC
 				<option value="AL">AL
 				<option value="AM">AM
@@ -79,10 +79,12 @@
 				<option value="SP">SP
 				<option value="TO">TO
 			</select>
+			</br>
 
 			</span>
-				<input type="button" id="unity_search_button" value="Buscar" class="btn btn-primary" />
 				<br>
+				<input type="button" id="unity_search_button" value="Buscar" class="btn btn-primary" />
+				</br>
 			</form>
 		<left>
 	</div>
@@ -104,7 +106,7 @@
 				<% # = submit_tag "Pesquisar", class:"form_submit" %>
 
 			<select name="estados" id="unity_uf">
-				<option value="" selected>Estado
+				<option value="" selected>UF
 				<option value="AC">AC
 				<option value="AL">AL
 				<option value="AM">AM
@@ -131,6 +133,7 @@
 				<option value="SP">SP
 				<option value="TO">TO
 			</select>
+			</br>
 
 			</span>
 				<br>
@@ -146,20 +149,20 @@
 <% if yield(:title) == "Fornecedores" %>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span4">
+			<div class="span3">
 				<h3>BUSCAR</h3>
 				<span style="color:#FFA500">
 				<%= search_form_for @search do |f| %>
 					<div class="field">
-						<%= f.label :fantasy_name_supplier_cont, "Nome contém" %>
+						<%= f.label :fantasy_name_supplier_cont, "Nome:" %></br>
 						<%= f.text_field :fantasy_name_supplier_cont %>
 					</div>
 					<div class="field">
-						<%= f.label :cnpj_cont, "Cnpj" %>
+						<%= f.label :cnpj_cont, "CNPJ:" %></br>
 						<%= f.text_field :cnpj_cont %>
 					</div>
 					<div class="actions">
-						<%= f.submit "Pesquisar" %>
+						<%= f.submit "Pesquisar", class: "btn btn-large btn-primary" %>
 					</div>
 				<% end %>
 				</span>

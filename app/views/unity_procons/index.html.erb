@@ -1,8 +1,8 @@
 <% provide(:title, "Procons") %>
 <title><%= yield(:title) %></title>
 <%= render 'layouts/searcher' %>
-<h1>Lista de Unidades do Procon</h1>
-<div class="span8">
+<center><h1>Lista de Unidades do Procon</h1>
+<div class="span10">
 	<center>
 		<%= will_paginate =%>
 			<table class="table table-striped">
@@ -27,6 +27,7 @@
 		<%= will_paginate =%>
 	</center>
 </div>
+</center>
 
 
 
