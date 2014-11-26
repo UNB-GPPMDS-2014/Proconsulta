@@ -1,14 +1,14 @@
-<div class="container" style="padding-left: 6	0px;">
+<div class="container" style="padding-left: 60px;">
 <% provide(:title, "Atendimento "+@customer_service.id.to_s ) %>
 <title><%= yield(:title) %></title>
-
+<br>
 <% a = @customer_service %>
 <h1>
-<div align="center">
-	<font  face="verdana" color="gray">
-		Atendimento <%= a.id %><br>
-	</font>
-</div>
+	<div align="center">
+		<font  face="Architect" color="#FFCC66">
+			<b>Atendimento <%= a.id %></b><br>
+		</font>
+	</div>
 </h1>
 <right>
 	<h3>
