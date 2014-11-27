@@ -249,6 +249,11 @@ end
 
 # Avaliar unidade do procon
 
+Dado(/^que existe uma unidade do procon de ID "(.*?)"$/) do |arg1|
+  @unity_procon = FactoryGirl.create(:unity_procon)
+end
+
+
 Dado(/^existe uma unidade Procon$/) do
   @unity_procon = FactoryGirl.create(:unity_procon)
 end
@@ -288,11 +293,11 @@ Dado(/^que eu estou na pagina da lista de unidades do procon$/) do
 end
 
 Entao(/^sou redirecionado para a pagina dessa Unidade Procon$/) do
-  visit "/unity_procons/2285"
+  visit "/unity_procons/250"
 end
 
 E(/^vejo os dados dessa unidade$/) do
-  assert page.has_text?("Unidade do Procon 2285")
+  assert page.has_text?("Unidade do Procon 250")
   assert page.has_text?("Endereço")
   assert page.has_text?("UF")
   assert page.has_text?("Email")
