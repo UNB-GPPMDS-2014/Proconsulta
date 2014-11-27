@@ -11,7 +11,7 @@ Funcionalidade: Logar
 
 	Dado que eu estou na homepage
 	Quando eu clico no link "Login"
-   	Então vejo o formulario de login
+   	Entao vejo o formulario de login
 
 
 	Cenário: login mal-sucedido 
@@ -19,7 +19,7 @@ Funcionalidade: Logar
 	
 	Dado que eu estou na pagina de login
 	Quando preencho informacao invalida
-	Entao vejo o texto "Combinacao invalida de email e password."
+	Entao vejo o texto "Combinacao invalida de email e senha."
 	
 
 	Cenário: login bem sucedido

@@ -1,23 +1,24 @@
 #language: pt
 
-Funcionalidade: Abrir do página do código do consumidor
-	Para poder visualizar o código
+Funcionalidade: Acesso ao código do consumidor
+	Para ter ciência de meus direitos e deveres como consumidor
 	Como usuário
-	Quero acessar a página do código do consumidor
+	Quero visualizar a página com os capítulos do código do consumidor
 
 
   	
-  	Cenário: Carregar página de cdc
-    Ao carregar página do cdc, é mostrado o cdc
+  	Cenário: Carregar página do código do consumidor
+    	Ao carregar página do código do consumidor, é mostrado o código do consumidor
 
-	Dado que eu estou na homepage
-    Quando eu clico no link "Legislação"
-    Entao vejo o codigo do consumidor
+    	Dado que eu estou na homepage
+    	Quando eu clico no link "Legislação"
+    	Entao vejo o codigo do consumidor
  
-    Cenário: Visualizar um capitulo especifico
-    Ao selecionar um capitulo na arvore, é mostrado capitulo referente
 
-	Dado que eu estou na homepage
- 	  Quando eu clico no link "Legislação"
-    E eu clico na arvore
-    Entao vejo o capitulo
+    	Cenário: Visualizar um capítulo específico do código
+    	Ao selecionar um capítulo na árvore de opções, e selecionar um subtópico, é mostrado o conteúdo referente ao capitulo
+
+   	Dado que eu estou na pagina da Legislacao
+    	Quando eu clico no primeiro topico da arvore de opcoes
+    	E clico no subtopico
+    	Entao vejo o capitulo do codigo
