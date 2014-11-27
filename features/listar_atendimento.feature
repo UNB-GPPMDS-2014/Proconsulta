@@ -55,6 +55,7 @@ Funcionalidade: Visualizar lista de atendimentos do PROCON
     	Cenário: Visualizar profile de um atendimento selecionado pelo ID
     	Ao clicar no ID de um atendimento, são mostradas as informações do atendimento selecionado
 
-	Dado que eu estou na pagina de listar atendimento    	
-  	Quando clico no link "10"
+            Dado que existe um atendimento de id "50"
+            E que eu estou na pagina de listar atendimento
+  	Quando clico no link "50"
     	Entao vejo dados deste atendimento

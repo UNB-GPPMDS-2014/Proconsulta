@@ -96,6 +96,13 @@ end
 
 #'listar atendimento' methods
 
+Dado(/^que existe um atendimento de id "(.*?)"$/) do |arg1|
+  @customer_service = FactoryGirl.create(:customer_service)
+end
+
+
+
+
 Dado(/^que eu estou na pagina de listar atendimento$/) do
   visit "/customer_services"
 end
@@ -130,16 +137,7 @@ end
 #end
 
 Entao(/^vejo dados deste atendimento$/) do
-  assert page.has_text?("Atendimento 10:")
-  assert page.has_text?("ID Customer Service")
-  assert page.has_text?("ID Supplier")
-  assert page.has_text?("Código do problema")
-  assert page.has_text?("Descrição")
-  assert page.has_text?("Ano")
-  assert page.has_text?("Região")
-  assert page.has_text?("UF")
-  assert page.has_text?("CEP empresa")
-
+  assert page.has_text?("Atendimento 50")
 end
 
 Entao(/^vejo atendimentos ocorridos no DF$/) do
@@ -169,19 +167,19 @@ Dado(/^que eu estou na pagina de login$/) do
 end
 
 Quando(/^preencho informacao invalida$/) do
-  click_button "Logar" 
+  click_button "Logar"
 end
 
 Dado(/^possuo uma conta$/) do
   @user = User.new(name_user: "User", email_user: "user@gmail.com",
-                      password: "135790", password_confirmation: "135790", 
+                      password: "135790", password_confirmation: "135790",
 		      address_user: "DF")
 end
 
 Quando(/^submeto informacoes validas$/) do
   fill_in "E-mail", with: @user.email_user
   fill_in "Senha", with: @user.password
-  click_button "Logar" 
+  click_button "Logar"
 end
 
 
@@ -283,7 +281,7 @@ end
 
 Entao(/^vejo a lista de unidades$/) do
   assert page.has_text?("Lista de Unidades do Procon")
-end	
+end
 
 Dado(/^que eu estou na pagina da lista de unidades do procon$/) do
   visit "/unity_procons"
@@ -373,4 +371,4 @@ Entao(/^vejo minha avaliacao$/) do
   assert page.has_text?("Péssimo")
   assert page.has_text?("Atendimento horrível")
 end
-	
+
