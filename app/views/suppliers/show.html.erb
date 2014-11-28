@@ -50,8 +50,88 @@
 			</body>
 			<left>
 		</div>
-		<div class="span7">
-			Gráfico aqui!
+		<div class="span7" style = "width = 600px">
+
+		<script type="text/javascript" charset="utf-8">
+		 $(document).ready(function()
+			{
+				console.log(@hash.map { |key, value| [key, value] })
+			var chart = new Highcharts.Chart({
+		            chart:
+		            {
+		                renderTo: 'container',
+		                type: 'pie',
+
+		                options3d:
+		                {
+		                    enabled: true,
+		                    alpha: 45,
+		                    beta: 0
+		                }
+		            },
+
+		            title:
+		            {
+		                text: 'Atendimentos por Estado'
+		            },
+
+		            tooltip:
+		            {
+		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		            },
+
+		            plotOptions:
+		            {
+		                pie:
+		                {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    depth: 35,
+
+		                    dataLabels:
+		                    {
+		                        enabled: true,
+		                        format: '{point.name}'
+		                    }
+		                }
+		            },
+
+		            legend:
+		            {
+		                layout: 'vertical',
+		                align: 'right',
+		                verticalAlign: 'top',
+		                x: -10,
+		                y: 100,
+		                borderWidth: 1,
+
+		                labelFormatter: function()
+		                {
+		                    if(this.name!='series')
+		                    {
+		                        return this.name;
+		                    }
+		                    else
+		                    {
+		                        return 'Legend';
+		                    }
+		                }
+		            },
+
+		            series: [{
+		                showInLegend:true,
+		                type: 'pie',
+		                name: 'Atendimentos',
+		                console.log(@hash.map { |key, value| [key, value] })
+		                data: <%= raw @hash.map { |key, value| [key, value] } %>
+		            }]
+		        });
+			});
+        </script>
+
+        <%= pie_chart @hash %>
+
+        <div id="container" style="height: 600px"></div>
 		</div>
 	</div>
 </div>
