@@ -50,88 +50,84 @@
 			</body>
 			<left>
 		</div>
-		<div class="span7" style = "width = 600px">
+		<div class="span7 " style="height: 800px"  >
 
 		<script type="text/javascript" charset="utf-8">
-		 $(document).ready(function()
-			{
-				console.log(@hash.map { |key, value| [key, value] })
-			var chart = new Highcharts.Chart({
-		            chart:
-		            {
-		                renderTo: 'container',
-		                type: 'pie',
+ 
+$(document).ready(function() {
+   
 
-		                options3d:
-		                {
-		                    enabled: true,
-		                    alpha: 45,
-		                    beta: 0
-		                }
-		            },
+     var chart = new Highcharts.Chart({
+chart: {
+	        renderTo: 'container',
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Tipos de Atendimento'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                slicedOffset: 0,
+                size:'100%',
+                dataLabels: {
+                    enabled: false,
+                    format: '{point.name}'
+                }
 
-		            title:
-		            {
-		                text: 'Atendimentos por Estado'
-		            },
+                
+              }
+        },
 
-		            tooltip:
-		            {
-		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		            },
+       legend:
+{
+	itemStyle: {
+        width: 90 // or whatever
+    },
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -10,
+    y: 100,
+    borderWidth: 0,
 
-		            plotOptions:
-		            {
-		                pie:
-		                {
-		                    allowPointSelect: true,
-		                    cursor: 'pointer',
-		                    depth: 35,
 
-		                    dataLabels:
-		                    {
-		                        enabled: true,
-		                        format: '{point.name}'
-		                    }
-		                }
-		            },
 
-		            legend:
-		            {
-		                layout: 'vertical',
-		                align: 'right',
-		                verticalAlign: 'top',
-		                x: -10,
-		                y: 100,
-		                borderWidth: 1,
+    labelFormatter: function() 
+    {
+        if(this.name!='series')
+        {
+            return this.name;
+        }
+        else
+        {
+            return 'Legend';
+        }
+    }
+},
 
-		                labelFormatter: function()
-		                {
-		                    if(this.name!='series')
-		                    {
-		                        return this.name;
-		                    }
-		                    else
-		                    {
-		                        return 'Legend';
-		                    }
-		                }
-		            },
-
-		            series: [{
-		                showInLegend:true,
-		                type: 'pie',
-		                name: 'Atendimentos',
-		                console.log(@hash.map { |key, value| [key, value] })
-		                data: <%= raw @hash.map { |key, value| [key, value] } %>
-		            }]
-		        });
-			});
-        </script>
-
-        <%= pie_chart @hash %>
-
-        <div id="container" style="height: 600px"></div>
+        series: [{
+        	showInLegend:true,
+            type: 'pie',
+            name: 'Atendimentos',
+            data: <%=raw @hash.map { |key, value| [key, value] } %>
+        }]
+    });
+});
+</script>
+ 
+<div id="container" style="height: 450px"></div>
+        
 		</div>
 	</div>
 </div>
