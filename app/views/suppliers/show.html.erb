@@ -1,14 +1,133 @@
-<h1>Fornecedor:</h1></br>
-<center><font face="Architect" color="#FFCC66"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></center></br>
-<right>
+<% provide(:title, @supplier.fantasy_name_supplier) %>
+<title><%= yield(:title) %></title>
+<% a = @supplier %><h5>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4">
+			<body style= "width:1200px">
+				<center>
+					<h1><font face="Architect"><h1><%= @supplier.fantasy_name_supplier %> </h1></font></h1>
+				</center>
+				<span style="color:#FFA500">
+					<b> Informações </b>
+				</span>
+				<br><br>
+				<div align="justify">
+						<font style="padding-left: 15px;" face="verdana" color="gray">
+							ID Fornecedor:
+						</font>
+					<%= a.id %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						Razão Social:
+					</font>
+					<%= a.social_reason_supplier %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						CNPJ:
+					</font>
+					<%= a.cnpj %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						CNAEP:
+					</font>
+					<%= a.cnaep_main_code_supplier %>
+				</div>
+				<br>
+				<div align="justify">
+					<font style="padding-left: 15px;" face="verdana" color="gray">
+						Descrição:
+					</font>
+					<%= a.description_cnaep_code_supplier %>
+				</div>
 
-	<% a = @supplier %><h5>
-		<font face="verdana" color="gray">ID Fornecedor:      </font><div align="justify"><%= a.id %></div></br>
-		<font face="verdana" color="gray">Tipo de Fornecedor: </font><div align="justify"><%= a.type_supplier %></div></br>
-		<font face="verdana" color="gray">Razão Social:       </font><div align="justify"><%= a.social_reason_supplier %></div></br>
-		<font face="verdana" color="gray">CNPJ:               </font><div align="justify"><%= a.cnpj %></div></br>
-		<font face="verdana" color="gray">CNAEP:              </font><div align="justify"><%= a.cnaep_main_code_supplier %></div></br>
-		<font face="verdana" color="gray">Descrição:          </font><div align="justify"><%= a.description_cnaep_code_supplier %></div></br>
-	</h5>
-</right>
+			</body>
+			<left>
+		</div>
+		<div class="span7 " style="height: 800px"  >
 
+		<script type="text/javascript" charset="utf-8">
+ 
+$(document).ready(function() {
+   
+
+     var chart = new Highcharts.Chart({
+chart: {
+	        renderTo: 'container',
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Atendimentos por tipo de problema'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                slicedOffset: 0,
+                size:'100%',
+                dataLabels: {
+                    enabled: false,
+                    format: '{point.name}'
+                }
+
+                
+              }
+        },
+
+       legend:
+{
+	itemStyle: {
+        width: 90 // or whatever
+    },
+    layout: '',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -10,
+    y: 100,
+    borderWidth: 0,
+
+
+
+    labelFormatter: function() 
+    {
+        if(this.name!='series')
+        {
+            return this.name;
+        }
+        else
+        {
+            return 'Legend';
+        }
+    }
+},
+
+        series: [{
+        	showInLegend:true,
+            type: 'pie',
+            name: 'Atendimentos',
+            data: <%=raw @hash.map { |key, value| [key, value] } %>
+        }]
+    });
+});
+</script>
+ 
+<div id="container" style="height: 450px"></div>
+        
+		</div>
+	</div>
+</div>

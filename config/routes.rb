@@ -4,19 +4,32 @@ SISANPRO::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :customer_services, only: [:show, :index]
   resources :suppliers, only: [:show, :index]
-  resources :unity_procons, only: [:show, :index]
+  resources :unity_procons
   resources :faqs
+  resources :ratings, only: [:show, :index]
+  resources :cdcs
 
-
+  match '/add_rating', to: 'unity_procons#update'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete 
+  match '/signout', to: 'sessions#destroy', via: :delete
   match '/allusers', to: 'users#allusers'
   match '/ranking', to: 'unity_procons#ranking'
-
-  get "/customer_service/custom_search", to: "customer_services#custom_search"
-
   match '/faq', to: 'faqs#index'
+  match '/cdc', to: 'cdcs#index'
+  match '/avaliar', to: 'ratings#index'
+
+  get "/graphs", to: 'customer_services#graphs'
+
+  get '/list', to: 'customer_services#list'
+  get "/customer_service/filter_customer_service_by_type", to: "customer_services#filter_customer_service_by_type"
+  get "/customer_service/filter_customer_service_by_type_region", to: "customer_services#filter_customer_service_by_type_region"
+  get "/customer_service/custom_search", to: "customer_services#custom_search"
+  get "/customer_service/index", to: "customer_services#index"
+  get "/unity_procon/custom_search", to: "unity_procons#custom_search"
+  get "/supplier/custom_search", to: "suppliers#custom_search"
+  get "/unity_procon/custom_search_ranking", to: "unity_procons#custom_search_ranking"
+  #get "/rating/avaliar", to: "ratings#add_rating"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,14 +1,72 @@
+<div class="container" style="padding-left: 60px;">
+<% provide(:title, "Atendimento "+@customer_service.id.to_s ) %>
+<title><%= yield(:title) %></title>
+<br>
 <% a = @customer_service %>
-<h1>Atendimento <%= a.id%>:</h1></br>
+<h1>
+	<div align="center">
+		<font  face="Architect" color="#FFCC66">
+			<b>Atendimento <%= a.id %></b><br>
+		</font>
+	</div>
+</h1>
 <right>
-	<h5>
-    <font face="verdana" color="gray">ID Customer Service:</font><div align="justify"><%= a.id %></div></br>
-    <font face="verdana" color="gray">ID Supplier:        </font><div align="justify"><%= a.supplier_id %></div></br>
-    <font face="verdana" color="gray">Código do problema: </font><div align="justify"><%= a.code_problem_customer_service %></div></br>
-    <font face="verdana" color="gray">Descrição:          </font><div align="justify"><%= a.description_problem_customer_service %></div></br>
-    <font face="verdana" color="gray">Ano:                </font><div align="justify"><%= a.year_customer_service %></div></br>
-    <font face="verdana" color="gray">Região:             </font><div align="justify"><%= a.region_customer_service %></div></br>
-    <font face="verdana" color="gray">UF:                 </font><div align="justify"><%= a.uf_customer_service %></div></br>
-    <font face="verdana" color="gray">CEP empresa:        </font><div align="justify"><%= a.cep_customer_service%></div></br>
-    </h5>
+	<h3>
+	<div align="justify">
+		<font face="verdana" color="gray">
+			ID Customer Service: 
+		</font>
+		<%= a.id %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			ID Supplier: 
+		</font>
+		<%= a.supplier_id %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			Código do problema: 
+		</font>
+		<%= a.code_problem_customer_service %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			Descrição: 
+		</font>
+		<%= a.description_problem_customer_service %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			Ano: 
+		</font>
+		<%= a.year_customer_service %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			Região: 
+		</font>
+		<%= a.region_customer_service %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			UF: 
+		</font>
+		<%= a.uf_customer_service %></br></br>
+	</div>
+
+	<div align="justify">
+		<font face="verdana" color="gray">
+			CEP empresa: 
+		</font>
+		<%= a.cep_customer_service%></br></br>
+	</div>
+	</h3>
 </right>
+</div>

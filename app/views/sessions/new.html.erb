@@ -1,3 +1,6 @@
+<% provide(:title, "Logar") %>
+<title><%= yield(:title) %></title></br></br>
+
 <center>
 	<%= form_for(:session, url: sessions_path) do |f| %>
 		<br>
@@ -13,5 +16,5 @@
 		</br>
 	<% end %>
 
-	<p>Novo? <%= link_to "Cadastre-se!", "/signup" %></p>
+	<p>Novo? <%= link_to "Cadastre-se!", signup_path %></p>
 </center>

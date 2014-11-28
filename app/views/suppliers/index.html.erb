@@ -1,34 +1,29 @@
-<div>
-	<center>
-		<h1>Lista de Fornecedores</h1>
-	</center>
-		<center>
-			<center>
-				<%= will_paginate %>
-			</center>
-				<table class="table table-striped" id="Suppliers">
-						<thead>
-							<tr>
-							    <th>Fornecedor</th>
-							    <th>CNPJ</th> 
-							    <th colspan = "3"></th>
-						  	</tr>
-						</thead>
-						<tbody>
-					    <% @suppliers.each do |sup| %>
-						      <tr>
-						      	<h6>
-							        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %></td>
-							        <td><%= sup.cnpj %></td>
-							    </h6>
-					          </tr>
-							<% end %>
-					</tbody>
-				</table>
-				<center>
-					<%= will_paginate %>
-				</center>
-		</center>
+<% provide(:title, "Fornecedores") %>
+<title><%= yield(:title) %></title>
+<%= render 'layouts/searcher' %>
+<center><h1>Lista de Fornecedores</h1></center>
+<div class="span9">
+	<center><%= will_paginate %></center>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+				    <th><%= sort_link @search, :fantasy_name_supplier, "Fornecedor" %></th>
+				    <th><%= sort_link @search, :cnpj, "CNPJ" %></th>
+				    <th colspan = "3"></th>
+			  	</tr>
+			</thead>
+			<tbody id="suppliers">
+			    	<% @suppliers.each do |sup| %>
+			        <tr>
+				      	<h6>
+					        <td><%= link_to sup.fantasy_name_supplier, '/suppliers/'+sup.id.to_s %></td>
+					        <td><%= sup.cnpj %></td>
+				       </h6>
+		         	 </tr>
+				<% end %>
+			</tbody>
+		</table>
+	<center><%= will_paginate %></center>
 </div>
 
 

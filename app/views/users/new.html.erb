@@ -1,28 +1,10 @@
-<center><h1>Cadastro de Usuário</h1>
-<%= form_for(@user) do |f| %>    
-    <%= render 'shared/error_messages' %>    
+<div class="center jumbotron">
+	<% provide(:title, "Cadastro de novo usuário") %>
+	<title><%= yield(:title) %></title>
+	<h1>Cadastro de Usuário</h1>
 
-<br>
-    <%= f.label :name_user, "Nome" %></br>
-    <%= f.text_field :name_user %>
-</br>
-<br>
-    <%= f.label :email_user, "E-mail" %></br>
-    <%= f.text_field :email_user %>
-</br><br>
-    <%= f.label :password, "Senha" %></br>
-    <%= f.password_field :password %>
-    </br><br>
-
-    <%= f.label :password_confirmation, "Repetir" %></br>
-    <%= f.password_field :password_confirmation %>
-</br>
-<br>
-    <%= f.label :address_user, "Estado" %></br>
-    <%= f.select :address_user, options_for_select([["AC", "AC"], ["AL", "AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PR", "PR"], ["PB", "PB"], ["PA", "PA"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SE", "SE"], ["SP", "SP"], ["TO", "TO"]]) %>
-<br>
-</br>
-    <%= f.submit "Registrar conta", class: "btn btn-large btn-primary" %>
-<% end %>
-  </center>
-</br>
+	<%= form_for(@user) do |f| %>
+		<%= render 'signup_fields', f: f %>
+		<%= f.submit "Registrar conta", class: "btn btn-large btn-primary" %>
+	<% end %>
+</div>

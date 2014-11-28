@@ -4,9 +4,7 @@ require 'rails_helper'
 
 describe Supplier do
 	before do
-		@supplier = Supplier.new(type_supplier: "PessoaJuridica", social_reason_supplier: "Importante",
-		 fantasy_name_supplier: "Tchanananas", cnpj: "222777-13", cnaep_main_code_supplier: "blablabla",
-		 description_cnaep_code_supplier: "blablablas")
+		@supplier = FactoryGirl.create(:supplier)
 	end
 
 	subject { @supplier }

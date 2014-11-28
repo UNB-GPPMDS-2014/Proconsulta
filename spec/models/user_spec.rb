@@ -4,9 +4,7 @@ require 'rails_helper'
 
 describe User do
 	before do
-		@user = User.new(name_user: "UserTest", email_user: "usertest@test.com",
-		 password: "teste1234", address_user: "DF",
-		 password_confirmation: "teste1234")
+		@user = FactoryGirl.create(:user)
 	end
 
 	subject { @user }
@@ -42,15 +40,6 @@ describe User do
       			expect(@user).not_to be_valid
       		end
       	end
-    end
-    describe "email already taken" do
-    	before do
-    		user_with_same_email = @user.dup
-    		user_with_same_email.email_user = @user.email_user.upcase
-    		user_with_same_email.save
-    	end
-
-    	it { should_not be_valid }
     end
     describe "password blank" do
     	before do

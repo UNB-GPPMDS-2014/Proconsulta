@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
-
+gem "chartkick"
 gem 'rails', '3.2.15'
+gem 'highcharts-rails', '~> 4.0.4'
+gem 'ransack'
+gem 'gmaps4rails'
+gem 'geocoder'
 
 gem 'simplecov', :require => false, :group => :test
 
@@ -21,8 +25,10 @@ group :development, :test do
 end
 
 group :test do
+  gem 'factory_girl_rails', '4.1.0'
   gem 'selenium-webdriver'
-  gem 'capybara'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 # Gems used only for assets and not required

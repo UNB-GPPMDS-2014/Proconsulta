@@ -1,0 +1,186 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 5px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 25px;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.0em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+h3 {
+  font: verdana;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 30%;
+  margin-bottom: 11px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.dropshadow {
+height: auto;
+-webkit-box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+-moz-box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+box-shadow: -15px 13px 20px 3px rgba(0,0,0,0.91);
+}
+
+.span4 {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 15px;
+  height: 560px;
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
+  overflow-y:scroll;
+}
+
+.span3 {
+  margin-left: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 560px;
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
+}
+.span2 {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 560px;
+  box-shadow: 6px 0px 5px 0px rgba(0,0,0,0.91);
+}
+
+.span8 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 15px;
+  overflow-y:scroll;
+  height: 490px;
+}
+
+.span9 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow-y:scroll;
+  height: 500px;
+}
+
+.span10 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow-y:scroll;
+  height: 500px;
+}
+
+.span12 {
+  position:fixed;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 15px;
+  overflow-y:scroll;
+  height: 550px;
+  width:1365px;
+
+}
+
+.footer {
+  position:fixed;
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  height: 35px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
+}
+
+
+#grad {
+  background-image: url("logoBackground.png");
+}

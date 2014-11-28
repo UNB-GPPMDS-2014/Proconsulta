@@ -1,0 +1,10 @@
+<% provide(:title, "Legislação") %>
+<title><%= yield(:title) %></title>
+<%= stylesheet_link_tag "cdcs" %>
+
+<%= render 'layouts/searcher' %>
+
+<div class="span9">
+	<%= render 'cdcs/cdc' %>
+</div>
+

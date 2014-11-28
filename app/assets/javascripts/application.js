@@ -12,6 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require highcharts
+//= require highcharts/highcharts-3d
+//= require highcharts/adapters/mootools-adapter
+//= require highcharts/adapters/prototype-adapter
+//= require highcharts/modules/annotations
+//= require highcharts/modules/canvas-tools
+//= require highcharts/modules/data
+//= require highcharts/modules/drilldown
+//= require highcharts/modules/exporting
+//= require highcharts/modules/funnel
+//= require highcharts/modules/heatmap
+//= require highcharts/modules/no-data-to-display
+//= require highcharts/adapters/standalone-framework
+//= require highcharts/highcharts-more
+//= require highcharts/modules/exporting
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 //= require bootstrap
 //= require bootstrap.min
