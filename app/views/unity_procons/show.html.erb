@@ -51,11 +51,14 @@
 						</span>
 						<br>
 						<% @ratingpie.order("value_rating") %>
-						<%= pie_chart @ratingpie.group("value_rating").count, height: "200px", colors: ["#FF0000","#FF8000","#FFFF00","#00FF00","#0040FF"] %>
+						<%= pie_chart @rating_hash, {library: {tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+
+        }}} %>
 						<center><h2>Nota: <%= a.average_pontuation %></h2></center>
 						<br>
 
-					<% end %>
+					<% end %> 
 					
 					<% if url_for(:back)=="http://0.0.0.0:3000/avaliar" %>
 						<span style="color:#FFA500">

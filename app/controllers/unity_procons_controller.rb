@@ -14,12 +14,43 @@ class UnityProconsController < ApplicationController
 	   	@rating = Rating.new
 	   	@ratings = Rating.where("unity_procon_id = ?", params[:id]).order("created_at DESC")
 	   	@ratingpie = Rating.where("unity_procon_id = ?", params[:id])
+	   	@rating_hash = return_hash
 
 	   	@hash = Gmaps4rails.build_markers(@unity_procon) do |unity_procon, marker|
 	  		marker.lat unity_procon.latitude
 	 		marker.lng unity_procon.longitude
 		end
 
+	end
+
+	def return_hash
+		hash = Hash.new
+		all_rating = Rating.where("unity_procon_id = ?", params[:id])
+
+		all_rating.each do |rating|
+			
+			case rating.value_rating
+			when 1
+				ratings = Rating.all.select { |m| m.value_rating == rating.value_rating }
+				hash["Péssimo"] = ratings.count
+			when 2
+				ratings = Rating.all.select { |m| m.value_rating == rating.value_rating }	
+				hash["Ruim"] = ratings.count
+			when 3
+				ratings = Rating.all.select { |m| m.value_rating == rating.value_rating }
+				hash["Regular"] = ratings.count
+			when 4
+				ratings = Rating.all.select { |m| m.value_rating == rating.value_rating }
+				hash["Bom"] = ratings.count
+			when 5
+				ratings = Rating.all.select { |m| m.value_rating == rating.value_rating }
+				hash["Ótimo"] = ratings.count
+			else
+				#nothing to do
+			end	
+		end
+
+		hash
 	end
 
 	def ranking
