@@ -1,7 +1,7 @@
 <% provide(:title, "Ranking de Procons") %>
 <title><%= yield(:title) %></title>
 <%= render 'layouts/searcher' %>
-<div class="span10">
+<div class="span10" style="height: 549px;">
     <div class="container">
 		<center>
 			<h1>Ranking</h1>
@@ -17,7 +17,7 @@
 					    <th>Endereço</th> 
 					    <th>Telefone</th>
 					    <th>Email</th> 
-					    <th colspan = "3"></th>
+					    <th colspan = "2"></th>
 				  	</tr>
 				</thead>
 				<% @unity_procons = UnityProcon.where("average_pontuation is not null").order('average_pontuation DESC') %>

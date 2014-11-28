@@ -4,6 +4,7 @@
  
 <% provide(:title, "Unidade do Procon") %>
 <title><%= yield(:title) %></title>
+<%= stylesheet_link_tag "unity_procons" %>
 
 <%= form_for @unity_procon do |f| %>
 	<% a = @unity_procon %>
@@ -112,37 +113,19 @@
 			</div>
 			<div class="span7">
 				<div class="mapGoogle">
-				 	<div id="map" style='width: 560px; height: 560px;'></div>
+				 	<div id="map" style='width: 890px; height: 545px;'></div>
 				</div>
-
-				<script type="text/javascript">
-					handler = Gmaps.build('Google');
-					handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-						markers = handler.addMarkers(<%=raw @hash.to_json %>);
-						handler.bounds.extendWith(markers);
-						handler.fitMapToBounds();
-					});
-				</script>
 			</div>
 		</div>
 	</div>
 <% end %>
 
-<style>
-	.btn
-	{
-	   -webkit-border-radius: 20px;
-	   -moz-border-radius: 20px;
-	   border-radius: 20px;
-	}
-
-	.mapGoogle
-	{
-		position:absolute;
-		padding-left: 250px;
-		right:0px;
-		top:58px;
-		width:800px;
-	}
-</style>
+<script type="text/javascript">
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+		markers = handler.addMarkers(<%=raw @hash.to_json %>);
+		handler.bounds.extendWith(markers);
+		handler.fitMapToBounds();
+	});
+</script>
 	
