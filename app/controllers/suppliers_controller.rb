@@ -28,4 +28,17 @@ class SuppliersController < ApplicationController
 	#	render :json=>data.to_json
 	#end
 
+	def hash_format_graph
+
+		@hash = @supplier.customer_services.order('count_all desc').limit(10).group(:description_problem_customer_service).count
+		array_quantity =  @hash.map { |key, value| value }
+		quantity_10 = array_quantity.inject(:+)
+		outros = @supplier.customer_services.count - quantity_10
+		another_hash = {"outros" => outros }
+		@hash.merge(another_hash)
+		 
+	end
+
+
+
 end
