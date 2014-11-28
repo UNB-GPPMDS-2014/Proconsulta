@@ -13,34 +13,20 @@ class SuppliersController < ApplicationController
         @hash = hash_format_graph
 	end
 
-	#def custom_search
-	#		unless request.xhr? or params[:page].nil? or params[:search].nil?
-	#			redirect_to root_path
-	#			return
-	#
-	#	sql = "1=1"
-
-	#	if !params[:type_search].nil?
-	#		sql += "AND #{params[:type_search]} = ?"
-	#	end
-
-	#	sql = sql
-	#	data = Supplier.where("#{params[:type_search]} like '%' ? '%'", params[:search]).paginate(:page=>1)
-	#	render :json=>data.to_json
-	#end
-
 	def hash_format_graph
-
+		quantity_total = @supplier.customer_services.count
 		hash = @supplier.customer_services.order('count_all desc').limit(10).group(:description_problem_customer_service).count
 		array_quantity =  hash.map { |key, value| value }
-		quantity_10 = array_quantity.inject(:+)
-		outros = @supplier.customer_services.count - quantity_10
-		another_hash = {"outros" => outros }
-		hash = hash.merge(another_hash)
-		hash
-		 
+		quantity = array_quantity.inject(:+)
+		
+		unless quantity_total.nil?
+      		unless quantity.nil?
+      			outros = (quantity_total - quantity)
+      			another_hash = {"outros" => outros }
+      	  		hash = hash.merge(another_hash)
+           end
+    	end 
 	end
-
 
 
 end
